@@ -1207,19 +1207,17 @@
         }
 
         .heart-btn {
+            display: none !important;
             background: none;
             border: none;
+            color: var(--text-muted);
+            font-size: 1rem;
             cursor: pointer;
-            font-size: 1.1rem;
-            color: var(--rose);
-            transition: transform 0.3s;
-            display: flex;
+            transition: all 0.3s ease;
             align-items: center;
             gap: 0.3rem;
-        }
-
-        .heart-btn:hover {
-            transform: scale(1.15);
+            padding: 0.5rem;
+            border-radius: 20px;
         }
 
         .heart-btn .count {
@@ -1584,6 +1582,18 @@
             color: var(--sage-light);
         }
 
+        .footer-disclaimer {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.8rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.6);
+            border-radius: 4px;
+        }
+
         .footer-bottom {
             max-width: 1100px;
             margin: 0 auto;
@@ -1670,6 +1680,7 @@
                 right: 0;
                 background: rgba(253, 251, 247, 0.97);
                 backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
                 flex-direction: column;
                 padding: 1.5rem;
                 gap: 1rem;
@@ -1785,7 +1796,8 @@
         }
 
         .limit-popup .popup-icon {
-            font-size: 3rem;
+            font-size: 4rem;
+            /* INCREASED AS REQUESTED */
             margin-bottom: 0.75rem;
         }
 
@@ -2156,7 +2168,7 @@
         .caring-header h3 {
             font-family: 'DM Serif Display', serif;
             color: var(--text-secondary);
-            font-size: 1.8rem;
+            font-size: 1rem;
             margin-bottom: 0.5rem;
             letter-spacing: 0.02em;
         }
@@ -2279,10 +2291,40 @@
             position: relative;
             overflow: hidden;
         }
+
+        .draft-banner {
+            position: fixed;
+            bottom: 2rem;
+            left: -8.5rem;
+            width: 32rem;
+            /* widened to fit text */
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: #444;
+            padding: 0.6rem 0;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-align: center;
+            transform: rotate(45deg);
+            z-index: 10000;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+            /* Flipped shadow up */
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .draft-banner:focus {
+            outline: 3px solid var(--ocean);
+            outline-offset: -3px;
+        }
     </style>
 </head>
 
 <body>
+
+    <div class="draft-banner" tabindex="0" role="status" data-i18n="draftBanner">Draft<br><span
+            style="font-weight:400; font-size:0.65rem;">Final
+            version will be published on 21 March.</span></div>
 
     <a href="#main-content" class="skip-link" data-i18n="skipLink">Skip to main content</a>
 
@@ -2333,7 +2375,7 @@
                     Irene Roura Garcia and Co
                 </p>
             </div>
-            <div class="scroll-indicator"><span data-i18n="scroll">Scroll</span>
+            <div class="scroll-indicator">
                 <div class="scroll-line"></div>
             </div>
         </section>
@@ -2722,7 +2764,7 @@
                     <div class="story-card" data-category="movement">
                         <div class="quote-mark">"</div>
                         <p class="story-text">I started to use the tapping technique after attending the mindfulness
-                            course with Irene through FND hope. I was initially very skeptical. However I was intrigued
+                            course with Irene. I was initially very skeptical. However I was intrigued
                             also and so started to practice it. I now use it when struggling with pain.</p>
                         <div class="story-footer">
                             <div class="quote-tool-label"><span class="qt-icon">🤸</span> Shake-and-Tap ·
@@ -3264,7 +3306,8 @@
                     <p data-i18n="shareDesc">Please feel free to share what has helped you — whether it’s a breathing
                         technique, movement practice, music, or something someone once said. Your experience is
                         valuable, and sharing it could make a meaningful difference in someone else’s journey.</p>
-                    <div style="display:flex; flex-direction:column; align-items:center; margin-top:1.5rem; gap:1rem;">
+                    <div
+                        style="display:flex; flex-direction:column; align-items:center; margin-top:1.5rem; gap:1rem; width: 100%;">
                         <iframe
                             src="https://docs.google.com/forms/d/e/1FAIpQLSdjXKt5A5uBE0MW-lb3xXfAOZkWOgwD-wN2iVkPcPVXJU-55A/viewform?embedded=true"
                             width="640" height="1206" frameborder="0" marginheight="0" marginwidth="0"
@@ -3300,7 +3343,7 @@
                 <div class="signpost-filters" id="signpostFilters">
                     <button class="signpost-filter-btn active" onclick="filterOrgType('all', this)">All</button>
                     <button class="signpost-filter-btn" onclick="filterOrgType('charity', this)">Charities</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgType('medical', this)">Medical</button>
+                    <button class="signpost-filter-btn" onclick="filterOrgType('medical', this)">Professional</button>
                     <button class="signpost-filter-btn" onclick="filterOrgType('research', this)">Research</button>
                     <button class="signpost-filter-btn" onclick="filterOrgType('support', this)">Peer Support</button>
                     <button class="signpost-filter-btn"
@@ -3308,15 +3351,7 @@
                     <button class="signpost-filter-btn" onclick="filterOrgType('specialist', this)">Specialist</button>
                     <button class="signpost-filter-btn" onclick="filterOrgType('tools', this)">Apps &amp; Tools</button>
                 </div>
-                <div class="signpost-filters" id="signpostGeoFilters" style="margin-top:0.5rem;">
-                    <button class="signpost-filter-btn active" onclick="filterOrgGeo('all', this)">🌍 All</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgGeo('uk', this)">🇬🇧 UK</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgGeo('usa', this)">🇺🇸 USA</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgGeo('canada', this)">🇨🇦 Canada</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgGeo('europe', this)">🇪🇺 Europe</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgGeo('global', this)">🌐 Global</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgGeo('online', this)">💻 Online</button>
-                </div>
+
             </div>
 
             <p class="signpost-count" id="signpostCount" data-i18n="resourceCount">Showing all 38 resources</p>
@@ -3380,6 +3415,17 @@
                     <span class="org-type support">Northern Ireland</span>
                 </a>
 
+                <a href="https://www.fndwhatnow.com" target="_blank" class="org-card reveal" data-geo="global"
+                    data-type="charity"
+                    data-tags="fnd what now south africa NPC support tuesday meetings neurolog app carers charity">
+                    <span class="org-link-arrow">↗</span>
+                    <div class="org-icon" style="background:#FFF3E0;color:#B8860B;">🇿🇦</div>
+                    <h4>FND — What Now? (South Africa)</h4>
+                    <p class="org-desc">South Africa's registered NPC supporting people with FND. Weekly Tuesday online
+                        support groups, carer resources, and home of the NeuroLog symptom-tracking app.</p>
+                    <span class="org-type charity">Charity (South Africa)</span>
+                </a>
+
                 <a href="https://www.thebraincharity.org.uk/condition/functional-neurological-disorder/" target="_blank"
                     class="org-card reveal" data-geo="uk" data-type="charity"
                     data-tags="brain charity liverpool uk neurological conditions practical help emotional support counselling carers">
@@ -3413,41 +3459,29 @@
                     <p class="org-desc">Created by Prof. Jon Stone — the definitive patient information resource
                         explaining
                         every FND symptom, how diagnosis works, and treatment approaches. Essential reading.</p>
-                    <span class="org-type nhs">Medical Resource</span>
+                    <span class="org-type nhs">Professional Resource</span>
                 </a>
 
-                <a href="https://www.nhs.uk/conditions/functional-neurological-disorder/" target="_blank"
-                    class="org-card reveal" data-geo="global" data-type="medical"
-                    data-tags="nhs national health service uk diagnosis symptoms treatment pathways official medical england">
+                <a href="https://www.nhsinform.scot/illnesses-and-conditions/brain-nerves-and-spinal-cord/functional-neurological-disorder/"
+                    target="_blank" class="org-card reveal" data-geo="global" data-type="medical"
+                    data-tags="nhs inform scotland national health service uk diagnosis symptoms treatments health services medical">
                     <span class="org-link-arrow">↗</span>
                     <div class="org-icon" style="background:#E3EEF3;color:var(--ocean-deep);">🏛️</div>
-                    <h4>NHS — FND Information</h4>
-                    <p class="org-desc">Official NHS information on FND including symptoms, causes, diagnosis, and
-                        treatment
-                        pathways available across the UK health system.</p>
-                    <span class="org-type nhs">NHS</span>
+                    <h4>NHS Inform</h4>
+                    <p class="org-desc">Official health information from Scotland’s NHS. Trusted guidance on conditions,
+                        symptoms, treatments, and health services.</p>
+                    <span class="org-type nhs">Professional Resource</span>
                 </a>
 
-                <a href="https://nonepilepticattacks.info" target="_blank" class="org-card reveal" data-geo="global"
-                    data-type="medical"
+                <a href="https://non-epileptic-attacks.sites.sheffield.ac.uk/" target="_blank" class="org-card reveal"
+                    data-geo="global" data-type="medical"
                     data-tags="non-epileptic seizures attacks PNES NEAD dissociative seizures information sheffield uk">
                     <span class="org-link-arrow">↗</span>
                     <div class="org-icon" style="background:#E3EEF3;color:var(--ocean-deep);">⚡</div>
                     <h4>Non-Epileptic Attacks Info</h4>
                     <p class="org-desc">Specialist resource by a Sheffield clinical team with detailed information on
                         non-epileptic seizures (PNES/NEAD) — a common FND presentation.</p>
-                    <span class="org-type nhs">Medical Resource</span>
-                </a>
-
-                <a href="https://www.fndhope.org/fnd-guide/treatment/physiophysical-therapy/" target="_blank"
-                    class="org-card reveal" data-geo="global" data-type="medical"
-                    data-tags="physiotherapy occupational therapy rehabilitation treatment movement retraining evidence exercise uk">
-                    <span class="org-link-arrow">↗</span>
-                    <div class="org-icon" style="background:#E3EEF3;color:var(--ocean-deep);">🏃</div>
-                    <h4>FND Physiotherapy Guide</h4>
-                    <p class="org-desc">Evidence-based guide to physiotherapy and occupational therapy for FND. How
-                        rehabilitation retrains movement patterns with 60-70% improvement rates.</p>
-                    <span class="org-type nhs">Treatment Guide</span>
+                    <span class="org-type nhs">Professional Resource</span>
                 </a>
 
                 <!-- === SPECIALIST CLINICIANS & PROGRAMMES === -->
@@ -3465,16 +3499,15 @@
                     <span class="org-type specialist">FND Specialist</span>
                 </a>
 
-                <a href="https://www.fndhope.org.uk/living-fnd/managing-fnd-find-provider/" target="_blank"
-                    class="org-card reveal" data-geo="uk" data-type="specialist"
-                    data-tags="find provider directory international neurologist physiotherapist psychologist treatment search">
+                <a href="https://www.fndcourage.org/" target="_blank" class="org-card reveal" data-geo="global"
+                    data-type="specialist"
+                    data-tags="fnd courage support education courses events community connection living">
                     <span class="org-link-arrow">↗</span>
-                    <div class="org-icon" style="background:#F0EDF5;color:#5A4A7A;">🔎</div>
-                    <h4>FND Hope — Find a Provider</h4>
-                    <p class="org-desc">International directory of neurologists, physiotherapists, psychologists, and
-                        other
-                        clinicians who have confirmed experience treating FND.</p>
-                    <span class="org-type specialist">Provider Directory</span>
+                    <div class="org-icon" style="background:#F0EDF5;color:#5A4A7A;">💙</div>
+                    <h4>FND Courage</h4>
+                    <p class="org-desc">Support and education for people living with FND through courses, events, and
+                        community connection.</p>
+                    <span class="org-type specialist">Support & Education</span>
                 </a>
 
                 <a href="https://www.ahpfndnetwork.org" target="_blank" class="org-card reveal" data-geo="uk"
@@ -3587,15 +3620,26 @@
                     <span class="org-type international">Australia</span>
                 </a>
 
-                <a href="https://www.fndwhatnow.com" target="_blank" class="org-card reveal" data-geo="global"
-                    data-type="international"
-                    data-tags="fnd what now south africa NPC support tuesday meetings neurolog app carers">
+                <a href="https://aidinef.it/" target="_blank" class="org-card reveal" data-geo="europe"
+                    data-type="support"
+                    data-tags="aidinef italy italian association support awareness community family">
                     <span class="org-link-arrow">↗</span>
-                    <div class="org-icon" style="background:#FFF3E0;color:#B8860B;">🇿🇦</div>
-                    <h4>FND — What Now? (South Africa)</h4>
-                    <p class="org-desc">South Africa's registered NPC supporting people with FND. Weekly Tuesday online
-                        support groups, carer resources, and home of the NeuroLog symptom-tracking app.</p>
-                    <span class="org-type international">South Africa</span>
+                    <div class="org-icon" style="background:#FFF3E0;color:#B8860B;">🇮🇹</div>
+                    <h4>AIDINeF (Italy)</h4>
+                    <p class="org-desc">Italian association for people with FND and their families offering support,
+                        awareness and community.</p>
+                    <span class="org-type support">Support (Italy)</span>
+                </a>
+
+                <a href="https://www.ag-fns.de/" target="_blank" class="org-card reveal" data-geo="europe"
+                    data-type="support"
+                    data-tags="german working group ag-fns fnd germany information networking collaborative">
+                    <span class="org-link-arrow">↗</span>
+                    <div class="org-icon" style="background:#FFF3E0;color:#B8860B;">🇩🇪</div>
+                    <h4>Arbeitsgemeinschaft FNS</h4>
+                    <p class="org-desc">German working group for FND — a collaborative site for information and
+                        networking.</p>
+                    <span class="org-type support">Working Group (Germany)</span>
                 </a>
 
                 <a href="https://www.notdefinedbyfnd.org" target="_blank" class="org-card reveal" data-geo="online"
@@ -3632,29 +3676,6 @@
                     <span class="org-type tools">App</span>
                 </a>
 
-                <a href="https://fndaware.org" target="_blank" class="org-card reveal" data-geo="global"
-                    data-type="charity"
-                    data-tags="fnd aware awareness education employers healthcare professionals public understanding workplace">
-                    <span class="org-link-arrow">↗</span>
-                    <div class="org-icon" style="background:var(--sage-pale);color:var(--sage-deep);">📢</div>
-                    <h4>FND Aware</h4>
-                    <p class="org-desc">Awareness and education initiative helping the public, healthcare professionals,
-                        and
-                        employers better understand FND and its impact on daily life.</p>
-                    <span class="org-type charity">Awareness</span>
-                </a>
-
-                <a href="https://www.facebook.com/groups/fnd" target="_blank" class="org-card reveal" data-geo="online"
-                    data-type="support"
-                    data-tags="facebook groups community social media online daily support peer connect">
-                    <span class="org-link-arrow">↗</span>
-                    <div class="org-icon" style="background:#E3EEF3;color:var(--ocean-deep);">👥</div>
-                    <h4>FND Facebook Communities</h4>
-                    <p class="org-desc">Multiple active Facebook groups where thousands of people with FND share daily
-                        experiences, practical tips, and support each other worldwide.</p>
-                    <span class="org-type support">Online Community</span>
-                </a>
-
                 <!-- === MORE INTERNATIONAL === -->
                 <a href="https://www.samaritans.org" target="_blank" class="org-card reveal" data-geo="uk"
                     data-type="support"
@@ -3688,106 +3709,16 @@
                     <span class="org-type support">Mental Health</span>
                 </a>
 
-                <a href="https://www.facebook.com/groups/fndcanada" target="_blank" class="org-card reveal"
-                    data-geo="canada" data-type="international"
-                    data-tags="fnd canada support group facebook peer online">
-                    <span class="org-link-arrow">↗</span>
-                    <div class="org-icon" style="background:var(--earth-pale);color:#8A6D4B;">🇨🇦</div>
-                    <h4>FND Canada (Facebook Group)</h4>
-                    <p class="org-desc">Active peer support community for Canadians living with FND. Sharing
-                        experiences, resources, and practical coping strategies.</p>
-                    <span class="org-type international">Canada</span>
-                </a>
-
-                <a href="https://www.facebook.com/groups/fndgermany" target="_blank" class="org-card reveal"
-                    data-geo="europe" data-type="international"
-                    data-tags="fnd germany deutschland support group facebook peer online">
-                    <span class="org-link-arrow">↗</span>
-                    <div class="org-icon" style="background:#EDE5F5;color:#6B4F9E;">🇩🇪</div>
-                    <h4>FND Deutschland (Facebook Group)</h4>
-                    <p class="org-desc">German-language peer support community on Facebook for people living with FND.
-                        Sharing and support across Germany, Austria, and Switzerland.</p>
-                    <span class="org-type international">Germany</span>
-                </a>
-
-                <a href="https://www.facebook.com/groups/fndspain" target="_blank" class="org-card reveal"
-                    data-geo="europe" data-type="international"
-                    data-tags="fnd spain españa tnf trastorno neurológico funcional apoyo grupo facebook">
-                    <span class="org-link-arrow">↗</span>
-                    <div class="org-icon" style="background:#FBE8EF;color:#D4839B;">🇪🇸</div>
-                    <h4>TNF España (Facebook Group)</h4>
-                    <p class="org-desc">Comunidad de apoyo en español para personas con Trastorno Neurológico Funcional.
-                        Compartir experiencias y recursos en Facebook.</p>
-                    <span class="org-type international">Spain</span>
-                </a>
-
-                <a href="https://www.facebook.com/groups/fndindia" target="_blank" class="org-card reveal"
-                    data-geo="global" data-type="international"
-                    data-tags="fnd india support group facebook peer online asia">
-                    <span class="org-link-arrow">↗</span>
-                    <div class="org-icon" style="background:#E8F1FA;color:#3D6E9E;">🇮🇳</div>
-                    <h4>FND India (Facebook Group)</h4>
-                    <p class="org-desc">Growing peer support community for people in India and South Asia living with
-                        FND. Sharing resources and experiences.</p>
-                    <span class="org-type international">India</span>
-                </a>
-
-                <a href="https://www.facebook.com/groups/fndnewzealand" target="_blank" class="org-card reveal"
-                    data-geo="global" data-type="international"
-                    data-tags="fnd new zealand nz aotearoa support group facebook peer online">
-                    <span class="org-link-arrow">↗</span>
-                    <div class="org-icon" style="background:var(--sage-pale);color:var(--sage-deep);">🇳🇿</div>
-                    <h4>FND New Zealand (Facebook Group)</h4>
-                    <p class="org-desc">Support community for New Zealanders living with FND. Peer connection, local
-                        experiences, and practical coping resources.</p>
-                    <span class="org-type international">New Zealand</span>
-                </a>
-
-                <a href="https://www.facebook.com/groups/fndnetherlands" target="_blank" class="org-card reveal"
-                    data-geo="europe" data-type="international"
-                    data-tags="fnd netherlands nederland dutch support group facebook peer online">
-                    <span class="org-link-arrow">↗</span>
-                    <div class="org-icon" style="background:#EDE5F5;color:#6B4F9E;">🇳🇱</div>
-                    <h4>FND Nederland (Facebook Group)</h4>
-                    <p class="org-desc">Dutch-language peer support community for people in the Netherlands living with
-                        FND. Sharing and encouragement.</p>
-                    <span class="org-type international">Netherlands</span>
-                </a>
-
-                <a href="https://www.facebook.com/groups/fnditaly" target="_blank" class="org-card reveal"
-                    data-geo="europe" data-type="international"
-                    data-tags="fnd italy italia italian support group facebook peer online">
-                    <span class="org-link-arrow">↗</span>
-                    <div class="org-icon" style="background:#FFF3E0;color:#B8860B;">🇮🇹</div>
-                    <h4>FND Italia (Facebook Group)</h4>
-                    <p class="org-desc">Italian-language peer support community for people living with FND. Connection
-                        and
-                        shared experiences.</p>
-                    <span class="org-type international">Italy</span>
-                </a>
-
-                <a href="https://www.facebook.com/groups/fndasia" target="_blank" class="org-card reveal"
-                    data-geo="global" data-type="international"
-                    data-tags="fnd asia asian support group facebook peer online">
-                    <span class="org-link-arrow">↗</span>
-                    <div class="org-icon" style="background:var(--sage-pale);color:var(--sage-deep);">🌏</div>
-                    <h4>FND Asia (Facebook Group)</h4>
-                    <p class="org-desc">Pan-Asian peer support community connecting people with FND across diverse
-                        countries
-                        and cultures.</p>
-                    <span class="org-type international">Asian Community</span>
-                </a>
-
                 <!-- === NEW RESOURCES === -->
                 <a href="https://reactivept.com/" target="_blank" class="org-card reveal" data-geo="usa"
                     data-type="medical"
                     data-tags="reactive physical therapy pt neurologic usa los angeles wellness support">
                     <span class="org-link-arrow">↗</span>
                     <div class="org-icon" style="background:#E8F1FA;color:#3D6E9E;">🇺🇸</div>
-                    <h4>Reactive Physical Therapy</h4>
+                    <h4>Reactive PT</h4>
                     <p class="org-desc">In-person and online physical/occupational therapy specializing in neurologic
                         disorders including FND, based in California USA.</p>
-                    <span class="org-type medical">Physical Therapy</span>
+                    <span class="org-type medical">Professional Resource</span>
                 </a>
 
                 <a href="https://www.rewireot.com/" target="_blank" class="org-card reveal" data-geo="online"
@@ -3801,17 +3732,17 @@
                     <span class="org-type specialist">Occupational Therapy</span>
                 </a>
 
-                <a href="https://nortle.org" target="_blank" class="org-card reveal" data-geo="uk" data-type="support"
-                    data-tags="nortle peer support mental health wellbeing community uk">
+                <a href="https://www.nortle.co.uk/" target="_blank" class="org-card reveal" data-geo="uk"
+                    data-type="medical" data-tags="nortle medical support mental health wellbeing community uk">
                     <span class="org-link-arrow">↗</span>
-                    <div class="org-icon" style="background:var(--sage-pale);color:var(--sage-deep);">🗣️</div>
+                    <div class="org-icon" style="background:#E8F1FA;color:#3D6E9E;">🏥</div>
                     <h4>Nortle</h4>
-                    <p class="org-desc">A safe space and community for individuals seeking peer support to navigate the
-                        everyday challenges of living with a chronic condition.</p>
-                    <span class="org-type support">Peer Support</span>
+                    <p class="org-desc">UK-based specialist neuro rehabilitation service supporting people with FND.
+                        Offers assessments, therapy, online programs, and practical self-management resources.</p>
+                    <span class="org-type medical">Professional Resource</span>
                 </a>
 
-                <a href="https://tnfespana.org" target="_blank" class="org-card reveal" data-geo="europe"
+                <a href="https://tnf-spain.org/" target="_blank" class="org-card reveal" data-geo="europe"
                     data-type="charity"
                     data-tags="tnf espana spain asociación trastorno neurológico funcional charity support">
                     <span class="org-link-arrow">↗</span>
@@ -3820,6 +3751,51 @@
                     <p class="org-desc">La Asociación de Trastorno Neurológico Funcional en España. Promoviendo el
                         conocimiento, la investigación y el apoyo a pacientes en todo el país.</p>
                     <span class="org-type charity">Charity (Spain)</span>
+                </a>
+
+                <!-- NEW REQUESTED RESOURCES -->
+
+                <a href="https://trastornoneurologicofuncional.com/" target="_blank" class="org-card reveal"
+                    data-geo="europe" data-type="medical"
+                    data-tags="tnf spain spanish educacion recursos tratamiento rehabilitacion fnd">
+                    <span class="org-link-arrow">↗</span>
+                    <div class="org-icon" style="background:#E3EEF3;color:var(--ocean-deep);">🇪🇸</div>
+                    <h4>Rehabilitación TNF</h4>
+                    <p class="org-desc">Spanish educational website explaining FND, its symptoms, diagnosis, and
+                        treatment approaches. Focused on clear, evidence-based information.</p>
+                    <span class="org-type medical">Professional Resource</span>
+                </a>
+
+                <a href="https://www.instagram.com/fndnorthwest/" target="_blank" class="org-card reveal" data-geo="uk"
+                    data-type="support" data-tags="uk north west instagram community support peer">
+                    <span class="org-link-arrow">↗</span>
+                    <div class="org-icon" style="background:var(--sage-pale);color:var(--sage-deep);">📸</div>
+                    <h4>FND North West</h4>
+                    <p class="org-desc">Supportive FND community instagram account sharing insights, experiences, tips,
+                        and encouragement from people living with FND.</p>
+                    <span class="org-type support">Peer Support</span>
+                </a>
+
+                <a href="https://neurologyrehab.com/functionalneurologicaldisorder/" target="_blank"
+                    class="org-card reveal" data-geo="online" data-type="medical"
+                    data-tags="medical rehab online support therapy">
+                    <span class="org-link-arrow">↗</span>
+                    <div class="org-icon" style="background:#E8F1FA;color:#3D6E9E;">🏥</div>
+                    <h4>Neurology Rehab</h4>
+                    <p class="org-desc">Professional neurorehabilitation resource explaining FND and offering structured
+                        support including assessment, treatment, and self-management strategies to improve symptoms and
+                        quality of life.</p>
+                    <span class="org-type medical">Professional Resource</span>
+                </a>
+
+                <a href="https://www.fndwellbeing.com/" target="_blank" class="org-card reveal" data-geo="online"
+                    data-type="support" data-tags="wellbeing support online lived experience">
+                    <span class="org-link-arrow">↗</span>
+                    <div class="org-icon" style="background:#F0EDF5;color:#5A4A7A;">🌱</div>
+                    <h4>FND Wellbeing</h4>
+                    <p class="org-desc">Support and guidance for people living with Functional Neurological Disorder,
+                        shaped by lived experience and professional insight.</p>
+                    <span class="org-type support">Wellbeing Support</span>
                 </a>
 
             </div>
@@ -3875,6 +3851,11 @@
                     Session</a>
                 <a href="mailto:irenerouragarcia@gmail.com">Get in Touch</a>
             </div>
+        </div>
+        <div class="footer-disclaimer" data-i18n="footerDisclaimer">
+            <strong>Disclaimer:</strong> The information on FNDCareGuide.com is for educational and peer-support
+            purposes only and does not constitute professional medical advice, diagnosis, or treatment. Always consult
+            your doctor or a qualified healthcare provider regarding any medical condition or treatment plan.
         </div>
         <div class="footer-bottom">
             <span data-i18n="footerCopy">© 2026 FNDCare.org — Created with care by <a
@@ -3944,7 +3925,7 @@
             { cat: 'movement', title: 'Self-Soothing Touch & Movement', desc: 'Using gentle touches, strokes, or slight movements to calm the body and mind. A wonderful practice for regulating the nervous system.', type: 'steps', steps: ['Choose a comfortable position: sit or lie down', 'Begin with light strokes: gently stroke arms, legs, face, or any other area', 'Combine with gentle movement: sway the body part you\'re touching', 'Breathe deeply: inhale and exhale slowly while stroking', 'Notice the calming, soothing effect on your nervous system'] },
             { cat: 'movement', title: 'Shake-and-Tap Release', desc: 'Gentle rhythmic shaking with light tapping to wake up the body, boost circulation, release tension, and bring you into the present moment.', type: 'steps', steps: ['Shake hands & arms vigorously for 15-30 seconds — let tension jiggle out', 'Tap along your arms from shoulders to wrists for 15-30 seconds', 'Shake one leg at a time (15-30 seconds each)', 'Gently shake your whole body for 20-40 seconds, softening your knees', 'Conclude with light whole-body tapping — brushing away tension'] },
             { cat: 'movement', title: 'Dancing', desc: 'Moving freely to music for fun, expression, and releasing energy. Dancing can happen while sitting down too! Let your body take the lead.', type: 'steps', steps: ['Choose music: select songs that make you want to move', 'Create space: find a safe, open area', 'Move freely: dance in whatever way feels good — no technique needed', 'Let your body take the lead and move naturally to the rhythm', 'Focus on the freedom of movement and enjoy!'] },
-            { cat: 'movement', title: 'Brush Technique', desc: 'Sweeping your hand along a body part, as if brushing away dust or excess energy. Similar to Tai Chi, this practice soothes, relaxes, and calms.', type: 'steps', steps: ['Find a comfortable position — sitting or standing', 'Place one hand on your shoulder or thigh', 'Slowly sweep your hand downward, toward fingertips or end of the body part', 'Visualise tension being brushed away with each stroke', 'Repeat several times on each side — notice the release'] },
+            { cat: 'movement', title: 'Brush Technique', desc: 'Sweeping your hand along a body part, as if brushing away dust or excess energy. Similar to Tai Chi, this practice soothes, relaxes, and calms.', type: 'steps', steps: ['Find a comfortable position — sitting or standing', 'Place one hand on your shoulder or thigh', 'Slowly sweep your hand downward, toward fingertips or end of the body part', 'Visualise tension being brushed away with each stroke', 'Repeat several times on each side — notice the release', 'Breathe deeply: inhale and exhale slowly while stroking'] },
             { cat: 'movement', title: 'Stretching', desc: 'Extending and flexing muscles to maintain or improve flexibility. Even simple stretches upon waking and before bed can reduce pain frequency.', type: 'steps', steps: ['Warm up: gentle marching in place or swinging your arms', 'Target major muscle groups: legs, back, shoulders', 'Hold each stretch for 15-30 seconds', 'Breathe: inhale to lengthen the stretch, exhale to relax deeper into it', 'Aim for daily or frequent stretching — anything helps and adds up'] },
             // === ARTS (from book) ===
             { cat: 'arts', title: 'Expressive Drawing: Now → Future', desc: 'On the left, draw how you feel right now — any colour, any shape. On the right, draw where you want to be. There\'s no right or wrong. Let your hand express what words can\'t.', type: 'canvas' },
@@ -4252,6 +4233,8 @@
                 btn.classList.remove('expanded');
                 btn.querySelector('span:first-child').textContent = 'Show More Insights';
                 fade.classList.remove('hidden');
+                // Scroll back to section top
+                document.getElementById('community').scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
 
@@ -4354,15 +4337,18 @@
         // ===== TRANSLATION SYSTEM =====
         var translations = {
             en: {
+                draftBanner: 'Draft<br><span style="font-weight:400; font-size:0.65rem;">Final version will be published on 21 March.</span>',
                 skipLink: 'Skip to main content',
                 siteTitle: 'FNDCare',
                 navTools: 'Self-Care Tools',
-                navKnowledge: 'Knowledge Base',
-                navSupport: 'Find Support',
+                navKnowledge: 'Lived experience',
+                navSupport: 'Sources of Support',
                 navAbout: 'About Irene',
+                heroMiniHeader: 'Community Knowledge Base',
+                heroBtn3: 'Sources of support',
                 heroTag: 'Created by Irene Roura Garcia and Co',
                 heroTitle: 'The FND<br><em>Care Guide</em>',
-                heroSubtitle: 'Practical tools to help you care for yourself. Lived experience insights from people who understand. And trusted pathways to professional support — because nobody should have to navigate FND alone.',
+                heroSubtitle: 'A community knowledge base with practical tools that have helped others living with FND, along with lived-experience insights, caring messages, and links to professional and community support.',
                 heroBtn1: 'Explore Self-Care Tools',
                 heroBtn2: 'Lived experience quotes',
                 scroll: 'Scroll',
@@ -4371,7 +4357,7 @@
                 toolsDesc: 'Techniques that have helped other people living with FND and may help you too',
                 communityTag: 'Lived Experience Knowledge Base',
                 communityTitle: 'Lived experience quotes',
-                communityDesc: 'This is a crowd-sourced knowledge base — real insights from real people sharing the tools, techniques, and approaches that have helped them manage, ease, and recover from FND. Every contribution builds a richer picture of what actually works, and your lived experience is as valuable as any clinical study.',
+                communityDesc: 'This is a crowd-sourced knowledge base — real insights from real people sharing the tools, techniques, and approaches that have helped them manage, ease, and recover from FND. Every contribution builds a richer picture of what actually works. Your lived experience is an invaluable part of the community\'s collective wisdom.',
                 shareTitle: 'Add Your Insight to the Knowledge Base',
                 shareDesc: 'Please feel free to share what has helped you — whether it’s a breathing technique, movement practice, music, or something someone once said. Your experience is valuable, and sharing it could make a meaningful difference in someone else’s journey.',
                 signpostTag: 'Professional & Network Support',
@@ -4379,6 +4365,7 @@
                 signpostDesc: 'We can support ourselves in many ways, and the activities above may help us support ourselves. However, they are not a substitute for professional care. If your health or wellbeing is suffering, please seek support from your local healthcare provider. Always follow the treatment or care plan agreed with your doctor or healthcare team.<br><br>Below is a list of organisations, charities, networks, and groups that offer professional and community support for people living with FND.',
                 resourceCount: 'Showing all 38 resources',
                 footerDesc: 'Created by <strong style="color:white">Irene Roura Garcia and Co</strong>. Built with compassion, backed by lived experience and clinical expertise.',
+                footerDisclaimer: '<strong>Disclaimer:</strong> The information on FNDCareGuide.com is for educational and peer-support purposes only and does not constitute professional medical advice, diagnosis, or treatment. Always consult your doctor or a qualified healthcare provider regarding any medical condition or treatment plan.',
                 footerCopy: '© 2026 FNDCare.org — Created with care by <a href="https://irenerouragarcia.com" target="_blank">Irene Roura Garcia and Co</a>',
                 showMore: 'Show More Insights',
                 showLess: 'Show Less',
@@ -4398,7 +4385,7 @@
                 bookFeat4: '<span class="check">✓</span> Guidance for navigating care and building your personal toolkit',
                 bookFeat5: '<span class="check">✓</span> A reminder that improvement, connection, and hope are possible',
                 bookBtn: 'Learn More',
-                caringTitle: '&#128156; Caring messages &#128156;',
+                caringTitle: '<span style="font-size: 0.4em;">&#128156;</span> Caring messages <span style="font-size: 0.4em;">&#128156;</span>',
                 caringSubtitle: 'Supportive messages from people navigating FND',
                 cmsg1: 'Strive for progress, not perfection. A tiny step in the right direction is still progress.',
                 cmsg2: 'It may feel terrifying and hopeless at first, but I promise it can get better. Take in the new feelings without judgment, keep going, be patient, trust the process — one day at a time.',
@@ -4425,22 +4412,25 @@
                 cmsg24: 'Find local support groups and talk to others on the FND journey.',
                 cmsg25: 'Reach out to others.',
                 cmsg26: 'You are not alone. Using tools isn’t weakness. You still have value and can achieve your dreams. It’s okay to grieve and to struggle — seek support, it makes a difference.',
-                cmsg27: 'Research your condition online. Follow FND Hope USA and FND Action, download the myFND app, seek therapy, and give yourself time to accept and adapt.',
+                cmsg27: 'Research your condition online. Follow FND Action, download the myFND app, seek therapy, and give yourself time to accept and adapt.',
                 cmsg28: 'See a neurologist who understands FND and takes you seriously. A peer support group can help too.',
                 cmsg29: 'In the confusion and loss, take one day at a time. You will rebuild. Be open and brave — accept what is, do what you can, and know that’s enough.',
-                floatingSurveyText: 'Do you have lived experience of FND and would like to share what has helped you? - click here to go to the survey and support us in developing this community knowledge base.',
+                floatingSurveyText: 'Do you have lived experience of FND and would like to share what has helped you? Click here to complete the survey and contribute to this community knowledge base.',
                 floatingSurveyBtn: 'Go to Survey'
             },
             es: {
+                draftBanner: 'Borrador<br><span style="font-weight:400; font-size:0.65rem;">La versión final se publicará el 21 de marzo.</span>',
                 skipLink: 'Saltar al contenido principal',
                 siteTitle: 'Guía de cuidado TNF',
-                navTools: 'Herramientas de Autocuidado',
-                navKnowledge: 'Base de Conocimiento',
-                navSupport: 'Encontrar Apoyo',
+                navTools: 'Herramientas de auto-cuidado',
+                navKnowledge: 'Experiencia vivida',
+                navSupport: 'Fuentes de apoyo',
                 navAbout: 'Sobre Irene',
+                heroMiniHeader: 'Base de conocimiento comunitaria',
+                heroBtn3: 'Fuentes de apoyo',
                 heroTag: 'Creado por Irene Roura Garcia y Co',
                 heroTitle: 'Guía de cuidado TNF',
-                heroSubtitle: 'Recursos prácticos para tu bienestar. La sabiduría de quienes han recorrido este camino y lo entienden de verdad. Y acceso seguro a apoyo profesional, porque nadie debería afrontar el TNF en soledad.',
+                heroSubtitle: 'Una base de conocimiento comunitaria con herramientas prácticas que han ayudado a otras personas que viven con el TNF, junto con perspectivas de experiencia vivida, mensajes de ánimo y enlaces a apoyo profesional y comunitario.',
                 heroBtn1: 'Explora herramientas de auto-cuidado',
                 heroBtn2: 'Citas de experiencia vivida',
                 scroll: 'Desplazar',
@@ -4449,7 +4439,7 @@
                 toolsDesc: 'El principal objetivo de la Guía de Cuidado TNF es ofrecerte herramientas que puedas poner en práctica de verdad — aquí y ahora. Pulsa el botón para descubrir un recurso de una de las diez categorías de autocuidado. Cada uno ha sido seleccionado porque personas con TNF lo han encontrado realmente útil.',
                 communityTag: 'Base de Conocimiento de Experiencia Vivida',
                 communityTitle: 'Citas de experiencia vivida',
-                communityDesc: 'Esta es una base de conocimiento colaborativa: perspectivas reales de personas reales que comparten las herramientas, técnicas y enfoques que les han ayudado a manejar sus síntomas, encontrar alivio y avanzar en su recuperación del TNF. Cada aportación contribuye a construir una comprensión más rica de lo que realmente ayuda.',
+                communityDesc: 'Esta es una base de conocimiento colaborativa: perspectivas reales de personas reales que comparten las herramientas, técnicas y enfoques que les han ayudado a manejar sus síntomas, encontrar alivio y avanzar en su recuperación del TNF. Cada aportación contribuye a construir una comprensión más rica de lo que realmente funciona. Tu experiencia vivida es una parte invaluable de la sabiduría colectiva de la comunidad.',
                 shareTitle: 'Añade Tu Perspectiva a la Base de Conocimiento',
                 shareDesc: '¿Qué te ha ayudado? Ya sea una técnica de respiración, una práctica de movimiento, tiempo en la naturaleza, una salida creativa, o simplemente algo que alguien dijo que cambió tu perspectiva — tu aportación podría ser la que ayude a otra persona. Así es como construimos una base de conocimiento juntos.',
                 signpostTag: 'Apoyo Profesional y de Red',
@@ -4457,6 +4447,7 @@
                 signpostDesc: 'Podemos apoyarnos de muchas maneras, y las actividades anteriores pueden ayudarnos a cuidarnos. Sin embargo, no sustituyen la atención profesional. Si tu salud o bienestar se ven afectados, busca apoyo de tu proveedor de atención médica local. Sigue siempre el tratamiento o plan de cuidado acordado con tu médico o equipo de salud.<br><br>A continuación se muestra una lista de organizaciones, organizaciones benéficas, redes y grupos que ofrecen apoyo profesional y comunitario para personas que viven con el TNF',
                 resourceCount: 'Mostrando los 38 recursos',
                 footerDesc: 'Creado por <strong style="color:white">Irene Roura Garcia y Co</strong>. Construido con compasión, respaldado por experiencia vivida y experiencia clínica.',
+                footerDisclaimer: '<strong>Descargo de responsabilidad:</strong> La información en FNDCareGuide.com es solo para fines educativos y de apoyo entre pares, y no constituye consejo médico profesional, diagnóstico o tratamiento. Consulta siempre a tu médico o a un proveedor de atención médica calificado sobre cualquier condición médica o plan de tratamiento.',
                 footerCopy: '© 2026 FNDCare.org — Creado con cariño por <a href="https://irenerouragarcia.com" target="_blank">Irene Roura Garcia y Co</a>',
                 showMore: 'Mostrar Más Perspectivas',
                 showLess: 'Mostrar Menos',
@@ -4476,7 +4467,7 @@
                 bookFeat4: '<span class="check">✓</span> Orientación para navegar tu atención médica y construir tu kit de herramientas personal',
                 bookFeat5: '<span class="check">✓</span> Un recordatorio de que la mejoría, la conexión y la esperanza son posibles',
                 bookBtn: 'Saber Más',
-                caringTitle: '&#128156; Mensajes de ánimo &#128156;',
+                caringTitle: '<span style="font-size: 0.4em;">&#128156;</span> Mensajes de ánimo <span style="font-size: 0.4em;">&#128156;</span>',
                 caringSubtitle: 'Mensajes de apoyo de personas que navegan por el TNF',
                 cmsg1: 'Busca el progreso, no la perfección. Un paso minúsculo en la dirección correcta sigue siendo un progreso.',
                 cmsg2: 'Al principio puede parecer aterrador y sin esperanza, pero prometo que puede mejorar. Asimila los nuevos sentimientos sin juzgar, sigue adelante, ten paciencia, confía en el proceso — un día a la vez.',
