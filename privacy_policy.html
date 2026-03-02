@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - FND Care Guide</title>
+    <!-- Favicon -->
+    <link rel="icon" href="logo_hero_bottom.png" type="image/png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&family=Caveat:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            /* Keep color palette consistent */
+            --warm-white: #FDFBF9;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --purple-deep: #6B4F9E;
+            --purple: #9B7DC4;
+            --purple-light: #C4B0DC;
+            --sage-deep: #6B4F9E;
+            --cream: #F7F3F8;
+            --sage: #9B7DC4;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--warm-white);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1,
+        h2 {
+            font-family: 'DM Serif Display', serif;
+            color: var(--purple-deep);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        p,
+        li {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        ul {
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        a {
+            color: var(--purple);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--sage-deep);
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        /* Language toggle styled similar to index */
+        .lang-toggle {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 2rem;
+        }
+
+        .lang-toggle div {
+            display: inline-flex;
+            border-radius: 50px;
+            overflow: hidden;
+            border: 1.5px solid var(--purple-light);
+        }
+
+        .lang-toggle button {
+            padding: 0.35rem 0.7rem;
+            border: none;
+            background: transparent;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: var(--text-secondary);
+        }
+
+        .lang-toggle button.active {
+            background: var(--purple-deep);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="lang-toggle">
+        <div>
+            <button id="lang-en" class="active" onclick="setLang('en')" aria-pressed="true">EN</button>
+            <button id="lang-es" onclick="setLang('es')" aria-pressed="false">ES</button>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-link" data-i18n="back_link">← Back to main site</a>
+
+    <h1 data-i18n="title">Privacy Policy</h1>
+
+    <p data-i18n="last_updated"><strong>Last Updated:</strong> March 2026</p>
+
+    <h2 data-i18n="analytics_title">Analytics Data Collection</h2>
+    <p data-i18n="analytics_p1">This site uses <strong>GoatCounter</strong> as its analytics tool to help understand how
+        visitors use the website and what features are most helpful to the community.</p>
+
+    <p data-i18n="analytics_p2">GoatCounter is specifically designed to be privacy-friendly. It <strong>does
+            not</strong> track individuals, does not collect any personally identifiable information (PII), and does not
+        use cookies.</p>
+
+    <h2 data-i18n="what_we_collect_title">What Analytics Data is Collected?</h2>
+    <p data-i18n="what_we_collect_desc">This site only collects anonymous, aggregated data. According to the
+        configuration, the
+        following anonymous data points are tracked:</p>
+    <ul>
+        <li data-i18n="collect_1"><strong>Individual Pageviews:</strong> Stored to track overall site traffic patterns.
+        </li>
+        <li data-i18n="collect_2"><strong>Sessions:</strong> To ensure accurate counts (like making sure a simple page
+            refresh isn't counted as a brand new visit), this site temporarily notes a visit for up to 8 hours before
+            securely discarding it.</li>
+        <li data-i18n="collect_3"><strong>Device Size:</strong> This site tracks screen dimensions (e.g., mobile vs
+            desktop) to
+            ensure the website renders correctly on the devices people actually use.</li>
+        <li data-i18n="collect_4"><strong>Country:</strong> This site logs the country name (e.g., UK, Spain, US)
+            derived from
+            an anonymized IP address to understand where the community is located.</li>
+    </ul>
+
+    <h2 data-i18n="what_we_dont_collect_title">What is NOT Collected?</h2>
+    <ul>
+        <li data-i18n="not_collect_1">This site does <strong>not</strong> collect Referrer data (where you clicked a
+            link from).
+        </li>
+        <li data-i18n="not_collect_2">This site does <strong>not</strong> collect User-Agent data (specific web browser
+            names and
+            operating system names).</li>
+        <li data-i18n="not_collect_3">This site does <strong>not</strong> track Regional data within your country.</li>
+        <li data-i18n="not_collect_4">This site does <strong>not</strong> track your specific browser language settings.
+        </li>
+    </ul>
+
+    <h2 data-i18n="survey_title">Survey Data & Knowledge Base</h2>
+    <p data-i18n="survey_p1">Community survey data collection is managed via <strong>Google Forms</strong>. The specific
+        terms and agreements are outlined within the surveys themselves.</p>
+    <p data-i18n="survey_p2">The goal of these surveys is to produce an open knowledge base. Please only share
+        information that you are happy to be made public, and that you are happy for Irene Roura Garcia and the FND Care
+        Guide to use as quotes in communications materials of all sorts.</p>
+
+    <p data-i18n="gdpr_statement">Because this site does not collect personal data or utilize tracking cookies, it does
+        not require a cookie consent banner under GDPR regulations. Your privacy is respected by default.</p>
+
+    <h2 data-i18n="contact_title">Contact</h2>
+    <p data-i18n="contact_desc">If you have any questions regarding how your privacy is handled while using this site,
+        please contact: <a href="mailto:irenerouragarcia@gmail.com">irenerouragarcia@gmail.com</a>.</p>
+
+    <script>
+        const translations = {
+            en: {
+                back_link: "← Back to main site",
+                title: "Privacy Policy",
+                last_updated: "<strong>Last Updated:</strong> March 2026",
+                analytics_title: "Analytics Data Collection",
+                analytics_p1: "This site uses <strong>GoatCounter</strong> as its analytics tool to help understand how visitors use the website and what features are most helpful to the community.",
+                analytics_p2: "GoatCounter is specifically designed to be privacy-friendly. It <strong>does not</strong> track individuals, does not collect any personally identifiable information (PII), and does not use cookies.",
+                what_we_collect_title: "What Analytics Data is Collected?",
+                what_we_collect_desc: "This site only collects anonymous, aggregated data. According to the configuration, the following anonymous data points are tracked:",
+                collect_1: "<strong>Individual Pageviews:</strong> Stored to track overall site traffic patterns.",
+                collect_2: "<strong>Sessions:</strong> To ensure accurate counts (like making sure a simple page refresh isn't counted as a brand new visit), this site temporarily notes a visit for up to 8 hours before securely discarding it.",
+                collect_3: "<strong>Device Size:</strong> This site tracks screen dimensions (e.g., mobile vs desktop) to ensure the website renders correctly on the devices people actually use.",
+                collect_4: "<strong>Country:</strong> This site logs the country name (e.g., UK, Spain, US) derived from an anonymized IP address to understand where the community is located.",
+                what_we_dont_collect_title: "What is NOT Collected?",
+                not_collect_1: "This site does <strong>not</strong> collect Referrer data (where you clicked a link from).",
+                not_collect_2: "This site does <strong>not</strong> collect User-Agent data (specific web browser names and operating system names).",
+                not_collect_3: "This site does <strong>not</strong> track Regional data within your country.",
+                not_collect_4: "This site does <strong>not</strong> track your specific browser language settings.",
+                survey_title: "Survey Data & Knowledge Base",
+                survey_p1: "Community survey data collection is managed via <strong>Google Forms</strong>. The specific terms and agreements are outlined within the surveys themselves.",
+                survey_p2: "The goal of these surveys is to produce an open knowledge base. Please only share information that you are happy to be made public, and that you are happy for Irene Roura Garcia and the FND Care Guide to use as quotes in communications materials of all sorts.",
+                gdpr_statement: "Because this site does not collect personal data or utilize tracking cookies, it does not require a cookie consent banner under GDPR regulations. Your privacy is respected by default.",
+                contact_title: "Contact",
+                contact_desc: "If you have any questions regarding how your privacy is handled while using this site, please contact: <a href=\"mailto:irenerouragarcia@gmail.com\">irenerouragarcia@gmail.com</a>."
+            },
+            es: {
+                back_link: "← Volver al sitio principal",
+                title: "Política de Privacidad",
+                last_updated: "<strong>Última actualización:</strong> Marzo 2026",
+                analytics_title: "Recopilación de Datos Analíticos",
+                analytics_p1: "Este sitio utiliza <strong>GoatCounter</strong> como herramienta de análisis para entender cómo los visitantes usan el sitio web y qué funciones son más útiles para la comunidad.",
+                analytics_p2: "GoatCounter está diseñado específicamente para respetar la privacidad. <strong>No</strong> rastrea a los individuos, no recopila ninguna información de identificación personal (PII) y no utiliza cookies.",
+                what_we_collect_title: "¿Qué datos analíticos se recopilan?",
+                what_we_collect_desc: "Este sitio solo recopila datos anónimos y agregados. Según la configuración, se rastrean los siguientes puntos de datos anónimos:",
+                collect_1: "<strong>Visitas individuales a la página:</strong> Almacenadas para rastrear patrones generales de tráfico del sitio.",
+                collect_2: "<strong>Sesiones:</strong> Para garantizar recuentos precisos (como asegurar que una simple actualización de la página no se cuente como una visita completamente nueva), este sitio nota temporalmente una visita por hasta 8 horas antes de descartarla de forma segura.",
+                collect_3: "<strong>Tamaño del dispositivo:</strong> Este sitio rastrea las dimensiones de la pantalla (ej., móvil vs escritorio) para asegurar que el sitio web se muestre correctamente en los dispositivos que la gente usa.",
+                collect_4: "<strong>País:</strong> Este sitio registra el nombre del país (ej., España, Reino Unido, EE. UU.) derivado de una dirección IP anonimizada para entender dónde se encuentra la comunidad.",
+                what_we_dont_collect_title: "¿Qué NO se recopila?",
+                not_collect_1: "Este sitio <strong>no</strong> recopila datos de Referente (desde dónde hiciste clic en un enlace).",
+                not_collect_2: "Este sitio <strong>no</strong> recopila datos de User-Agent (nombres específicos de navegadores web y sistemas operativos).",
+                not_collect_3: "Este sitio <strong>no</strong> rastrea datos Regionales dentro de tu país.",
+                not_collect_4: "Este sitio <strong>no</strong> rastrea la configuración de idioma específica de tu navegador.",
+                survey_title: "Datos de Encuestas y Base de Conocimiento",
+                survey_p1: "La recopilación de datos de las encuestas de la comunidad se gestiona a través de <strong>Google Forms</strong>. Los términos y acuerdos específicos se detallan en las propias encuestas.",
+                survey_p2: "El objetivo de estas encuestas es producir una base de conocimiento abierta. Por favor, comparte solo información que estés dispuesto a hacer pública, y que estés de acuerdo en que Irene Roura Garcia y la FND Care Guide la utilicen como citas en materiales de comunicación de todo tipo.",
+                gdpr_statement: "Debido a que este sitio no recopila datos personales ni utiliza cookies de seguimiento, no requiere un banner de consentimiento de cookies bajo las regulaciones GDPR. Tu privacidad es respetada por defecto.",
+                contact_title: "Contacto",
+                contact_desc: "Si tienes alguna pregunta sobre cómo se maneja tu privacidad al usar este sitio, por favor contacta a: <a href=\"mailto:irenerouragarcia@gmail.com\">irenerouragarcia@gmail.com</a>."
+            }
+        };
+
+        function setLang(lang) {
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            document.getElementById('lang-en').classList.remove('active');
+            document.getElementById('lang-es').classList.remove('active');
+            document.getElementById('lang-en').setAttribute('aria-pressed', 'false');
+            document.getElementById('lang-es').setAttribute('aria-pressed', 'false');
+
+            document.getElementById('lang-' + lang).classList.add('active');
+            document.getElementById('lang-' + lang).setAttribute('aria-pressed', 'true');
+
+            // Save preference
+            try { localStorage.setItem('fndLangPref', lang); } catch (e) { }
+        }
+
+        // Initialize based on saved preference or browser language
+        document.addEventListener('DOMContentLoaded', () => {
+            let userLang = 'en';
+            try {
+                const saved = localStorage.getItem('fndLangPref');
+                if (saved) {
+                    userLang = saved;
+                } else {
+                    const browserLang = navigator.language || navigator.userLanguage;
+                    if (browserLang.startsWith('es')) userLang = 'es';
+                }
+            } catch (e) { }
+
+            setLang(userLang);
+        });
+    </script>
+</body>
+
+</html>
