@@ -14,6 +14,22 @@
         content="A community knowledge base with practical tools that have helped others living with FND, along with lived-experience insights, caring messages, and links to professional and community support.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://fndcareguide.com">
+    <meta property="og:image" content="https://fndcareguide.com/logo_main.png">
+    <meta name="twitter:card" content="summary">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "FND Care Guide",
+      "url": "https://fndcareguide.com",
+      "inLanguage": ["en", "es"],
+      "author": {
+        "@type": "Person",
+        "name": "Irene Roura García",
+        "url": "https://irenerouragarcia.com/"
+      }
+    }
+    </script>
 
     <meta name="keywords" content="FND, Functional Neurological Disorder, self-care, wellbeing, support, care guide">
 
@@ -2422,6 +2438,167 @@
             outline-offset: -3px;
         }
     </style>
+    <style>
+        /* ===== Jul 2026 additions: survey mini-links, outcomes strip, support card, accessibility toggles ===== */
+        .survey-mini-link {
+            display: inline-block;
+            margin-top: 0.9rem;
+            font-size: 0.85rem;
+            color: var(--sage-deep);
+            text-decoration: none;
+            border-bottom: 1px solid var(--sage-deep);
+            padding-bottom: 1px;
+        }
+
+        .survey-mini-link:hover {
+            opacity: 0.8;
+        }
+
+        .outcomes-strip {
+            max-width: 720px;
+            margin: 3rem auto 0;
+            padding: 1.6rem 1.8rem;
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid rgba(139, 168, 136, 0.35);
+            border-radius: 18px;
+            text-align: center;
+        }
+
+        .outcomes-strip h3 {
+            color: var(--sage-deep);
+            margin-bottom: 0.7rem;
+        }
+
+        .outcomes-strip p {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            margin: 0.4rem 0;
+            line-height: 1.6;
+        }
+
+        .outcomes-strip a {
+            color: var(--sage-deep);
+        }
+
+        .outcomes-disclaimer {
+            font-size: 0.72rem !important;
+            opacity: 0.85;
+            margin-top: 0.9rem !important;
+        }
+
+        .support-card {
+            max-width: 720px;
+            margin: 1.4rem auto 0;
+            padding: 1.4rem 1.8rem;
+            background: rgba(237, 231, 243, 0.55);
+            border-radius: 18px;
+            text-align: center;
+        }
+
+        .support-card p {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.9rem;
+        }
+
+        .support-card-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .footer-a11y-note {
+            display: block;
+            margin-top: 0.8rem;
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.55);
+            line-height: 1.5;
+        }
+
+        .a11y-controls {
+            display: flex;
+            gap: 0.4rem;
+            align-items: center;
+        }
+
+        .a11y-btn {
+            font-family: inherit;
+            font-size: 0.68rem;
+            padding: 0.32rem 0.7rem;
+            border-radius: 50px;
+            border: 1px solid rgba(107, 91, 149, 0.4);
+            background: transparent;
+            color: var(--text-secondary);
+            cursor: pointer;
+        }
+
+        .a11y-btn[aria-pressed="true"] {
+            background: var(--sage-deep);
+            border-color: var(--sage-deep);
+            color: #fff;
+        }
+
+        /* Reduced motion: applies via user toggle (body class) — the same rules
+           are duplicated below inside the media query for the OS setting. */
+        body.reduced-motion *,
+        body.reduced-motion *::before,
+        body.reduced-motion *::after {
+            animation: none !important;
+            transition: none !important;
+            scroll-behavior: auto !important;
+        }
+
+        body.reduced-motion .reveal {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                transition: none !important;
+                scroll-behavior: auto !important;
+            }
+
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+
+        body.large-text {
+            font-size: 118%;
+        }
+
+        body.large-text .org-desc,
+        body.large-text .tool-desc,
+        body.large-text p {
+            font-size: 1.02em;
+        }
+    </style>
+    <script>
+        // Apply saved accessibility preferences before first paint (no flash).
+        (function () {
+            try {
+                if (localStorage.getItem('fndcare_reducedMotion') === '1' ||
+                    (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+                    document.documentElement.classList.add('pre-reduced-motion');
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.body.classList.add('reduced-motion');
+                    });
+                }
+                if (localStorage.getItem('fndcare_largeText') === '1') {
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.body.classList.add('large-text');
+                    });
+                }
+            } catch (e) { /* localStorage unavailable — defaults apply */ }
+        })();
+    </script>
 </head>
 
 <body>
@@ -2442,6 +2619,12 @@
                 <div class="lang-toggle" role="group" aria-label="Language selector">
                     <button id="langEn" class="active" onclick="setLang('en')" aria-label="English">EN</button>
                     <button id="langEs" onclick="setLang('es')" aria-label="Español">ES</button>
+                </div>
+            </li>
+            <li>
+                <div class="a11y-controls" role="group" aria-label="Accessibility options">
+                    <button id="toggleTextBtn" class="a11y-btn" aria-pressed="false" onclick="toggleLargeText()"
+                        data-i18n="toggleText">Larger text</button>
                 </div>
             </li>
         </ul>
@@ -2516,22 +2699,28 @@
                     </div>
                     <div class="tool-controls">
                         <button class="tool-btn primary" id="toolActionBtn" onclick="toolAction()">Start</button>
-                        <button class="tool-btn secondary" onclick="shuffleTool()">⟳ New Tool</button>
+                        <button class="tool-btn secondary" onclick="shuffleTool()" data-i18n="toolShuffleBtn">⟳ New
+                            Tool</button>
                     </div>
+                    <!-- Jul 2026: survey mini-link replaces planned live voting (decision item 10) -->
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdjXKt5A5uBE0MW-lb3xXfAOZkWOgwD-wN2iVkPcPVXJU-55A/viewform"
+                        target="_blank" rel="noopener" class="survey-mini-link"
+                        data-i18n="toolSurveyLink">Did this help you? Tell
+                        us in the 2-minute What Helps survey →</a>
                 </div>
 
                 <!-- BOOK CARD (always visible) -->
                 <div class="book-card reveal">
                     <span class="card-label" data-i18n="bookLabel">📖 The Guide</span>
                     <h3 data-i18n="bookTitle">FND Care Guide Book</h3>
-                    <p class="desc" data-i18n="bookDesc">Created with care, clarity, and intention, this guide is a
-                        compassionate, practical handbook designed to share with you what has helped other people living
-                        with FND manage their symptoms, feel more in control, and improve their wellbeing — and what
-                        might help you, too. It has been shaped by the insights and voices of the FND community.</p>
+                    <p class="desc" data-i18n="bookDesc">Compassionate, practical handbook designed to share with you
+                        what has helped other people living with FND manage their symptoms, feel more in control, and
+                        improve their wellbeing, and what might help you, too. Shaped by the insights and voices of the
+                        FND community.</p>
                     <div class="book-visual">
                         <a href="https://fnd-care.myshopify.com/products/pre-order-fnd-care-guide-book-1st-edition?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
                             target="_blank">
-                            <img src="Screenshot 2026-02-17 at 19.06.27.png" alt="The FND Care Guide book cover"
+                            <img src="book_cover.png" alt="The FND Care Guide book cover"
                                 class="book-cover-img">
                         </a>
                     </div>
@@ -2545,11 +2734,11 @@
                         <div class="book-feature" data-i18n="bookFeat4"><span class="check">✓</span> Guidance for
                             navigating care and building your personal toolkit</div>
                         <div class="book-feature" data-i18n="bookFeat5"><span class="check">✓</span> A reminder that
-                            improvement, connection, and hope are possible</div>
+                            there is hope and that you are not alone</div>
                     </div>
                     <a href="https://fnd-care.myshopify.com/products/pre-order-fnd-care-guide-book-1st-edition?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
-                        target="_blank" class="btn btn-primary" style="align-self:flex-start;" data-i18n="bookBtn">Learn
-                        More</a>
+                        target="_blank" class="btn btn-primary" style="align-self:flex-start;" data-i18n="bookBtn">Get
+                        yours</a>
                 </div>
             </div>
         </section>
@@ -3432,6 +3621,21 @@
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5LP47ylQVbTaoLzZ3UjR3GXiNA1522QJ1aTgkoU-d_0uNcw/viewform"
                             target="_blank" class="btn btn-primary" style="margin-top:0.5rem;"
                             data-i18n="extendedQuestionnaire">📝 Extended Questionnaire</a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdjXKt5A5uBE0MW-lb3xXfAOZkWOgwD-wN2iVkPcPVXJU-55A/viewform"
+                            target="_blank" rel="noopener" class="survey-mini-link"
+                            data-i18n="storiesSurveyLink">Has something here
+                            helped you? Add your voice in the What Helps survey →</a>
+                    </div>
+                </div>
+
+                <!-- Jul 2026: Patreon support card (decisions B-new-1 / B-new-2) -->
+                <div class="support-card reveal">
+                    <p data-i18n="supportCardText">This resource is free and community-built.<br>You can support its
+                        upkeep and development on Patreon — and get great rewards in return: weekly and monthly group
+                        sessions, exclusive content, and more!</p>
+                    <div class="support-card-links">
+                        <a href="https://www.patreon.com/cw/IreneRouraGarcia" target="_blank" rel="noopener"
+                            class="btn btn-primary" data-i18n="footerPatreon">Support on Patreon</a>
                     </div>
                 </div>
             </div>
@@ -3465,11 +3669,12 @@
                     <button class="signpost-filter-btn" onclick="filterOrgType('support', this)">Peer Support</button>
                     <button class="signpost-filter-btn" onclick="filterOrgType('specialist', this)">Specialist</button>
                     <button class="signpost-filter-btn" onclick="filterOrgType('tools', this)">Apps &amp; Tools</button>
+                    <button class="signpost-filter-btn" onclick="filterOrgType('spanish', this)">🇪🇸 En Español</button>
                 </div>
 
             </div>
 
-            <p class="signpost-count" id="signpostCount" data-i18n="resourceCount">Showing all 38 resources</p>
+            <p class="signpost-count" id="signpostCount" data-i18n="resourceCount">Showing all 41 resources</p>
 
             <div class="signpost-grid" id="signpostGrid">
 
@@ -3522,12 +3727,12 @@
 
                 <a href="https://fndfriends.com" target="_blank" class="org-card reveal" data-geo="uk"
                     data-type="charity"
-                    data-tags="fnd friends peer support community meetups brian toolbox coping network south west england bristol gloucester charity">
+                    data-tags="fnd friends peer support community meetups brian toolbox coping network south west england south wales bristol gloucester charity">
                     <span class="org-link-arrow">↗</span>
                     <div class="org-icon" style="background:var(--earth-pale);color:#8A6D4B;">💬</div>
                     <h4>FND Friends</h4>
-                    <p class="org-desc">South West England-based charity with peer support groups, meetups, holistic
-                        therapy
+                    <p class="org-desc">South West England and South Wales based charity with peer support groups,
+                        meetups, holistic therapy
                         sessions, and BRIAN — a practical toolbox for coping with FND day-to-day.</p>
                     <span class="org-type charity">UK Charity</span>
                 </a>
@@ -3857,8 +4062,8 @@
                 </a>
 
                 <a href="https://tnf-spain.org/" target="_blank" class="org-card reveal" data-geo="europe"
-                    data-type="charity"
-                    data-tags="tnf espana spain asociación trastorno neurológico funcional charity support">
+                    data-type="charity" data-lang="es"
+                    data-tags="tnf espana spain asociación trastorno neurológico funcional charity support spanish español">
                     <span class="org-link-arrow">↗</span>
                     <div class="org-icon" style="background:#FBE8EF;color:#D4839B;">🇪🇸</div>
                     <h4>Asociación Española de TNF</h4>
@@ -3870,8 +4075,8 @@
                 <!-- NEW REQUESTED RESOURCES -->
 
                 <a href="https://trastornoneurologicofuncional.com/" target="_blank" class="org-card reveal"
-                    data-geo="europe" data-type="medical"
-                    data-tags="tnf spain spanish educacion recursos tratamiento rehabilitacion fnd">
+                    data-geo="europe" data-type="medical" data-lang="es"
+                    data-tags="tnf spain spanish español educacion recursos tratamiento rehabilitacion fnd">
                     <span class="org-link-arrow">↗</span>
                     <div class="org-icon" style="background:#E3EEF3;color:var(--ocean-deep);">🇪🇸</div>
                     <h4>Rehabilitación TNF</h4>
@@ -3910,6 +4115,39 @@
                     <p class="org-desc">Support and guidance for people living with Functional Neurological Disorder,
                         shaped by lived experience and professional insight.</p>
                     <span class="org-type support">Wellbeing Support</span>
+                </a>
+
+                <a href="https://www.facebook.com/groups/1118556290245976" target="_blank" class="org-card reveal"
+                    data-geo="global" data-type="support"
+                    data-tags="fnd connect australia national peer led support facebook group families carers community">
+                    <span class="org-link-arrow">↗</span>
+                    <div class="org-icon" style="background:#FFF3E0;color:#B8860B;">🇦🇺</div>
+                    <h4>FND Connect Australia</h4>
+                    <p class="org-desc">National peer-led support for individuals diagnosed with FND, their families,
+                        and carers — an active Facebook community connecting people across Australia.</p>
+                    <span class="org-type support">Peer Support (Australia)</span>
+                </a>
+
+                <a href="https://www.themedicalblindspot.com/" target="_blank" class="org-card reveal" data-geo="uk"
+                    data-type="support"
+                    data-tags="medical blind spot nhs advocacy uk complex chronic undiagnosed conditions patient advocate">
+                    <span class="org-link-arrow">↗</span>
+                    <div class="org-icon" style="background:#E8F1FA;color:#3D6E9E;">🧭</div>
+                    <h4>The Medical Blind Spot</h4>
+                    <p class="org-desc">Independent NHS advocacy for people with complex, chronic, or undiagnosed
+                        conditions — helping patients be heard and navigate their care.</p>
+                    <span class="org-type support">Advocacy (UK)</span>
+                </a>
+
+                <a href="https://www.fndportal.org" target="_blank" class="org-card reveal" data-geo="global"
+                    data-type="medical"
+                    data-tags="fnd portal patient information perspectives resources articles science lived experience library">
+                    <span class="org-link-arrow">↗</span>
+                    <div class="org-icon" style="background:#EDE7F3;color:#7A619B;">📚</div>
+                    <h4>FND Portal</h4>
+                    <p class="org-desc">Patient-created library of information and perspectives on FND — curated
+                        articles, science, and lived-experience resources in one place.</p>
+                    <span class="org-type nhs">Information Resource</span>
                 </a>
 
             </div>
@@ -3964,10 +4202,16 @@
                 <h5>Connect with Irene</h5>
                 <a href="https://irenerouragarcia.com" target="_blank">irenerouragarcia.com</a>
                 <a href="https://www.instagram.com/irenerouragarcia/" target="_blank">@irenerouragarcia</a>
-                <a href="https://patreon.com/irenerouragarcia" target="_blank">Support on Patreon</a>
                 <a href="https://calendly.com/irenerouragarcia/freeconsultation" target="_blank">Book a Free
                     Session</a>
                 <a href="mailto:irenerouragarcia@gmail.com">Get in Touch</a>
+            </div>
+            <div class="footer-col">
+                <h5 data-i18n="footerSupportTitle">Support</h5>
+                <a href="https://www.patreon.com/cw/IreneRouraGarcia" target="_blank" rel="noopener"
+                    data-i18n="footerPatreon">Support on Patreon</a>
+                <span class="footer-a11y-note" data-i18n="a11yStatement">Designed with and for people living with FND —
+                    no flashing, gentle pacing, your pace.</span>
             </div>
         </div>
         <div class="footer-disclaimer" data-i18n="footerDisclaimer">
@@ -3984,6 +4228,30 @@
     </footer>
 
     <script>
+        // ===== ACCESSIBILITY TOGGLES (Jul 2026, decision item 12) =====
+        function toggleReducedMotion() {
+            var on = !document.body.classList.contains('reduced-motion');
+            document.body.classList.toggle('reduced-motion', on);
+            try { localStorage.setItem('fndcare_reducedMotion', on ? '1' : '0'); } catch (e) { }
+            var b = document.getElementById('toggleMotionBtn');
+            if (b) b.setAttribute('aria-pressed', String(on));
+        }
+
+        function toggleLargeText() {
+            var on = !document.body.classList.contains('large-text');
+            document.body.classList.toggle('large-text', on);
+            try { localStorage.setItem('fndcare_largeText', on ? '1' : '0'); } catch (e) { }
+            var b = document.getElementById('toggleTextBtn');
+            if (b) b.setAttribute('aria-pressed', String(on));
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var m = document.getElementById('toggleMotionBtn');
+            var t = document.getElementById('toggleTextBtn');
+            if (m) m.setAttribute('aria-pressed', String(document.body.classList.contains('reduced-motion')));
+            if (t) t.setAttribute('aria-pressed', String(document.body.classList.contains('large-text')));
+        });
+
         // ===== NAV & SCROLL INTERACTIONS =====
         var navbar = document.getElementById('navbar');
         var hamburger = document.getElementById('hamburger');
@@ -4506,7 +4774,8 @@
                 var title = card.querySelector('h4').textContent.toLowerCase();
                 var desc = card.querySelector('.org-desc').textContent.toLowerCase();
                 var searchText = tags + ' ' + title + ' ' + desc;
-                var matchesType = (currentOrgFilter === 'all' || type === currentOrgFilter);
+                var matchesType = (currentOrgFilter === 'all' || type === currentOrgFilter ||
+                    (currentOrgFilter === 'spanish' && card.getAttribute('data-lang') === 'es'));
                 var matchesGeo = (currentGeoFilter === 'all' || geo === currentGeoFilter);
                 var matchesSearch = (!query || searchText.indexOf(query) !== -1);
                 if (matchesType && matchesGeo && matchesSearch) { card.classList.remove('hidden'); card.style.display = ''; visCount++; }
@@ -4562,7 +4831,7 @@
                 signpostTag: 'Professional & Network Support',
                 signpostTitle: 'Sources of support',
                 signpostDesc: 'We can support ourselves in many ways, and the activities above may help us support ourselves. However, they are not a substitute for professional care. If your health or wellbeing is suffering, please seek support from your local healthcare provider. Always follow the treatment or care plan agreed with your doctor or healthcare team.<br><br>Below is a list of organisations, charities, networks, and groups that offer professional and community support for people living with FND.',
-                resourceCount: 'Showing all 38 resources',
+                resourceCount: 'Showing all 41 resources',
                 footerDesc: 'Created by <strong style="color:white">Irene Roura Garcia and Co</strong>. Built with compassion, backed by lived experience and clinical expertise.',
                 footerDisclaimer: '<strong>Disclaimer:</strong> The information on FNDCareGuide.com is for educational and peer-support purposes only and does not constitute professional medical advice, diagnosis, or treatment. Always consult your doctor or a qualified healthcare provider regarding any medical condition or treatment plan.',
                 footerCopy: '© 2026 FNDCareGuide.com — Created with care by <a href="https://irenerouragarcia.com" target="_blank">Irene Roura Garcia</a> and Co',
@@ -4583,13 +4852,13 @@
                 navPrivacy: 'Privacy Policy',
                 bookLabel: '📖 The Guide',
                 bookTitle: 'FND Care Guide book',
-                bookDesc: 'Created with care, clarity, and intention, this guide is a compassionate, practical handbook designed to share with you what has helped other people living with FND manage their symptoms, feel more in control, and improve their wellbeing — and what might help you, too. It has been shaped by the insights and voices of the FND community.',
+                bookDesc: 'Compassionate, practical handbook designed to share with you what has helped other people living with FND manage their symptoms, feel more in control, and improve their wellbeing, and what might help you, too. Shaped by the insights and voices of the FND community.',
                 bookFeat1: '<span class="check">✓</span> Practical tools to help you manage symptoms and feel more in control',
                 bookFeat2: '<span class="check">✓</span> Everyday practices to support your body and mind',
                 bookFeat3: '<span class="check">✓</span> Lived experiences and shared wisdom from the FND community',
                 bookFeat4: '<span class="check">✓</span> Guidance for navigating care and building your personal toolkit',
-                bookFeat5: '<span class="check">✓</span> A reminder that improvement, connection, and hope are possible',
-                bookBtn: 'Learn More',
+                bookFeat5: '<span class="check">✓</span> A reminder that there is hope and that you are not alone',
+                bookBtn: 'Get yours',
                 caringTitle: '<span style="font-size: 0.4em;">&#128156;</span> Caring messages <span style="font-size: 0.4em;">&#128156;</span>',
                 caringSubtitle: 'Supportive messages from people navigating FND',
                 cmsg1: 'Strive for progress, not perfection. A tiny step in the right direction is still progress.',
@@ -4621,7 +4890,16 @@
                 cmsg28: 'See a neurologist who understands FND and takes you seriously. A peer support group can help too.',
                 cmsg29: 'In the confusion and loss, take one day at a time. You will rebuild. Be open and brave — accept what is, do what you can, and know that’s enough.',
                 floatingSurveyText: 'Do you have lived experience of FND and would like to share what has helped you? Click here to complete the survey and contribute to this community knowledge base.',
-                floatingSurveyBtn: 'Go to Survey'
+                floatingSurveyBtn: 'Go to Survey',
+                toolSurveyLink: 'Did this help you? Tell us in the 2-minute What Helps survey →',
+                toolShuffleBtn: '⟳ New Tool',
+                storiesSurveyLink: 'Has something here helped you? Add your voice in the What Helps survey →',
+                footerSupportTitle: 'Support',
+                footerPatreon: 'Support on Patreon',
+                footerVolunteer: 'Volunteer with us — get in touch →',
+                supportCardText: 'This resource is free and community-built.<br>You can support its upkeep and development on Patreon — and get great rewards in return: weekly and monthly group sessions, exclusive content, and more!',
+                toggleText: 'Larger text',
+                a11yStatement: 'Designed with and for people living with FND — no flashing, gentle pacing, your pace.'
             },
             es: {
                 draftBanner: 'Borrador<span class="banner-long"><br><span style="font-weight:400; font-size:0.65rem;">La versión final se publicará el 21 de marzo.</span></span>',
@@ -4651,7 +4929,7 @@
                 signpostTag: 'Apoyo Profesional y de Red',
                 signpostTitle: 'Fuentes de apoyo',
                 signpostDesc: 'Podemos apoyarnos de muchas maneras, y las actividades anteriores pueden ayudarnos a cuidarnos. Sin embargo, no sustituyen la atención profesional. Si tu salud o bienestar se ven afectados, busca apoyo de tu proveedor de atención médica local. Sigue siempre el tratamiento o plan de cuidado acordado con tu médico o equipo de salud.<br><br>A continuación se muestra una lista de organizaciones, organizaciones benéficas, redes y grupos que ofrecen apoyo profesional y comunitario para personas que viven con el TNF',
-                resourceCount: 'Mostrando los 38 recursos',
+                resourceCount: 'Mostrando los 41 recursos',
                 footerDesc: 'Creado por <strong style="color:white">Irene Roura Garcia y Co</strong>. Construido con compasión, respaldado por experiencia vivida y experiencia clínica.',
                 footerDisclaimer: '<strong>Descargo de responsabilidad:</strong> La información en FNDCareGuide.com es solo para fines educativos y de apoyo entre pares, y no constituye consejo médico profesional, diagnóstico o tratamiento. Consulta siempre a tu médico o a un proveedor de atención médica calificado sobre cualquier condición médica o plan de tratamiento.',
                 footerCopy: '© 2026 FNDCareGuide.com — Creado con cariño por <a href="https://irenerouragarcia.com" target="_blank">Irene Roura Garcia</a> y Co',
@@ -4672,13 +4950,13 @@
                 navPrivacy: 'Política de Privacidad',
                 bookLabel: '📖 La Guía',
                 bookTitle: 'Libro FND Care Guide',
-                bookDesc: 'Creada con cuidado, claridad e intención, esta guía es un manual compasivo y práctico diseñado para compartir contigo lo que ha ayudado a otras personas que viven con TNF a manejar sus síntomas, sentirse más en control y mejorar su bienestar — y lo que también podría ayudarte a ti. Ha sido moldeada por las voces y experiencias de la comunidad TNF.',
+                bookDesc: 'Manual compasivo y práctico diseñado para compartir contigo lo que ha ayudado a otras personas que viven con TNF a manejar sus síntomas, sentirse más en control y mejorar su bienestar, y lo que también podría ayudarte a ti. Moldeado por las voces y experiencias de la comunidad TNF.',
                 bookFeat1: '<span class="check">✓</span> Herramientas prácticas para ayudarte a manejar síntomas y sentirte más en control',
                 bookFeat2: '<span class="check">✓</span> Prácticas cotidianas para cuidar tu cuerpo y tu mente',
                 bookFeat3: '<span class="check">✓</span> Experiencias vividas y sabiduría compartida de la comunidad TNF',
                 bookFeat4: '<span class="check">✓</span> Orientación para navegar tu atención médica y construir tu kit de herramientas personal',
-                bookFeat5: '<span class="check">✓</span> Un recordatorio de que la mejoría, la conexión y la esperanza son posibles',
-                bookBtn: 'Saber Más',
+                bookFeat5: '<span class="check">✓</span> Un recordatorio de que hay esperanza y de que no estás solo/a',
+                bookBtn: 'Consigue el tuyo',
                 caringTitle: '<span style="font-size: 0.4em;">&#128156;</span> Mensajes de ánimo <span style="font-size: 0.4em;">&#128156;</span>',
                 caringSubtitle: 'Mensajes de apoyo de personas que navegan por el TNF',
                 cmsg1: 'Busca el progreso, no la perfección. Un paso minúsculo en la dirección correcta sigue siendo un progreso.',
@@ -4710,7 +4988,16 @@
                 cmsg28: 'Acude a un neurólogo que entienda el TNF y te tome en serio. Un grupo de apoyo mutuo también puede ayudar.',
                 cmsg29: 'En medio de la confusión y la pérdida, toma un día a la vez. Te reconstruirás. Sé abierto y valiente — acepta lo que es, haz lo que puedas y sabe que eso es suficiente.',
                 floatingSurveyText: '¿Tienes alguna experiencia de vida relacionada con el TNF y te gustaría compartir lo que te ha ayudado? Haz clic aquí para ir a la encuesta y ayúdanos a desarrollar esta base de conocimientos de la comunidad.',
-                floatingSurveyBtn: 'Ir a la encuesta'
+                floatingSurveyBtn: 'Ir a la encuesta',
+                toolSurveyLink: '¿Te ha ayudado? Cuéntanoslo en la encuesta de 2 minutos «Qué ayuda» →',
+                toolShuffleBtn: '⟳ Nueva Herramienta',
+                storiesSurveyLink: '¿Algo de aquí te ha ayudado? Suma tu voz en la encuesta «Qué ayuda» →',
+                footerSupportTitle: 'Apoya',
+                footerPatreon: 'Apoya en Patreon',
+                footerVolunteer: 'Hazte voluntario/a — escríbenos →',
+                supportCardText: 'Este recurso es gratuito y construido en comunidad.<br>Puedes apoyar su mantenimiento y desarrollo en Patreon — y recibir grandes recompensas a cambio: sesiones grupales semanales y mensuales, contenido exclusivo ¡y mucho más!',
+                toggleText: 'Texto más grande',
+                a11yStatement: 'Diseñada con y para personas que viven con TNF — sin destellos, ritmo suave, a tu ritmo.'
             }
         };
 

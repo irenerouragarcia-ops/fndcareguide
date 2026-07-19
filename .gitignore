@@ -1,0 +1,6 @@
+# Local draft-editing tool — never publish (contains Irene's private draft notes)
+draft-editor/
+
+# macOS junk
+.DS_Store
+**/.DS_Store
