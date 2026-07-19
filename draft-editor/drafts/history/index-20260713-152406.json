@@ -1,0 +1,34 @@
+{
+  "page": "/index.html",
+  "lang": "en",
+  "savedAt": "2026-07-13T14:24:06.420Z",
+  "generalComments": "",
+  "edits": [
+    {
+      "id": "bookDesc",
+      "i18n": "bookDesc",
+      "tag": "p",
+      "original": "Created with care, clarity, and intention, this guide is a compassionate, practical handbook designed to share with you what has helped other people living with FND manage their symptoms, feel more in control, and improve their wellbeing — and what might help you, too. It has been shaped by the insights and voices of the FND community.",
+      "newText": "Compassionate, practical handbook designed to share with you what has helped other people living\n                        with FND manage their symptoms, feel more in control, and improve their wellbeing, and what\n                        might help you, too. Shaped by the insights and voices of the FND community.",
+      "newHtml": "Compassionate, practical handbook designed to share with you what has helped other people living\n                        with FND manage their symptoms, feel more in control, and improve their wellbeing, and what\n                        might help you, too. Shaped by the insights and voices of the FND community."
+    },
+    {
+      "id": "bookFeat4",
+      "i18n": "bookFeat4",
+      "tag": "div",
+      "original": "✓\nGuidance for navigating care and building your personal toolkit",
+      "newText": "✓ Guidance for\n                            navigating care and building your personal toolkit",
+      "newHtml": "<span class=\"check\">✓</span> Guidance for\n                            navigating care and building your personal toolkit"
+    },
+    {
+      "id": "bookFeat5",
+      "i18n": "bookFeat5",
+      "tag": "div",
+      "original": "✓\nA reminder that improvement, connection, and hope are possible",
+      "newText": "✓ A reminder that\n                            there is hope and that you are not alone",
+      "newHtml": "<span class=\"check\">✓</span> A reminder that\n                            there is hope and that you are not alone"
+    }
+  ],
+  "deletions": [],
+  "comments": []
+}

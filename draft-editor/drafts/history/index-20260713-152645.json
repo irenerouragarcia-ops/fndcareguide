@@ -1,0 +1,103 @@
+{
+  "page": "/index.html",
+  "lang": "en",
+  "savedAt": "2026-07-13T14:26:45.540Z",
+  "generalComments": "",
+  "edits": [
+    {
+      "id": "bookDesc",
+      "i18n": "bookDesc",
+      "tag": "p",
+      "original": "Created with care, clarity, and intention, this guide is a compassionate, practical handbook designed to share with you what has helped other people living with FND manage their symptoms, feel more in control, and improve their wellbeing — and what might help you, too. It has been shaped by the insights and voices of the FND community.",
+      "newText": "Compassionate, practical handbook designed to share with you what has helped other people living\n                        with FND manage their symptoms, feel more in control, and improve their wellbeing, and what\n                        might help you, too. Shaped by the insights and voices of the FND community.",
+      "newHtml": "Compassionate, practical handbook designed to share with you what has helped other people living\n                        with FND manage their symptoms, feel more in control, and improve their wellbeing, and what\n                        might help you, too. Shaped by the insights and voices of the FND community."
+    },
+    {
+      "id": "bookFeat4",
+      "i18n": "bookFeat4",
+      "tag": "div",
+      "original": "✓\nGuidance for navigating care and building your personal toolkit",
+      "newText": "✓ Guidance for\n                            navigating care and building your personal toolkit",
+      "newHtml": "<span class=\"check\">✓</span> Guidance for\n                            navigating care and building your personal toolkit"
+    },
+    {
+      "id": "bookFeat5",
+      "i18n": "bookFeat5",
+      "tag": "div",
+      "original": "✓\nA reminder that improvement, connection, and hope are possible",
+      "newText": "✓ A reminder that\n                            there is hope and that you are not alone",
+      "newHtml": "<span class=\"check\">✓</span> A reminder that\n                            there is hope and that you are not alone"
+    },
+    {
+      "id": "supportCardText",
+      "i18n": "supportCardText",
+      "tag": "p",
+      "original": "This guide is free and community-built. If it helps you, you can support it on Patreon — or help it grow by volunteering.",
+      "newText": "This guide is free and community-built. If it helps you, you can\n                        support it on Patreon and get meaninful support in exchange",
+      "newHtml": "This guide is free and community-built. <br>If it helps you, you can\n                        support it on Patreon and get meaninful support in exchange"
+    },
+    {
+      "id": "footerPatreon",
+      "i18n": "footerPatreon",
+      "tag": "a",
+      "original": "Support this community on Patreon",
+      "newText": "Support on Patreon",
+      "newHtml": "Support on Patreon"
+    }
+  ],
+  "deletions": [
+    {
+      "id": "outcomesTitle",
+      "i18n": "outcomesTitle",
+      "tag": "h3",
+      "original": "Community outcomes"
+    },
+    {
+      "id": "outcomesInsights",
+      "i18n": "outcomesInsights",
+      "tag": "p",
+      "original": "60 lived-experience insights and 28 caring messages shared in this guide so far — with more arriving through the What Helps survey."
+    },
+    {
+      "id": "outcomesRecommend",
+      "i18n": "outcomesRecommend",
+      "tag": "p",
+      "original": "96% of surveyed programme participants would recommend working with Irene — participant-reported, anonymous surveys 2022–2025."
+    },
+    {
+      "id": "outcomesLink",
+      "i18n": "outcomesLink",
+      "tag": "a",
+      "original": "See how outcomes are measured →"
+    },
+    {
+      "id": "footerDisclaimer",
+      "i18n": "footerDisclaimer",
+      "tag": "p",
+      "original": "Disclaimer: The information on FNDCareGuide.com is for educational and peer-support purposes only and does not constitute professional medical advice, diagnosis, or treatment. Always consult your doctor or a qualified healthcare provider regarding any medical condition or treatment plan."
+    }
+  ],
+  "comments": [
+    {
+      "id": "bookBtn",
+      "i18n": "bookBtn",
+      "tag": "a",
+      "blockText": "Learn\n                        More",
+      "comment": "Get yours"
+    },
+    {
+      "id": "storiesSurveyLink",
+      "i18n": "storiesSurveyLink",
+      "tag": "a",
+      "blockText": "Has something here\n                            helped you? Add your voice in the What Helps survey →",
+      "comment": "I would like this hyperlink to take you to the questionnaire: https://docs.google.com/forms/d/e/1FAIpQLSdjXKt5A5uBE0MW-lb3xXfAOZkWOgwD-wN2iVkPcPVXJU-55A/viewform"
+    },
+    {
+      "id": "supportCardText",
+      "i18n": "supportCardText",
+      "tag": "p",
+      "blockText": "This guide is free and community-built. If it helps you, you can\n                        support it on Patreon and get meaninful support in exchange",
+      "comment": "improve sentence if needed for better flow and clarity"
+    }
+  ]
+}

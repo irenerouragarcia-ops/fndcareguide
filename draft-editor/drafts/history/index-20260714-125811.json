@@ -1,0 +1,26 @@
+{
+  "page": "/index.html",
+  "lang": "es",
+  "savedAt": "2026-07-14T11:58:11.473Z",
+  "generalComments": "",
+  "edits": [
+    {
+      "id": "supportCardText",
+      "i18n": "supportCardText",
+      "tag": "p",
+      "original": "This resource is free and community-built.\nYou can support its upkeep and development on Patreon — and get great rewards in return: weekly and monthly group sessions, exclusive content, and more!",
+      "newText": "Este recurso es gratuito y construido en comunidad.Puedes apoyar su mantenimiento y desarrollo en Patreon — y tener acceso a sesiones grupales semanales y mensuales, contenido exclusivo ¡y mucho más!",
+      "newHtml": "Este recurso es gratuito y construido en comunidad.<br>Puedes apoyar su mantenimiento y desarrollo en Patreon — y tener acceso a sesiones grupales semanales y mensuales, contenido exclusivo ¡y mucho más!"
+    }
+  ],
+  "deletions": [],
+  "comments": [
+    {
+      "id": "auto:button:33",
+      "i18n": null,
+      "tag": "button",
+      "blockText": "⟳ New Tool",
+      "comment": "this button text needs to be translate into spanish: Nueva Herramienta"
+    }
+  ]
+}

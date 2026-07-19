@@ -1,0 +1,98 @@
+{
+  "page": "/index.html",
+  "lang": "en",
+  "savedAt": "2026-07-13T20:59:29.508Z",
+  "generalComments": "",
+  "edits": [
+    {
+      "id": "bookDesc",
+      "i18n": "bookDesc",
+      "tag": "p",
+      "original": "Manual compasivo y práctico diseñado para compartir contigo lo que ha ayudado a otras personas que viven con TNF a manejar sus síntomas, sentirse más en control y mejorar su bienestar, y lo que también podría ayudarte a ti. Moldeado por las voces y experiencias de la comunidad TNF.",
+      "newText": "Compassionate, practical handbook designed to share with you what has helped other people living with FND manage their symptoms, feel more in control, and improve their wellbeing, and what might help you, too. Shaped by the insights and voices of the FND community.",
+      "newHtml": "Compassionate, practical handbook designed to share with you what has helped other people living with FND manage their symptoms, feel more in control, and improve their wellbeing, and what might help you, too. Shaped by the insights and voices of the FND community."
+    },
+    {
+      "id": "bookFeat4",
+      "i18n": "bookFeat4",
+      "tag": "div",
+      "original": "✓\nOrientación para navegar tu atención médica y construir tu kit de herramientas personal",
+      "newText": "✓ Guidance for navigating care and building your personal toolkit",
+      "newHtml": "<span class=\"check\">✓</span> Guidance for navigating care and building your personal toolkit"
+    },
+    {
+      "id": "bookFeat5",
+      "i18n": "bookFeat5",
+      "tag": "div",
+      "original": "✓\nUn recordatorio de que hay esperanza y de que no estás solo/a",
+      "newText": "✓ A reminder that there is hope and that you are not alone",
+      "newHtml": "<span class=\"check\">✓</span> A reminder that there is hope and that you are not alone"
+    },
+    {
+      "id": "supportCardText",
+      "i18n": "supportCardText",
+      "tag": "p",
+      "original": "Este recurso es gratuito y construido en comunidad.\nPuedes apoyar su mantenimiento y desarrollo en Patreon\ny recibir grandes recompensas a cambio — sesiones grupales semanales y mensuales, acceso exclusivo a contenido ¡y mucho más!",
+      "newText": "This resource is free and community-built.You can support its upkeep and development on Patreonand get great goodies in return — weekly and monthly group sessions, exclusive access to content, and more!",
+      "newHtml": "This resource is free and community-built.<br>You can support its upkeep and development on Patreon<br>and get great goodies in return — weekly and monthly group sessions, exclusive access to content, and more!"
+    },
+    {
+      "id": "footerPatreon",
+      "i18n": "footerPatreon",
+      "tag": "a",
+      "original": "Apoya en Patreon",
+      "newText": "Support on Patreon",
+      "newHtml": "Support on Patreon"
+    }
+  ],
+  "deletions": [
+    {
+      "id": "footerDisclaimer",
+      "i18n": "footerDisclaimer",
+      "tag": "div",
+      "original": "Descargo de responsabilidad: La información en FNDCareGuide.com es solo para fines educativos y de apoyo entre pares, y no constituye consejo médico profesional, diagnóstico o tratamiento. Consulta siempre a tu médico o a un proveedor de atención médica calificado sobre cualquier condición médica o plan de tratamiento."
+    },
+    {
+      "id": "footerVolunteer",
+      "i18n": "footerVolunteer",
+      "tag": "a",
+      "original": "Hazte voluntario/a — escríbenos →"
+    },
+    {
+      "id": "storiesSurveyLink",
+      "i18n": "storiesSurveyLink",
+      "tag": "a",
+      "original": "¿Algo de aquí te ha ayudado? Suma tu voz en la encuesta «Qué ayuda» →"
+    }
+  ],
+  "comments": [
+    {
+      "id": "bookBtn",
+      "i18n": "bookBtn",
+      "tag": "a",
+      "blockText": "Get yours",
+      "comment": "Get yours"
+    },
+    {
+      "id": "storiesSurveyLink",
+      "i18n": "storiesSurveyLink",
+      "tag": "a",
+      "blockText": "Has something here helped you? Add your voice in the What Helps survey →",
+      "comment": "I would like this hyperlink to take you to the questionnaire: https://docs.google.com/forms/d/e/1FAIpQLSdjXKt5A5uBE0MW-lb3xXfAOZkWOgwD-wN2iVkPcPVXJU-55A/viewform"
+    },
+    {
+      "id": "supportCardText",
+      "i18n": "supportCardText",
+      "tag": "p",
+      "blockText": "This resource is free and community-built.You can support its upkeep and development on Patreonand get great goodies in return — weekly and monthly group sessions, exclusive access to content, and mor",
+      "comment": "improve sentence if needed for better flow and clarity"
+    },
+    {
+      "id": "toolSurveyLink",
+      "i18n": "toolSurveyLink",
+      "tag": "a",
+      "blockText": "Did this help you? Tell us in the 2-minute What Helps survey →",
+      "comment": "for this link to take you directly here: https://docs.google.com/forms/d/e/1FAIpQLSdjXKt5A5uBE0MW-lb3xXfAOZkWOgwD-wN2iVkPcPVXJU-55A/viewform?usp=header"
+    }
+  ]
+}

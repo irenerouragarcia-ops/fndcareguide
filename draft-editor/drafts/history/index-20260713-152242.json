@@ -1,0 +1,18 @@
+{
+  "page": "/index.html",
+  "lang": "en",
+  "savedAt": "2026-07-13T14:22:42.111Z",
+  "generalComments": "",
+  "edits": [
+    {
+      "id": "bookDesc",
+      "i18n": "bookDesc",
+      "tag": "p",
+      "original": "Created with care, clarity, and intention, this guide is a compassionate, practical handbook designed to share with you what has helped other people living with FND manage their symptoms, feel more in control, and improve their wellbeing — and what might help you, too. It has been shaped by the insights and voices of the FND community.",
+      "newText": "Created with care, clarity, and intention, this guide is a\n                        compassionate, practical handbook designed to share with you what has helped other people living\n                        with FND manage their symptoms, feel more in control, and improve their wellbeing — and what\n                        might help you, too. It has been shaped by the insights and voices of the FND community.",
+      "newHtml": "Created with care, clarity, and intention, this guide is a\n                        compassionate, practical handbook designed to share with you what has helped other people living\n                        with FND manage their symptoms, feel more in control, and improve their wellbeing — and what\n                        might help you, too. It has been shaped by the insights and voices of the FND community."
+    }
+  ],
+  "deletions": [],
+  "comments": []
+}

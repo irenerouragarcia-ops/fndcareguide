@@ -1,0 +1,17 @@
+{
+  "page": "/index.html",
+  "lang": "es",
+  "savedAt": "2026-07-14T11:57:37.758Z",
+  "generalComments": "",
+  "edits": [],
+  "deletions": [],
+  "comments": [
+    {
+      "id": "auto:button:33",
+      "i18n": null,
+      "tag": "button",
+      "blockText": "⟳ New Tool",
+      "comment": "this button text needs to be translate into spanish: Nueva Herramienta"
+    }
+  ]
+}

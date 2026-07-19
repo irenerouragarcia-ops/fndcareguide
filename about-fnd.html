@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About FND — FND Care Guide</title>
+    <meta name="description"
+        content="Learn about Functional Neurological Disorder (FND) — what it is, how it presents, and where to find trusted information and resources.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo_hero_bottom.png" type="image/png">
+
+    <!-- GoatCounter Analytics -->
+    <script data-goatcounter="https://ireneroura.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&family=Caveat:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --blue: #6B9FD4;
+            --blue-light: #A3C4E9;
+            --blue-pale: #E8F1FA;
+            --blue-deep: #3D6E9E;
+            --pink: #D4839B;
+            --pink-light: #F0C6D4;
+            --purple: #6B4F9E;
+            --purple-deep: #4A3570;
+            --purple-light: #9B7DC4;
+            --sage: #8BA888;
+            --sage-deep: #5C7A59;
+            --sage-light: #B5D4B2;
+            --sage-pale: #E8F0E7;
+            --earth: #C4A97A;
+            --earth-pale: #F0E6D2;
+            --warm-white: #FDFBF7;
+            --cream: #F7F3ED;
+            --soft-black: #2C2C2C;
+            --charcoal: #4A4A4A;
+            --text-base: #3A3A3A;
+            --text-secondary: #6B6B6B;
+            --text-muted: #9A9A9A;
+            --ocean: #6B9FD4;
+            --ocean-deep: #3D6E9E;
+            --lavender: #9B7DC4;
+            --rose: #D4839B;
+            --rose-light: #F0C6D4;
+            --gold: #D4B96A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--warm-white);
+            color: var(--text-base);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(253, 251, 247, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(139, 168, 136, 0.1);
+        }
+
+        .nav-logo {
+            text-decoration: none;
+            font-family: 'DM Serif Display', serif;
+            color: var(--charcoal);
+        }
+
+        .nav-logo-img {
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.2rem;
+            list-style: none;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 500;
+            font-size: 0.88rem;
+            letter-spacing: 0.02em;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--purple);
+        }
+
+        .nav-links a.active-link {
+            color: var(--purple-deep);
+            font-weight: 600;
+        }
+
+        .lang-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 0;
+            border-radius: 50px;
+            overflow: hidden;
+            border: 1.5px solid var(--purple-light);
+            margin-left: 0.5rem;
+        }
+
+        .lang-toggle button {
+            padding: 0.35rem 0.7rem;
+            border: none;
+            background: transparent;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: var(--text-muted);
+        }
+
+        .lang-toggle button.active {
+            background: var(--purple-deep);
+            color: white;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--charcoal);
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+
+        /* MAIN CONTENT */
+        .page-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+
+        .page-hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-hero .section-tag {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--purple);
+            margin-bottom: 1rem;
+        }
+
+        .page-hero h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.8rem;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .page-hero h1 em {
+            font-style: italic;
+            color: var(--purple-deep);
+        }
+
+        .page-hero .lead {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* CONTENT CARDS */
+        .info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(139, 168, 136, 0.12);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        .info-card h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+        }
+
+        .info-card p {
+            color: var(--text-secondary);
+            font-weight: 300;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .info-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-card .highlight-box {
+            background: linear-gradient(135deg, var(--sage-pale), var(--warm-white));
+            border: 1px solid rgba(139, 168, 136, 0.2);
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-card .highlight-box p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .resource-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.8rem;
+            background: linear-gradient(135deg, var(--purple-deep), var(--purple));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(107, 79, 158, 0.3);
+            margin-top: 0.5rem;
+        }
+
+        .resource-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(107, 79, 158, 0.45);
+        }
+
+        .resource-link.secondary {
+            background: transparent;
+            color: var(--sage-deep);
+            border: 1.5px solid var(--sage);
+            box-shadow: none;
+        }
+
+        .resource-link.secondary:hover {
+            background: var(--sage-pale);
+            transform: translateY(-2px);
+        }
+
+        /* DIVIDER */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--sage-light), transparent);
+            margin: 2.5rem 0;
+        }
+
+        /* BACK LINK */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--purple);
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--purple-deep);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--soft-black);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 650px) {
+            nav {
+                padding: 0.8rem 1.2rem;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(253, 251, 247, 0.97);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 1.5rem;
+                gap: 1rem;
+                border-bottom: 1px solid rgba(139, 168, 136, 0.15);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .page-wrapper {
+                padding: 6rem 1.2rem 3rem;
+            }
+
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+
+            .info-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="nav-logo" style="font-size: 1.3rem;"><img src="logo_main.png" alt="FNDCare logo"
+                class="nav-logo-img"> <span data-i18n="siteTitle">FND Care guide</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#tools" data-i18n="navTools">Self-Care Tools</a></li>
+            <li><a href="index.html#community" data-i18n="navKnowledge">Lived Experience</a></li>
+            <li><a href="index.html#signpost" data-i18n="navSupport">Sources of Support</a></li>
+            <li><a href="about-fnd.html" class="active-link" data-i18n="navAboutFND">About FND</a></li>
+            <li>
+                <div class="lang-toggle" role="group" aria-label="Language selector">
+                    <button id="langEn" class="active" onclick="setLang('en')" aria-label="English">EN</button>
+                    <button id="langEs" onclick="setLang('es')" aria-label="Español">ES</button>
+                </div>
+            </li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu"
+            aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+
+    <main class="page-wrapper">
+
+        <div class="page-hero">
+            <p class="section-tag" data-i18n="aboutTag">Understanding FND</p>
+            <h1 data-i18n="aboutTitle">About <em>Functional Neurological Disorder</em></h1>
+            <p class="lead" data-i18n="aboutLead">There are many excellent sources of information about what Functional
+                Neurological Disorder (FND) is. This website is focused on sharing practical techniques, lived
+                experiences, and sources of support — rather than trying to explain the condition itself.</p>
+        </div>
+
+        <div class="info-card" style="text-align: center;">
+            <p style="font-size: 1.05rem; color: var(--text-secondary); margin: 0 0 1.5rem; line-height: 1.7;"
+                data-i18n="whatIsRecommend">For a comprehensive and detailed understanding of FND — including
+                symptoms, diagnosis, and treatment — I recommend visiting these trusted resources:</p>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <a href="https://www.neurosymptoms.org" target="_blank" class="resource-link" data-i18n="visitNeuro">🧠
+                    Visit Neurosymptoms.org</a>
+                <a href="https://www.nhsinform.scot/illnesses-and-conditions/brain-nerves-and-spinal-cord/functional-neurological-disorder/"
+                    target="_blank" class="resource-link"
+                    style="background: linear-gradient(135deg, var(--ocean-deep), var(--ocean));"
+                    data-i18n="visitNHS">🏛️
+                    Visit NHS Inform</a>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link" data-i18n="backHome">← Back to the FND Care Guide</a>
+
+    </main>
+
+    <footer>
+        <p data-i18n="footerCopy">© 2026 FNDCareGuide.com — Created with care by <a href="https://irenerouragarcia.com"
+                target="_blank">Irene Roura Garcia</a> and Co</p>
+    </footer>
+
+    <script>
+        // Language toggle
+        var currentLang = 'en';
+
+        var translations = {
+            en: {
+                siteTitle: 'FND Care guide',
+                navTools: 'Self-Care Tools',
+                navKnowledge: 'Lived Experience',
+                navSupport: 'Sources of Support',
+                navAboutFND: 'About FND',
+                aboutTag: 'Understanding FND',
+                aboutTitle: 'About <em>Functional Neurological Disorder</em>',
+                aboutLead: 'There are many excellent sources of information about what Functional Neurological Disorder (FND) is. This website is focused on sharing practical techniques, lived experiences, and sources of support \u2014 rather than trying to explain the condition itself.',
+                whatIsRecommend: 'For a comprehensive and detailed understanding of FND \u2014 including symptoms, diagnosis, and treatment \u2014 I recommend visiting these trusted resources:',
+                visitNeuro: '\ud83e\udde0 Visit Neurosymptoms.org',
+                visitNHS: '\ud83c\udfdb\ufe0f Visit NHS Inform',
+                backHome: '\u2190 Back to the FND Care Guide',
+                footerCopy: '\u00a9 2026 FNDCareGuide.com \u2014 Created with care by <a href="https://irenerouragarcia.com" target="_blank">Irene Roura Garcia</a> and Co'
+            },
+            es: {
+                siteTitle: 'Guía de cuidado TNF',
+                navTools: 'Herramientas de Autocuidado',
+                navKnowledge: 'Experiencia Vivida',
+                navSupport: 'Fuentes de Apoyo',
+                navAboutFND: 'Sobre el TNF',
+                aboutTag: 'Comprendiendo el TNF',
+                aboutTitle: 'Sobre el <em>Trastorno Neurológico Funcional</em>',
+                aboutLead: 'Existen muchas fuentes de información excelentes sobre qué es el Trastorno Neurológico Funcional (TNF). Este sitio web se centra en compartir técnicas prácticas, experiencias vividas y fuentes de apoyo, en lugar de intentar explicar la condición en sí.',
+                whatIsRecommend: 'Para una comprensión completa y detallada del TNF \u2014 incluyendo síntomas, diagnóstico y tratamiento \u2014 recomiendo visitar estos recursos de confianza:',
+                visitNeuro: '\ud83e\udde0 Visitar Neurosymptoms.org',
+                visitNHS: '\ud83c\udfdb\ufe0f Visitar NHS Inform',
+                backHome: '\u2190 Volver a la Guía de Cuidado TNF',
+                footerCopy: '\u00a9 2026 FNDCareGuide.com \u2014 Creado con cariño por <a href="https://irenerouragarcia.com" target="_blank">Irene Roura Garcia</a> y Co'
+            }
+        };
+
+        function setLang(lang) {
+            currentLang = lang;
+            document.getElementById('langEn').classList.toggle('active', lang === 'en');
+            document.getElementById('langEs').classList.toggle('active', lang === 'es');
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            document.documentElement.lang = lang === 'es' ? 'es' : 'en';
+            try { localStorage.setItem('fndcare_lang', lang); } catch (e) { }
+        }
+
+        // Hamburger menu
+        document.getElementById('hamburger').addEventListener('click', function () {
+            var nav = document.getElementById('navLinks');
+            nav.classList.toggle('open');
+            this.setAttribute('aria-expanded', nav.classList.contains('open'));
+        });
+
+        // Load saved language preference
+        try {
+            var savedLang = localStorage.getItem('fndcare_lang');
+            if (savedLang === 'es') { setLang('es'); }
+        } catch (e) { }
+    </script>
+
+</body>
+
+</html>
