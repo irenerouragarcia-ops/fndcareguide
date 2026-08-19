@@ -2708,10 +2708,6 @@
                             Tool</button>
                     </div>
                     <!-- Jul 2026: survey mini-link replaces planned live voting (decision item 10) -->
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdjXKt5A5uBE0MW-lb3xXfAOZkWOgwD-wN2iVkPcPVXJU-55A/viewform"
-                        target="_blank" rel="noopener" class="survey-mini-link"
-                        data-i18n="toolSurveyLink">Did this help you? Tell
-                        us in the 2-minute What Helps survey →</a>
                 </div>
 
                 <!-- BOOK CARD (always visible) -->
@@ -2761,17 +2757,17 @@
                     <p style="color: var(--soft-black); font-size: 1.15rem; font-weight: 300;" data-i18n="reflectionsLabel">Reflections about helpful practical tools</p>
                 </div>
                 <div class="community-tabs reveal">
-                    <button class="tab-btn active" onclick="filterStories('all', this)">All</button>
-                    <button class="tab-btn" onclick="filterStories('breath', this)">🫁 Breath</button>
-                    <button class="tab-btn" onclick="filterStories('senses', this)">✋ Senses</button>
-                    <button class="tab-btn" onclick="filterStories('pacing', this)">⏱️ Pacing</button>
-                    <button class="tab-btn" onclick="filterStories('thoughts', this)">💭 Thoughts</button>
-                    <button class="tab-btn" onclick="filterStories('movement', this)">🤸 Movement</button>
-                    <button class="tab-btn" onclick="filterStories('arts', this)">🎨 Arts</button>
-                    <button class="tab-btn" onclick="filterStories('social', this)">🤝 Social</button>
-                    <button class="tab-btn" onclick="filterStories('nutrition', this)">🍵 Nutrition</button>
-                    <button class="tab-btn" onclick="filterStories('nature', this)">🌿 Nature</button>
-                    <button class="tab-btn" onclick="filterStories('compassion', this)">💛 Compassion</button>
+                    <button class="tab-btn active" onclick="filterStories('all', this)" data-i18n="tabAll">All</button>
+                    <button class="tab-btn" onclick="filterStories('breath', this)" data-i18n="tabBreath">🫁 Breath</button>
+                    <button class="tab-btn" onclick="filterStories('senses', this)" data-i18n="tabSenses">✋ Senses</button>
+                    <button class="tab-btn" onclick="filterStories('pacing', this)" data-i18n="tabPacing">⏱️ Pacing</button>
+                    <button class="tab-btn" onclick="filterStories('thoughts', this)" data-i18n="tabThoughts">💭 Thoughts</button>
+                    <button class="tab-btn" onclick="filterStories('movement', this)" data-i18n="tabMovement">🤸 Movement</button>
+                    <button class="tab-btn" onclick="filterStories('arts', this)" data-i18n="tabArts">🎨 Arts</button>
+                    <button class="tab-btn" onclick="filterStories('social', this)" data-i18n="tabSocial">🤝 Social</button>
+                    <button class="tab-btn" onclick="filterStories('nutrition', this)" data-i18n="tabNutrition">🍵 Nutrition</button>
+                    <button class="tab-btn" onclick="filterStories('nature', this)" data-i18n="tabNature">🌿 Nature</button>
+                    <button class="tab-btn" onclick="filterStories('compassion', this)" data-i18n="tabCompassion">💛 Compassion</button>
                 </div>
 
                 <div class="stories-grid reveal collapsed" id="storiesGrid">
@@ -3659,16 +3655,16 @@
                 <div class="signpost-search-wrap">
                     <span class="search-icon">🔍</span>
                     <input type="text" class="signpost-search" id="signpostSearch"
-                        placeholder="Search by name, country, topic, or keyword..." oninput="filterOrgs()">
+                        placeholder="Search by name, country, topic, or keyword..." data-i18n-placeholder="signpostSearchPh" oninput="filterOrgs()">
                 </div>
                 <div class="signpost-filters" id="signpostFilters">
-                    <button class="signpost-filter-btn active" onclick="filterOrgType('all', this)" data-i18n=\"filterAll">All</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgType('charity', this)" data-i18n=\"filterCharities">Charities</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgType('medical', this)" data-i18n=\"filterProfessional">Professional</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgType('research', this)" data-i18n=\"filterResearch">Research</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgType('support', this)" data-i18n=\"filterPeer">Peer Support</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgType('specialist', this)" data-i18n=\"filterSpecialist">Specialist</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgType('tools', this)" data-i18n=\"filterApps">Apps &amp; Tools</button>
+                    <button class="signpost-filter-btn active" onclick="filterOrgType('all', this)" data-i18n="filterAll">All</button>
+                    <button class="signpost-filter-btn" onclick="filterOrgType('charity', this)" data-i18n="filterCharities">Charities</button>
+                    <button class="signpost-filter-btn" onclick="filterOrgType('medical', this)" data-i18n="filterProfessional">Professional</button>
+                    <button class="signpost-filter-btn" onclick="filterOrgType('research', this)" data-i18n="filterResearch">Research</button>
+                    <button class="signpost-filter-btn" onclick="filterOrgType('support', this)" data-i18n="filterPeer">Peer Support</button>
+                    <button class="signpost-filter-btn" onclick="filterOrgType('specialist', this)" data-i18n="filterSpecialist">Specialist</button>
+                    <button class="signpost-filter-btn" onclick="filterOrgType('tools', this)" data-i18n="filterApps">Apps &amp; Tools</button>
                     <button class="signpost-filter-btn" onclick="filterOrgType('spanish', this)">🇪🇸 En Español</button>
                 </div>
 
@@ -4159,8 +4155,7 @@
         <img src="logo_hero_bottom.png" alt="" class="deco-logo footer-deco" aria-hidden="true">
         <div class="footer-content">
             <div class="footer-brand">
-                <div class="footer-logo"><img src="logo_main.png" alt="FND Care Guide logo" class="footer-logo-img"> FND Care Guide:
-                    sharing practical tools that have helped people living with FND
+                <div class="footer-logo"><img src="logo_main.png" alt="FND Care Guide logo" class="footer-logo-img"> <span data-i18n="footerBrand">FND Care Guide: sharing practical tools that have helped people living with FND</span>
                 </div>
                 <p data-i18n="footerDesc">Created by <strong style="color:white">Irene Roura Garcia and Co</strong>.
                     Built with
@@ -4170,27 +4165,23 @@
                     <a href="https://irenerouragarcia.com" target="_blank"
                         style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.45rem 1rem;border-radius:50px;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.8);text-decoration:none;font-size:0.8rem;transition:all 0.3s;border:1px solid rgba(255,255,255,0.1);"
                         onmouseover="this.style.background='rgba(139,168,136,0.3)';this.style.color='white'"
-                        onmouseout="this.style.background='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.8)'">🌐
-                        Website</a>
+                        onmouseout="this.style.background='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.8)'">🌐 <span data-i18n="footerWebsite">Website</span></a>
                     <a href="https://www.instagram.com/irenerouragarcia/" target="_blank"
                         style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.45rem 1rem;border-radius:50px;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.8);text-decoration:none;font-size:0.8rem;transition:all 0.3s;border:1px solid rgba(255,255,255,0.1);"
                         onmouseover="this.style.background='rgba(193,53,132,0.3)';this.style.color='white'"
-                        onmouseout="this.style.background='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.8)'">📸
-                        Instagram</a>
+                        onmouseout="this.style.background='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.8)'">📸 <span data-i18n="footerInsta">Instagram</span></a>
                     <a href="mailto:irenerouragarcia@gmail.com"
                         style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.45rem 1rem;border-radius:50px;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.8);text-decoration:none;font-size:0.8rem;transition:all 0.3s;border:1px solid rgba(255,255,255,0.1);"
                         onmouseover="this.style.background='rgba(139,168,136,0.3)';this.style.color='white'"
-                        onmouseout="this.style.background='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.8)'">✉️
-                        Email</a>
+                        onmouseout="this.style.background='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.8)'">✉️ <span data-i18n="footerEmail">Email</span></a>
                     <a href="https://calendly.com/irenerouragarcia/freeconsultation" target="_blank"
                         style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.45rem 1rem;border-radius:50px;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.8);text-decoration:none;font-size:0.8rem;transition:all 0.3s;border:1px solid rgba(255,255,255,0.1);"
                         onmouseover="this.style.background='rgba(139,168,136,0.3)';this.style.color='white'"
-                        onmouseout="this.style.background='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.8)'">📅
-                        Free Consultation</a>
+                        onmouseout="this.style.background='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.8)'">📅 <span data-i18n="footerConsult">Free Consultation</span></a>
                 </div>
             </div>
             <div class="footer-col">
-                <h4>Explore</h4>
+                <h4 data-i18n="footerExplore">Explore</h4>
                 <a href="#tools" data-i18n="navTools">Self-Care Tools</a>
                 <a href="#community" data-i18n="navCommunity">Knowledge Base</a>
                 <a href="#signpost" data-i18n="navSignpost">Find Support</a>
@@ -4199,7 +4190,7 @@
                 <a href="privacy_policy.html" data-i18n="navPrivacy">Privacy Policy</a>
             </div>
             <div class="footer-col">
-                <h4>Connect with Irene</h4>
+                <h4 data-i18n="footerConnect">Connect with Irene</h4>
                 <a href="https://irenerouragarcia.com" target="_blank">irenerouragarcia.com</a>
                 <a href="https://www.instagram.com/irenerouragarcia/" target="_blank">@irenerouragarcia</a>
                 <a href="https://calendly.com/irenerouragarcia/freeconsultation" target="_blank" data-i18n="footerBookFree">Book a Free Consultation</a>
@@ -4864,6 +4855,15 @@
                 filterResearch: 'Research', filterPeer: 'Peer Support', filterSpecialist: 'Specialist',
                 filterApps: 'Apps & Tools',
                 footerBookFree: 'Book a Free Consultation',
+                tabAll: 'All', tabBreath: '🫁 Breath', tabSenses: '✋ Senses', tabPacing: '⏱️ Pacing',
+                tabThoughts: '💭 Thoughts', tabMovement: '🤸 Movement', tabArts: '🎨 Arts',
+                tabSocial: '🤝 Social', tabNutrition: '🍵 Nutrition', tabNature: '🌿 Nature',
+                tabCompassion: '💛 Compassion',
+                signpostSearchPh: 'Search by name, country, topic, or keyword...',
+                footerBrand: 'FND Care Guide: sharing practical tools that have helped people living with FND',
+                footerConnect: 'Connect with Irene', footerExplore: 'Explore',
+                footerWebsite: 'Website', footerInsta: 'Instagram', footerEmail: 'Email',
+                footerConsult: 'Free Consultation',
                 caringSubtitle: 'Supportive messages from people navigating FND',
                 cmsg1: 'Strive for progress, not perfection. A tiny step in the right direction is still progress.',
                 cmsg2: 'It may feel terrifying and hopeless at first, but I promise it can get better. Take in the new feelings without judgment, keep going, be patient, trust the process — one day at a time.',
@@ -4895,7 +4895,6 @@
                 cmsg29: 'In the confusion and loss, take one day at a time. You will rebuild. Be open and brave — accept what is, do what you can, and know that’s enough.',
                 floatingSurveyText: 'Do you have lived experience of FND and would like to share what has helped you? Click here to complete the survey and contribute to this community knowledge base.',
                 floatingSurveyBtn: 'Go to Survey',
-                toolSurveyLink: 'Did this help you? Tell us in the 2-minute What Helps survey →',
                 toolShuffleBtn: '⟳ New Tool',
                 footerSupportTitle: 'Support',
                 footerPatreon: 'Support on Patreon',
@@ -4966,6 +4965,15 @@
                 filterResearch: 'Investigación', filterPeer: 'Apoyo entre iguales', filterSpecialist: 'Especialistas',
                 filterApps: 'Apps y herramientas',
                 footerBookFree: 'Reserva una consulta gratuita',
+                tabAll: 'Todas', tabBreath: '🫁 Respiración', tabSenses: '✋ Sentidos', tabPacing: '⏱️ Ritmo',
+                tabThoughts: '💭 Pensamientos', tabMovement: '🤸 Movimiento', tabArts: '🎨 Artes',
+                tabSocial: '🤝 Vida social', tabNutrition: '🍵 Nutrición', tabNature: '🌿 Naturaleza',
+                tabCompassion: '💛 Compasión',
+                signpostSearchPh: 'Busca por nombre, país, tema o palabra clave...',
+                footerBrand: 'Guía de cuidado TNF: compartiendo herramientas prácticas que han ayudado a personas que viven con TNF',
+                footerConnect: 'Conecta con Irene', footerExplore: 'Explora',
+                footerWebsite: 'Sitio web', footerInsta: 'Instagram', footerEmail: 'Correo',
+                footerConsult: 'Consulta gratuita',
                 caringSubtitle: 'Mensajes de apoyo de personas que viven con TNF',
                 cmsg1: 'Busca el progreso, no la perfección. Un paso minúsculo en la dirección correcta sigue siendo un progreso.',
                 cmsg2: 'Al principio puede parecer aterrador y sin esperanza, pero prometo que puede mejorar. Asimila los nuevos sentimientos sin juzgar, sigue adelante, ten paciencia, confía en el proceso — un día a la vez.',
@@ -4997,7 +5005,6 @@
                 cmsg29: 'En medio de la confusión y la pérdida, toma un día a la vez. Te reconstruirás. Sé abierto y valiente — acepta lo que es, haz lo que puedas y sabe que eso es suficiente.',
                 floatingSurveyText: '¿Tienes alguna experiencia de vida relacionada con el TNF y te gustaría compartir lo que te ha ayudado? Haz clic aquí para ir a la encuesta y ayúdanos a desarrollar esta base de conocimientos de la comunidad.',
                 floatingSurveyBtn: 'Ir a la encuesta',
-                toolSurveyLink: '¿Te ha ayudado? Cuéntanoslo en la encuesta de 2 minutos «Qué ayuda» →',
                 toolShuffleBtn: '⟳ Nueva Herramienta',
                 footerSupportTitle: 'Apoya',
                 footerPatreon: 'Apoya en Patreon',
@@ -5338,6 +5345,11 @@
             document.getElementById('langEn').classList.toggle('active', lang === 'en');
             document.getElementById('langEs').classList.toggle('active', lang === 'es');
             // Apply translations to all data-i18n elements
+            var phEls = document.querySelectorAll('[data-i18n-placeholder]');
+            for (var pi = 0; pi < phEls.length; pi++) {
+                var phKey = phEls[pi].getAttribute('data-i18n-placeholder');
+                if (translations[lang] && translations[lang][phKey]) phEls[pi].setAttribute('placeholder', translations[lang][phKey]);
+            }
             var els = document.querySelectorAll('[data-i18n]');
             for (var i = 0; i < els.length; i++) {
                 var key = els[i].getAttribute('data-i18n');
