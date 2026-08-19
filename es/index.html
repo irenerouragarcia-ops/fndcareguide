@@ -2667,10 +2667,10 @@
             <div class="tools-layout">
                 <!-- TOOL WIDGET -->
                 <div class="tool-widget reveal" id="toolWidget">
-                    <div class="tool-category-badge" id="toolBadge" style="background: rgb(227, 240, 227); color: rgb(74, 122, 74);">🤸 Movimiento</div>
-                    <h3 id="toolTitle">Técnica del Cepillado</h3>
-                    <p class="tool-desc" id="toolDesc">Pasar la mano por una parte del cuerpo, como si se estuviera quitando el polvo o el exceso de energía. Similar al Tai Chi, esta práctica suaviza, relaja y calma.</p>
-                    <div class="tool-interactive" id="toolInteractive"><div class="tool-step-list"><div class="tool-step"><span class="tool-step-num">1</span><span>Encuentra una posición cómoda — sentado o de pie</span></div><div class="tool-step"><span class="tool-step-num">2</span><span>Coloca una mano sobre tu hombro o muslo</span></div><div class="tool-step"><span class="tool-step-num">3</span><span>Pasa lentamente la mano hacia abajo, hacia las yemas de los dedos o el final de la parte del cuerpo</span></div><div class="tool-step"><span class="tool-step-num">4</span><span>Visualiza la tensión siendo barrida con cada pasada</span></div><div class="tool-step"><span class="tool-step-num">5</span><span>Repite varias veces en cada lado — nota la liberación</span></div></div></div>
+                    <div class="tool-category-badge" id="toolBadge" style="background: rgb(232, 245, 233); color: rgb(46, 125, 50);">🌿 Naturaleza</div>
+                    <h3 id="toolTitle">Paseos para Enraizarse</h3>
+                    <p class="tool-desc" id="toolDesc">El contacto descalzo con la hierba, la arena o la tierra puede promover una sensación de calma y proporcionar nuevos estímulos sensoriales para el sistema nervioso.</p>
+                    <div class="tool-interactive" id="toolInteractive"><div class="tool-step-list"><div class="tool-step"><span class="tool-step-num">1</span><span>Elige una superficie segura: hierba, playa de arena, claro de bosque tranquilo</span></div><div class="tool-step"><span class="tool-step-num">2</span><span>Quítate el calzado y quédate de pie: nota la temperatura y textura bajo los pies</span></div><div class="tool-step"><span class="tool-step-num">3</span><span>Camina despacio: desplaza el peso del talón a la punta, mantén las rodillas suaves</span></div><div class="tool-step"><span class="tool-step-num">4</span><span>Respira y siente: con cada paso, nota mentalmente una sensación (frío, suave, granuloso)</span></div><div class="tool-step"><span class="tool-step-num">5</span><span>Después de 5-10 minutos, pausa y agradece a la tierra. Limpia tus pies.</span></div></div></div>
                     <div class="tool-controls">
                         <button class="tool-btn primary" id="toolActionBtn" onclick="toolAction()" style="display: none;">Start</button>
                         <button class="tool-btn secondary" onclick="shuffleTool()" data-i18n="toolShuffleBtn">⟳ Nueva Herramienta</button>
@@ -4468,7 +4468,7 @@
                 var type = card.getAttribute('data-type');
                 var geo = card.getAttribute('data-geo') || '';
                 var tags = (card.getAttribute('data-tags') || '').toLowerCase();
-                var title = card.querySelector('h4').textContent.toLowerCase();
+                var title = card.querySelector('h3, h4').textContent.toLowerCase();
                 var desc = card.querySelector('.org-desc').textContent.toLowerCase();
                 var searchText = tags + ' ' + title + ' ' + desc;
                 var matchesType = (currentOrgFilter === 'all' || type === currentOrgFilter ||
