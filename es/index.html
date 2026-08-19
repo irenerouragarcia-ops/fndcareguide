@@ -2383,6 +2383,7 @@
             margin-right: 0.5rem;
             vertical-align: middle;
             filter: brightness(1.8);
+            filter: brightness(0) invert(1);
         }
 
         /* Sections need relative for deco logos */
@@ -2615,7 +2616,7 @@
             <li>
                 <div class="lang-toggle" role="group" aria-label="Language selector">
                     <button id="langEn" class="" onclick="location.href='../index.html'" aria-label="English">EN</button>
-                    <button id="langEs" aria-current="true" aria-label="Español" class="active">ES</button>
+                    <button id="langEs" onclick="location.href='es/index.html'" aria-label="Español" class="active">ES</button>
                 </div>
             </li>
             <li>
@@ -2637,7 +2638,7 @@
             <img src="../logo_main.png" alt="" class="deco-logo hero-left" aria-hidden="true">
             <div class="hero-content">
                 <h1 data-i18n="heroTitle"><span style="color: #4a4a4a;">Guía de cuidado</span> <em style="color: var(--purple-deep); display: block;">TNF</em></h1>
-                <p class="hero-subtitle" data-i18n="heroSubtitle">Una base de conocimiento comunitaria con herramientas prácticas que han ayudado a otras personas que viven con el TNF, junto con perspectivas de experiencia vivida, mensajes de ánimo y enlaces a apoyo profesional y comunitario.</p>
+                <p class="hero-subtitle" data-i18n="heroSubtitle">Una base de conocimiento comunitaria con herramientas prácticas que han ayudado a otras personas que viven con TNF, junto con perspectivas de experiencia vivida, mensajes de ánimo y enlaces a apoyo profesional y comunitario.</p>
                 <div style="margin-top: 2rem;">
                     <div style="font-family: 'Outfit', sans-serif; font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.15em; margin-bottom: 0.5rem;" data-i18n="heroMiniHeader">Base de conocimiento comunitaria</div>
                     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
@@ -2659,17 +2660,17 @@
             <div class="section-header reveal">
                 <p class="section-tag" data-i18n="toolsTag">Herramientas de Autocuidado</p>
                 <h2 data-i18n="toolsTitle">Herramientas de auto-cuidado</h2>
-                <p class="section-subtitle" data-i18n="toolsDesc">El principal objetivo de la Guía de Cuidado TNF es ofrecerte herramientas que puedas poner en práctica de verdad — aquí y ahora. Pulsa el botón para descubrir un recurso de una de las diez categorías de autocuidado. Cada uno ha sido seleccionado porque personas con TNF lo han encontrado realmente útil.</p>
+                <p class="section-subtitle" data-i18n="toolsDesc">El principal objetivo de la Guía de Cuidado TNF es ofrecerte herramientas que puedas poner en práctica de verdad, aquí y ahora. Pulsa el botón para descubrir un recurso de una de las diez categorías de autocuidado. Cada uno ha sido seleccionado porque personas con TNF lo han encontrado realmente útil.</p>
                 <div class="gentle-reminder" data-i18n="toolsReminder" style="max-width: 680px; margin: 1.5rem auto 0; background: linear-gradient(135deg, var(--sage-pale), var(--warm-white)); border: 1px solid rgba(139, 168, 136, 0.2); border-radius: 16px; padding: 1.5rem 2rem; text-align: center;"><p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; font-weight: 300; margin: 0;"><span style="font-weight: 600; color: var(--sage-deep);">Recordatorio:</span> Todas las personas somos diferentes. Lo que funciona para una persona puede no funcionar para otra. Por eso te animo a explorar y elegir las técnicas que conecten contigo y que te resulten útiles. Escucha siempre a tu cuerpo y haz lo que sientas que es adecuado para ti. Tu camino es único, y también lo es tu caja de herramientas.</p></div>
             </div>
 
             <div class="tools-layout">
                 <!-- TOOL WIDGET -->
                 <div class="tool-widget reveal" id="toolWidget">
-                    <div class="tool-category-badge" id="toolBadge" style="background: rgb(232, 245, 233); color: rgb(46, 125, 50);">🌿 Naturaleza</div>
-                    <h3 id="toolTitle">Paseos para Enraizarse</h3>
-                    <p class="tool-desc" id="toolDesc">El contacto descalzo con la hierba, la arena o la tierra puede promover una sensación de calma y proporcionar nuevos estímulos sensoriales para el sistema nervioso.</p>
-                    <div class="tool-interactive" id="toolInteractive"><div class="tool-step-list"><div class="tool-step"><span class="tool-step-num">1</span><span>Elige una superficie segura: hierba, playa de arena, claro de bosque tranquilo</span></div><div class="tool-step"><span class="tool-step-num">2</span><span>Quítate el calzado y quédate de pie: nota la temperatura y textura bajo los pies</span></div><div class="tool-step"><span class="tool-step-num">3</span><span>Camina despacio: desplaza el peso del talón a la punta, mantén las rodillas suaves</span></div><div class="tool-step"><span class="tool-step-num">4</span><span>Respira y siente: con cada paso, nota mentalmente una sensación (frío, suave, granuloso)</span></div><div class="tool-step"><span class="tool-step-num">5</span><span>Después de 5-10 minutos, pausa y agradece a la tierra. Limpia tus pies.</span></div></div></div>
+                    <div class="tool-category-badge" id="toolBadge" style="background: rgb(237, 231, 243); color: rgb(122, 97, 155);">✋ Sentidos</div>
+                    <h3 id="toolTitle">Escuchar Música</h3>
+                    <p class="tool-desc" id="toolDesc">Escuchar música para mejorar el estado de ánimo y la relajación. Tener una lista de reproducción relajante involucra diferentes sentidos para crear armonía y paz interior.</p>
+                    <div class="tool-interactive" id="toolInteractive"><div class="tool-step-list"><div class="tool-step"><span class="tool-step-num">1</span><span>Selecciona música que te resulte relajante o inspiradora</span></div><div class="tool-step"><span class="tool-step-num">2</span><span>Encuentra un lugar cómodo</span></div><div class="tool-step"><span class="tool-step-num">3</span><span>Concéntrate en el sonido — deja que la música llene tu atención</span></div><div class="tool-step"><span class="tool-step-num">4</span><span>Nota diferentes elementos: instrumentos, ritmo, letras</span></div><div class="tool-step"><span class="tool-step-num">5</span><span>Déjate llevar por la música durante unos minutos</span></div></div></div>
                     <div class="tool-controls">
                         <button class="tool-btn primary" id="toolActionBtn" onclick="toolAction()" style="display: none;">Start</button>
                         <button class="tool-btn secondary" onclick="shuffleTool()" data-i18n="toolShuffleBtn">⟳ Nueva Herramienta</button>
@@ -2682,7 +2683,7 @@
                 <div class="book-card reveal">
                     <span class="card-label" data-i18n="bookLabel">📖 La Guía</span>
                     <h3 data-i18n="bookTitle">Libro FND Care Guide</h3>
-                    <p class="desc" data-i18n="bookDesc">Manual compasivo y práctico diseñado para compartir contigo lo que ha ayudado a otras personas que viven con TNF a manejar sus síntomas, sentirse más en control y mejorar su bienestar, y lo que también podría ayudarte a ti. Moldeado por las voces y experiencias de la comunidad TNF.</p>
+                    <p class="desc" data-i18n="bookDesc">Manual práctico diseñado para compartir contigo lo que ha ayudado a otras personas que viven con TNF a manejar sus síntomas, sentirse más en control y mejorar su bienestar, y lo que también podría ayudarte a ti. Con reflexiones y experiencias de la comunidad TNF.</p>
                     <div class="book-visual">
                         <a href="https://fnd-care.myshopify.com/products/pre-order-fnd-care-guide-book-1st-edition?utm_source=copyToPasteBoard&amp;utm_medium=product-links&amp;utm_content=web" target="_blank">
                             <img src="../book_cover.png" alt="The FND Care Guide book cover" class="book-cover-img">
@@ -2710,8 +2711,7 @@
 
             <div class="community-layout">
                 <div class="subtitle-container" style="margin-top: 2rem; margin-bottom: 2rem; text-align: center;">
-                    <p style="color: var(--soft-black); font-size: 1.15rem; font-weight: 300;">Reflections about helpful
-                        practical tools</p>
+                    <p style="color: var(--soft-black); font-size: 1.15rem; font-weight: 300;" data-i18n="reflectionsLabel">Reflexiones sobre herramientas prácticas útiles</p>
                 </div>
                 <div class="community-tabs reveal">
                     <button class="tab-btn active" onclick="filterStories('all', this)">All</button>
@@ -3326,7 +3326,7 @@
 
                 <div class="stories-fade-overlay" id="storiesFade"></div>
                 <button class="stories-expand-btn" id="storiesExpandBtn" onclick="toggleStoriesExpand()">
-                    <span>Show More Insights</span>
+                    <span data-i18n="showMore">Mostrar Más Perspectivas</span>
                     <span class="expand-arrow">▼</span>
                 </button>
 
@@ -3336,7 +3336,7 @@
                 <div class="caring-messages-wrapper reveal" style="position: relative;">
                     <div class="caring-header">
                         <h3 data-i18n="caringTitle" style="font-family: 'DM Serif Display', serif; color: var(--text-secondary); font-size: 1.8rem; margin-bottom: 0.5rem; letter-spacing: 0.02em; text-transform:none;"><span style="font-size: 0.4em;">💜</span> Mensajes de ánimo <span style="font-size: 0.4em;">💜</span></h3>
-                        <p data-i18n="caringSubtitle">Mensajes de apoyo de personas que navegan por el TNF</p>
+                        <p data-i18n="caringSubtitle">Mensajes de apoyo de personas que viven con TNF</p>
                     </div>
                     <button class="caring-nav-btn left" onclick="document.getElementById('caringScroll').scrollBy({left: -document.getElementById('caringScroll').clientWidth, behavior: 'smooth'})">‹</button>
                     <button class="caring-nav-btn right" onclick="document.getElementById('caringScroll').scrollBy({left: document.getElementById('caringScroll').clientWidth, behavior: 'smooth'})">›</button>
@@ -3432,20 +3432,19 @@
                 <!-- Share Your Story -->
                 <div class="share-section reveal" id="share">
                     <h3 data-i18n="shareTitle">Añade Tu Perspectiva a la Base de Conocimiento</h3>
-                    <p data-i18n="shareDesc">¿Qué te ha ayudado? Ya sea una técnica de respiración, una práctica de movimiento, tiempo en la naturaleza, una salida creativa, o simplemente algo que alguien dijo que cambió tu perspectiva — tu aportación podría ser la que ayude a otra persona. Así es como construimos una base de conocimiento juntos.</p>
+                    <p data-i18n="shareDesc">¿Qué te ha ayudado? Ya sea una técnica de respiración, una práctica de movimiento, tiempo en la naturaleza, una actividad creativa, o simplemente algo que alguien dijo que cambió tu perspectiva. Tu aportación podría ser la que ayude a otra persona. Así es como construimos una base de conocimiento juntos.</p>
                     <div style="display:flex; flex-direction:column; align-items:center; margin-top:1.5rem; gap:1rem; width: 100%;">
                         <button id="toggleSurveyBtn" class="btn btn-primary" onclick="toggleSurvey()" data-i18n="showSurvey">📝 Mostrar Cuestionario</button>
                         <div id="surveyContainer" style="display:none; width:100%; text-align:center;">
                             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdjXKt5A5uBE0MW-lb3xXfAOZkWOgwD-wN2iVkPcPVXJU-55A/viewform?embedded=true" width="640" height="1206" frameborder="0" marginheight="0" marginwidth="0" style="border:none; border-radius:12px; max-width:100%;">Cargando…</iframe>
                         </div>
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5LP47ylQVbTaoLzZ3UjR3GXiNA1522QJ1aTgkoU-d_0uNcw/viewform" target="_blank" class="btn btn-primary" style="margin-top:0.5rem;" data-i18n="extendedQuestionnaire">📝 Cuestionario Ampliado</a>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdjXKt5A5uBE0MW-lb3xXfAOZkWOgwD-wN2iVkPcPVXJU-55A/viewform" target="_blank" rel="noopener" class="survey-mini-link" data-i18n="storiesSurveyLink">¿Algo de aquí te ha ayudado? Suma tu voz en la encuesta «Qué ayuda» →</a>
                     </div>
                 </div>
 
                 <!-- Jul 2026: Patreon support card (decisions B-new-1 / B-new-2) -->
                 <div class="support-card reveal">
-                    <p data-i18n="supportCardText">Este recurso es gratuito y construido en comunidad.<br>Puedes apoyar su mantenimiento y desarrollo en Patreon — y recibir grandes recompensas a cambio: sesiones grupales semanales y mensuales, contenido exclusivo ¡y mucho más!</p>
+                    <p data-i18n="supportCardText">Este recurso es gratuito y construido en comunidad.<br>Puedes apoyar su mantenimiento y desarrollo en Patreon a cambio de acceso a contenido educacional, sesiones grupales semanales y mensuales, ¡y más!</p>
                     <div class="support-card-links">
                         <a href="https://www.patreon.com/cw/IreneRouraGarcia" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="footerPatreon">Apoya en Patreon</a>
                     </div>
@@ -3468,13 +3467,13 @@
                     <input type="text" class="signpost-search" id="signpostSearch" placeholder="Search by name, country, topic, or keyword..." oninput="filterOrgs()">
                 </div>
                 <div class="signpost-filters" id="signpostFilters">
-                    <button class="signpost-filter-btn active" onclick="filterOrgType('all', this)">All</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgType('charity', this)">Charities</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgType('medical', this)">Professional</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgType('research', this)">Research</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgType('support', this)">Peer Support</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgType('specialist', this)">Specialist</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgType('tools', this)">Apps &amp; Tools</button>
+                    <button class="signpost-filter-btn active" onclick="filterOrgType('all', this)" data-i18n="\&quot;filterAll&quot;">All</button>
+                    <button class="signpost-filter-btn" onclick="filterOrgType('charity', this)" data-i18n="\&quot;filterCharities&quot;">Charities</button>
+                    <button class="signpost-filter-btn" onclick="filterOrgType('medical', this)" data-i18n="\&quot;filterProfessional&quot;">Professional</button>
+                    <button class="signpost-filter-btn" onclick="filterOrgType('research', this)" data-i18n="\&quot;filterResearch&quot;">Research</button>
+                    <button class="signpost-filter-btn" onclick="filterOrgType('support', this)" data-i18n="\&quot;filterPeer&quot;">Peer Support</button>
+                    <button class="signpost-filter-btn" onclick="filterOrgType('specialist', this)" data-i18n="\&quot;filterSpecialist&quot;">Specialist</button>
+                    <button class="signpost-filter-btn" onclick="filterOrgType('tools', this)" data-i18n="\&quot;filterApps&quot;">Apps &amp; Tools</button>
                     <button class="signpost-filter-btn" onclick="filterOrgType('spanish', this)">🇪🇸 En Español</button>
                 </div>
 
@@ -3492,7 +3491,7 @@
                     <p class="org-desc" data-en="Created by Prof. Jon Stone — the definitive patient information resource
                         explaining
                         every FND symptom, how diagnosis works, and treatment approaches. Essential reading.">Creado por el Prof. Jon Stone — el recurso de información definitivo para pacientes que explica cada síntoma del TNF, cómo funciona el diagnóstico y los enfoques de tratamiento. Lectura esencial.</p>
-                    <span class="org-type nhs">Professional Resource</span>
+                    <span class="org-type nhs" data-en="Professional Resource">Recurso profesional</span>
                 </a>
 
                 <a href="https://www.nhsinform.scot/illnesses-and-conditions/brain-nerves-and-spinal-cord/functional-neurological-disorder/" target="_blank" class="org-card reveal" data-geo="global" data-type="medical" data-tags="nhs inform scotland national health service uk diagnosis symptoms treatments health services medical">
@@ -3501,7 +3500,7 @@
                     <h3>NHS Inform</h3>
                     <p class="org-desc" data-en="Official health information from Scotland's NHS. Trusted guidance on conditions,
                         symptoms, treatments, and health services.">Información sanitaria oficial del NHS de Escocia. Orientación de confianza sobre enfermedades, síntomas, tratamientos y servicios de salud.</p>
-                    <span class="org-type nhs">Professional Resource</span>
+                    <span class="org-type nhs" data-en="Professional Resource">Recurso profesional</span>
                 </a>
 
                 <!-- === UK CHARITIES === -->
@@ -3511,7 +3510,7 @@
                     <h3>FND Action</h3>
                     <p class="org-desc" data-en="The first UK-registered charity dedicated solely to FND. Support, education,
                         awareness campaigns, and regional community groups across the UK.">La primera organización benéfica del Reino Unido dedicada exclusivamente al TNF. Apoyo, educación, campañas de sensibilización y grupos comunitarios regionales en todo el Reino Unido.</p>
-                    <span class="org-type charity">UK Charity</span>
+                    <span class="org-type charity" data-en="UK Charity">Asociación benéfica (Reino Unido)</span>
                 </a>
 
                 <a href="https://www.fndadvocate.org" target="_blank" class="org-card reveal" data-geo="international" data-type="support" data-tags="fnd advocate advocacy patient support education awareness community resources">
@@ -3520,7 +3519,7 @@
                     <h3>FND Advocate</h3>
                     <p class="org-desc" data-en="A dedicated advocacy platform providing education, awareness, and support
                         resources for people living with FND and their families.">Una plataforma de defensa y promoción que ofrece educación, sensibilización y recursos de apoyo para personas que viven con TNF y sus familias.</p>
-                    <span class="org-type support">Advocacy &amp; Support</span>
+                    <span class="org-type support" data-en="Advocacy &amp; Support">Defensa y apoyo</span>
                 </a>
 
                 <a href="https://fndfriends.com" target="_blank" class="org-card reveal" data-geo="uk" data-type="charity" data-tags="fnd friends peer support community meetups brian toolbox coping network south west england south wales bristol gloucester charity">
@@ -3530,7 +3529,7 @@
                     <p class="org-desc" data-en="South West England and South Wales based charity with peer support groups,
                         meetups, holistic therapy
                         sessions, and BRIAN — a practical toolbox for coping with FND day-to-day.">Organización benéfica del suroeste de Inglaterra con grupos de apoyo entre pares, encuentros, sesiones de terapia holística y BRIAN — un kit de herramientas práctico para afrontar el TNF día a día.</p>
-                    <span class="org-type charity">UK Charity</span>
+                    <span class="org-type charity" data-en="UK Charity">Asociación benéfica (Reino Unido)</span>
                 </a>
 
                 <a href="https://www.fnddimensions.org" target="_blank" class="org-card reveal" data-geo="uk" data-type="charity" data-tags="fnd dimensions uk charity support awareness day campaigns carers family">
@@ -3540,7 +3539,7 @@
                     <p class="org-desc" data-en="UK charity co-hosting FND Awareness Day. Safe environment for people with FND
                         and
                         their carers to meet, share experiences, and support each other.">Organización benéfica del Reino Unido que coorganiza el Día de Concienciación sobre el TNF. Un entorno seguro para que las personas con TNF y sus cuidadores se reúnan, compartan experiencias y se apoyen mutuamente.</p>
-                    <span class="org-type charity">UK Charity</span>
+                    <span class="org-type charity" data-en="UK Charity">Asociación benéfica (Reino Unido)</span>
                 </a>
 
                 <a href="https://fndmattersni.org.uk" target="_blank" class="org-card reveal" data-geo="uk" data-type="support" data-tags="fnd matters northern ireland NI belfast peer support counselling uk">
@@ -3549,7 +3548,7 @@
                     <h3>FND Matters NI</h3>
                     <p class="org-desc" data-en="Northern Ireland's FND charity providing peer support, awareness campaigns, and
                         counselling services for over 5,000 people living with FND in NI.">La organización del TNF en Irlanda del Norte que ofrece apoyo entre pares, campañas de sensibilización y servicios de asesoramiento para más de 5.000 personas con TNF en NI.</p>
-                    <span class="org-type support">Northern Ireland</span>
+                    <span class="org-type support" data-en="Northern Ireland">Irlanda del Norte</span>
                 </a>
 
                 <a href="https://www.fndwhatnow.com" target="_blank" class="org-card reveal" data-geo="global" data-type="charity" data-tags="fnd what now south africa NPC support tuesday meetings neurolog app carers charity">
@@ -3558,7 +3557,7 @@
                     <h3>FND — What Now? (South Africa)</h3>
                     <p class="org-desc" data-en="South Africa's registered NPC supporting people with FND. Weekly Tuesday online
                         support groups, carer resources, and home of the NeuroLog symptom-tracking app.">La organización sin ánimo de lucro de Sudáfrica que apoya a personas con TNF. Grupos de apoyo en línea los martes, recursos para cuidadores y sede de la aplicación NeuroLog de seguimiento de síntomas.</p>
-                    <span class="org-type charity">Charity (South Africa)</span>
+                    <span class="org-type charity" data-en="Charity (South Africa)">Asociación benéfica (Sudáfrica)</span>
                 </a>
 
                 <a href="https://www.thebraincharity.org.uk/condition/functional-neurological-disorder/" target="_blank" class="org-card reveal" data-geo="uk" data-type="charity" data-tags="brain charity liverpool uk neurological conditions practical help emotional support counselling carers">
@@ -3567,7 +3566,7 @@
                     <h3>The Brain Charity</h3>
                     <p class="org-desc" data-en="UK-wide support for all 600+ neurological conditions including FND. Practical
                         advice, counselling, phone befriending, group therapy, and carer support from Liverpool.">Apoyo en todo el Reino Unido para más de 600 enfermedades neurológicas, incluido el TNF. Orientación práctica, asesoramiento, acompañamiento telefónico, terapia grupal y apoyo a cuidadores desde Liverpool.</p>
-                    <span class="org-type charity">UK Charity</span>
+                    <span class="org-type charity" data-en="UK Charity">Asociación benéfica (Reino Unido)</span>
                 </a>
 
                 <a href="https://www.mind.org.uk" target="_blank" class="org-card reveal" data-geo="uk" data-type="support" data-tags="mind mental health charity uk wellbeing support helpline information anxiety depression">
@@ -3577,7 +3576,7 @@
                     <p class="org-desc" data-en="Leading UK mental health charity with information, support services, and
                         helpline.
                         Many people with FND benefit from mental health support alongside neurological care.">Principal organización benéfica de salud mental del Reino Unido con información, servicios de apoyo y línea de ayuda. Muchas personas con TNF se benefician del apoyo en salud mental junto con la atención neurológica.</p>
-                    <span class="org-type support">Mental Health</span>
+                    <span class="org-type support" data-en="Mental Health">Salud mental</span>
                 </a>
 
                 <!-- === MEDICAL & CLINICAL RESOURCES === -->
@@ -3588,7 +3587,7 @@
                     <h3>Non-Epileptic Attacks Info</h3>
                     <p class="org-desc" data-en="Specialist resource by a Sheffield clinical team with detailed information on
                         non-epileptic seizures (PNES/NEAD) — a common FND presentation.">Recurso especializado del equipo clínico de Sheffield con información detallada sobre las crisis no epilépticas (PNES/NEAD) — una presentación frecuente del TNF.</p>
-                    <span class="org-type nhs">Professional Resource</span>
+                    <span class="org-type nhs" data-en="Professional Resource">Recurso profesional</span>
                 </a>
 
                 <!-- === SPECIALIST CLINICIANS & PROGRAMMES === -->
@@ -3598,7 +3597,7 @@
                         🌿</div>
                     <h3>Irene Roura García</h3>
                     <p class="org-desc" data-en="Mental health nurse, hypnotherapist, wellbeing coach, and FND support specialist. Group programs and 1:1 sessions. Member of the FND UK Network. Author &lt;em&gt;FND Care Guide&lt;/em&gt;.">Enfermera de salud mental, hipnoterapeuta, coach de bienestar y especialista en apoyo al TNF. Programas grupales y sesiones individuales. Miembro de la Red UK del TNF. Autora de la <em>Guía de Cuidado TNF</em>.</p>
-                    <span class="org-type specialist">FND Specialist</span>
+                    <span class="org-type specialist" data-en="FND Specialist">Especialista en TNF</span>
                 </a>
 
                 <a href="https://www.fndcourage.org/" target="_blank" class="org-card reveal" data-geo="global" data-type="specialist" data-tags="fnd courage support education courses events community connection living">
@@ -3607,7 +3606,7 @@
                     <h3>FND Courage</h3>
                     <p class="org-desc" data-en="Support and education for people living with FND through courses, events, and
                         community connection.">Apoyo y formación para personas que viven con TNF a través de cursos, eventos y conexión comunitaria.</p>
-                    <span class="org-type specialist">Support &amp; Education</span>
+                    <span class="org-type specialist" data-en="Support &amp; Education">Apoyo y educación</span>
                 </a>
 
                 <a href="https://www.ahpfndnetwork.org" target="_blank" class="org-card reveal" data-geo="uk" data-type="specialist" data-tags="allied health professionals AHP networking group NHS physiotherapists occupational therapists speech language psychologists uk clinicians">
@@ -3617,7 +3616,7 @@
                     <p class="org-desc" data-en="UK network of NHS occupational therapists, physiotherapists, speech therapists,
                         and
                         psychologists who specialise in FND. Expert talks and free resources.">Red del Reino Unido de terapeutas ocupacionales, fisioterapeutas, logopedas y psicólogos del NHS especializados en TNF. Charlas de expertos y recursos gratuitos.</p>
-                    <span class="org-type specialist">Professional Network</span>
+                    <span class="org-type specialist" data-en="Professional Network">Red profesional</span>
                 </a>
 
                 <a href="https://ukfndnetwork.org" target="_blank" class="org-card reveal" data-geo="uk" data-type="specialist" data-tags="uk fnd network multidisciplinary hub health professionals neuropsychology oxford">
@@ -3627,7 +3626,7 @@
                     <p class="org-desc" data-en="Multidisciplinary hub connecting UK health professionals involved in FND care.
                         Links
                         to resources, organisations, and specialist services across the UK.">Centro multidisciplinar que conecta a los profesionales sanitarios del Reino Unido involucrados en la atención del TNF. Enlaces a recursos, organizaciones y servicios especializados en todo el Reino Unido.</p>
-                    <span class="org-type specialist">Professional Network</span>
+                    <span class="org-type specialist" data-en="Professional Network">Red profesional</span>
                 </a>
 
                 <!-- === RESEARCH === -->
@@ -3638,7 +3637,7 @@
                     <p class="org-desc" data-en="International professional society advancing clinical care and research.
                         Multidisciplinary — neurology, psychiatry, physiotherapy, and more. Hosts annual conferences.
                     ">Sociedad profesional internacional que impulsa la atención clínica y la investigación. Multidisciplinar — neurología, psiquiatría, fisioterapia y más. Organiza conferencias anuales.</p>
-                    <span class="org-type medical">Professionals</span>
+                    <span class="org-type medical" data-en="Professionals">Profesionales</span>
                 </a>
 
                 <a href="https://www.brighamandwomens.org/neurology/functional-neurological-disorder" target="_blank" class="org-card reveal" data-geo="global" data-type="research" data-tags="brigham womens hospital boston usa harvard multidisciplinary fnd program treatment neurology psychiatry research">
@@ -3648,7 +3647,7 @@
                     <p class="org-desc" data-en="Harvard's multidisciplinary FND program — leading clinical care and research in
                         the
                         US. Neurology, psychiatry, rehabilitation, and clinical trials.">Programa multidisciplinar del TNF de Harvard — líder en atención clínica e investigación en EE.UU. Neurología, psiquiatría, rehabilitación y ensayos clínicos.</p>
-                    <span class="org-type research">US Research &amp; Treatment</span>
+                    <span class="org-type research" data-en="US Research &amp; Treatment">Investigación y tratamiento (EE. UU.)</span>
                 </a>
 
                 <a href="https://med.stanford.edu/psychiatry/patient_care/fnd.html" target="_blank" class="org-card reveal" data-geo="global" data-type="research" data-tags="stanford university fnd program research treatment clinical trials neurology usa california">
@@ -3658,7 +3657,7 @@
                     <p class="org-desc" data-en="Stanford Medicine's clinical and research program offering evaluation,
                         treatment,
                         and opportunities to participate in FND research studies.">Programa clínico e investigador de Stanford Medicine que ofrece evaluación, tratamiento y oportunidades de participar en estudios de investigación sobre el TNF.</p>
-                    <span class="org-type research">US Research &amp; Treatment</span>
+                    <span class="org-type research" data-en="US Research &amp; Treatment">Investigación y tratamiento (EE. UU.)</span>
                 </a>
 
                 <a href="https://www.fndhope.org" target="_blank" class="org-card reveal" data-geo="global" data-type="charity" data-tags="fnd hope international global charity awareness support funding research patient-led worldwide">
@@ -3668,7 +3667,7 @@
                     <p class="org-desc" data-en="The first and only global patient-led charity for FND. Raising awareness,
                         patient
                         registry, provider directory, and the comprehensive FND Guide.">La primera y única organización benéfica global liderada por pacientes para el TNF. Concienciación, registro de pacientes, directorio de proveedores y la completa Guía TNF.</p>
-                    <span class="org-type charity">Global Charity</span>
+                    <span class="org-type charity" data-en="Global Charity">Asociación benéfica global</span>
                 </a>
 
                 <a href="https://fnd.ie" target="_blank" class="org-card reveal" data-geo="europe" data-type="charity" data-tags="fnd ireland irish advocacy peer support clinical pathways dublin monthly meetings charity">
@@ -3678,7 +3677,7 @@
                     <p class="org-desc" data-en="Ireland's first dedicated FND organisation. Advocacy for clinical pathways,
                         monthly
                         in-person peer support groups, and awareness campaigns across Ireland.">La primera organización dedicada al TNF en Irlanda. Defensa de los itinerarios clínicos, grupos de apoyo presenciales mensuales y campañas de sensibilización en toda Irlanda.</p>
-                    <span class="org-type charity">Irish Charity</span>
+                    <span class="org-type charity" data-en="Irish Charity">Asociación benéfica (Irlanda)</span>
                 </a>
 
                 <a href="https://fndaustralia.com.au" target="_blank" class="org-card reveal" data-geo="global" data-type="medical" data-tags="fnd australia network videos education patients health professionals southern hemisphere">
@@ -3688,7 +3687,7 @@
                     <p class="org-desc" data-en="Australian network connecting health professionals and patients. Educational
                         videos,
                         resources, and information about FND services across Australia.">Red australiana que conecta a profesionales sanitarios y pacientes. Vídeos educativos, recursos e información sobre los servicios de TNF en Australia.</p>
-                    <span class="org-type medical">Professionals</span>
+                    <span class="org-type medical" data-en="Professionals">Profesionales</span>
                 </a>
 
                 <a href="https://fndaus.org.au" target="_blank" class="org-card reveal" data-geo="global" data-type="charity" data-tags="fnd australia support service knowledge services fulfilling life potential charity">
@@ -3698,7 +3697,7 @@
                     <p class="org-desc" data-en="Advancing knowledge and services for people with FND in Australia, so
                         Australians
                         affected by FND may live a fulfilling life and reach their full potential.">Avanzando en el conocimiento y los servicios para personas con TNF en Australia, para que los australianos afectados puedan llevar una vida plena y alcanzar su máximo potencial.</p>
-                    <span class="org-type charity">Australian Charity</span>
+                    <span class="org-type charity" data-en="Australian Charity">Asociación benéfica (Australia)</span>
                 </a>
 
                 <a href="https://aidinef.it/" target="_blank" class="org-card reveal" data-geo="europe" data-type="support" data-tags="aidinef italy italian association support awareness community family">
@@ -3707,7 +3706,7 @@
                     <h3>AIDINeF (Italy)</h3>
                     <p class="org-desc" data-en="Italian association for people with FND and their families offering support,
                         awareness and community.">Asociación italiana para personas con TNF y sus familias que ofrece apoyo, sensibilización y comunidad.</p>
-                    <span class="org-type support">Support (Italy)</span>
+                    <span class="org-type support" data-en="Support (Italy)">Apoyo (Italia)</span>
                 </a>
 
                 <a href="https://www.ag-fns.de/" target="_blank" class="org-card reveal" data-geo="europe" data-type="support" data-tags="german working group ag-fns fnd germany information networking collaborative">
@@ -3716,7 +3715,7 @@
                     <h3>Arbeitsgemeinschaft FNS</h3>
                     <p class="org-desc" data-en="German working group for FND — a collaborative site for information and
                         networking.">Grupo de trabajo alemán sobre el TNF — un sitio colaborativo para el intercambio de información y el trabajo en red.</p>
-                    <span class="org-type support">Working Group (Germany)</span>
+                    <span class="org-type support" data-en="Working Group (Germany)">Grupo de trabajo (Alemania)</span>
                 </a>
 
                 <a href="https://www.notdefinedbyfnd.org" target="_blank" class="org-card reveal" data-geo="online" data-type="support" data-tags="not defined by fnd stigma awareness advocacy surveys empowerment research warrior usa">
@@ -3725,7 +3724,7 @@
                     <h3>Not Defined By FND</h3>
                     <p class="org-desc" data-en="US-based advocacy organisation ending stigma through awareness campaigns,
                         participatory research surveys, FND Empowerment Circle support groups, and cognitive games.">Organización de defensa basada en EE.UU. que combate el estigma a través de campañas de sensibilización, encuestas de investigación participativa, grupos de apoyo y juegos cognitivos.</p>
-                    <span class="org-type support">US Advocacy</span>
+                    <span class="org-type support" data-en="US Advocacy">Defensa (EE. UU.)</span>
                 </a>
 
                 <!-- === APPS & TOOLS === -->
@@ -3736,7 +3735,7 @@
                     <p class="org-desc" data-en="Professional FND symptom-tracking app. Track symptoms, medications, and
                         triggers.
                         Generate reports for your healthcare team and contribute anonymously to research.">Aplicación profesional de seguimiento de síntomas del TNF. Registra síntomas, medicamentos y desencadenantes. Genera informes para tu equipo sanitario y contribuye anónimamente a la investigación.</p>
-                    <span class="org-type tools">App</span>
+                    <span class="org-type tools" data-en="App">App</span>
                 </a>
 
                 <a href="https://www.myfnd.co.uk" target="_blank" class="org-card reveal" data-geo="uk" data-type="tools" data-tags="myfnd app clinicians charity friendly symptoms uk digital tool">
@@ -3745,7 +3744,7 @@
                     <h3>MyFND App</h3>
                     <p class="org-desc" data-en="A secure, friendly app designed by clinicians and charity groups to help you
                         understand and manage your FND symptoms day-to-day.">Una aplicación segura y amigable diseñada por clínicos y organizaciones benéficas para ayudarte a comprender y gestionar los síntomas del TNF en tu día a día.</p>
-                    <span class="org-type tools">App</span>
+                    <span class="org-type tools" data-en="App">App</span>
                 </a>
 
                 <!-- === MORE INTERNATIONAL === -->
@@ -3755,7 +3754,7 @@
                     <h3>Samaritans</h3>
                     <p class="org-desc" data-en="24/7 listening service for anyone in emotional distress. Free to call 116 123
                         (UK &amp;amp; Ireland). Also available by email and in-person at branches.">Servicio de escucha disponible las 24 horas para cualquier persona en crisis emocional. Llamada gratuita al 116 123 (UK e Irlanda). También disponible por correo electrónico y en persona.</p>
-                    <span class="org-type support">Crisis Support</span>
+                    <span class="org-type support" data-en="Crisis Support">Apoyo en crisis</span>
                 </a>
 
                 <a href="https://www.crisistextline.org" target="_blank" class="org-card reveal" data-geo="global" data-type="support" data-tags="crisis text line sms text USA UK Canada mental health support free">
@@ -3764,7 +3763,7 @@
                     <h3>Crisis Text Line</h3>
                     <p class="org-desc" data-en="Free text-based mental health support: text HOME to 741741 (US), 85258 (UK), or
                         686868 (Canada). Available 24/7.">Apoyo gratuito de salud mental por mensaje de texto: envía HOME al 741741 (EE.UU.), 85258 (UK) o 686868 (Canadá). Disponible 24 horas.</p>
-                    <span class="org-type support">Crisis Support</span>
+                    <span class="org-type support" data-en="Crisis Support">Apoyo en crisis</span>
                 </a>
 
                 <a href="https://www.nami.org" target="_blank" class="org-card reveal" data-geo="usa" data-type="support" data-tags="nami national alliance mental illness usa support education advocacy mental health">
@@ -3773,7 +3772,7 @@
                     <h3>NAMI (National Alliance on Mental Illness)</h3>
                     <p class="org-desc" data-en="US-based mental health advocacy and support. Helpline, support groups, education
                         programmes. Relevant for FND mental health co-management.">Organización de defensa y apoyo en salud mental basada en EE.UU. Línea de ayuda, grupos de apoyo y programas educativos. Relevante para el tratamiento conjunto del TNF y la salud mental.</p>
-                    <span class="org-type support">Mental Health</span>
+                    <span class="org-type support" data-en="Mental Health">Salud mental</span>
                 </a>
 
                 <!-- === NEW RESOURCES === -->
@@ -3783,7 +3782,7 @@
                     <h3>Reactive PT</h3>
                     <p class="org-desc" data-en="In-person and online physical/occupational therapy specializing in neurologic
                         disorders including FND, based in California USA.">Terapia física y ocupacional presencial y en línea especializada en trastornos neurológicos, incluido el TNF, con sede en California, EE.UU.</p>
-                    <span class="org-type medical">Professional Resource</span>
+                    <span class="org-type medical" data-en="Professional Resource">Recurso profesional</span>
                 </a>
 
                 <a href="https://www.rewireot.com/" target="_blank" class="org-card reveal" data-geo="online" data-type="specialist" data-tags="rewire ot occupational therapy fnd functional neurologic disorder online coaching">
@@ -3792,7 +3791,7 @@
                     <h3>Rewire OT</h3>
                     <p class="org-desc" data-en="Specialized occupational therapy focusing on nervous system regulation and
                         functional rehabilitation for FND patients globally.">Terapia ocupacional especializada centrada en la regulación del sistema nervioso y la rehabilitación funcional para pacientes con TNF a nivel mundial.</p>
-                    <span class="org-type specialist">Occupational Therapy</span>
+                    <span class="org-type specialist" data-en="Occupational Therapy">Terapia ocupacional</span>
                 </a>
 
                 <a href="https://www.nortle.co.uk/" target="_blank" class="org-card reveal" data-geo="uk" data-type="medical" data-tags="nortle medical support mental health wellbeing community uk">
@@ -3801,7 +3800,7 @@
                     <h3>Nortle</h3>
                     <p class="org-desc" data-en="UK-based specialist neuro rehabilitation service supporting people with FND.
                         Offers assessments, therapy, online programs, and practical self-management resources.">Servicio especializado de neurorrehabilitación del Reino Unido que apoya a personas con TNF. Ofrece evaluaciones, terapia, programas en línea y recursos prácticos de autogestión.</p>
-                    <span class="org-type medical">Professional Resource</span>
+                    <span class="org-type medical" data-en="Professional Resource">Recurso profesional</span>
                 </a>
 
                 <a href="https://tnf-spain.org/" target="_blank" class="org-card reveal" data-geo="europe" data-type="charity" data-lang="es" data-tags="tnf espana spain asociación trastorno neurológico funcional charity support spanish español">
@@ -3810,7 +3809,7 @@
                     <h3>Asociación Española de TNF</h3>
                     <p class="org-desc" data-en="La Asociación de Trastorno Neurológico Funcional en España. Promoviendo el
                         conocimiento, la investigación y el apoyo a pacientes en todo el país.">La Asociación de Trastorno Neurológico Funcional en España. Promoviendo el conocimiento, la investigación y el apoyo a pacientes en todo el país.</p>
-                    <span class="org-type charity">Charity (Spain)</span>
+                    <span class="org-type charity" data-en="Charity (Spain)">Asociación benéfica (España)</span>
                 </a>
 
                 <!-- NEW REQUESTED RESOURCES -->
@@ -3821,7 +3820,7 @@
                     <h3>Rehabilitación TNF</h3>
                     <p class="org-desc" data-en="Spanish educational website explaining FND, its symptoms, diagnosis, and
                         treatment approaches. Focused on clear, evidence-based information.">Página web educativa en español que explica el TNF, sus síntomas, el diagnóstico y los enfoques de tratamiento. Centrada en información clara y basada en evidencia.</p>
-                    <span class="org-type medical">Professional Resource</span>
+                    <span class="org-type medical" data-en="Professional Resource">Recurso profesional</span>
                 </a>
 
                 <a href="https://www.instagram.com/fndnorthwest/" target="_blank" class="org-card reveal" data-geo="uk" data-type="support" data-tags="uk north west instagram community support peer">
@@ -3830,7 +3829,7 @@
                     <h3>FND North West</h3>
                     <p class="org-desc" data-en="Supportive FND community instagram account sharing insights, experiences, tips,
                         and encouragement from people living with FND.">Cuenta de Instagram de la comunidad TNF que comparte perspectivas, experiencias, consejos y palabras de aliento de personas que viven con TNF.</p>
-                    <span class="org-type support">Peer Support</span>
+                    <span class="org-type support" data-en="Peer Support">Apoyo entre iguales</span>
                 </a>
 
                 <a href="https://neurologyrehab.com/functionalneurologicaldisorder/" target="_blank" class="org-card reveal" data-geo="online" data-type="medical" data-tags="medical rehab online support therapy">
@@ -3840,7 +3839,7 @@
                     <p class="org-desc" data-en="Professional neurorehabilitation resource explaining FND and offering structured
                         support including assessment, treatment, and self-management strategies to improve symptoms and
                         quality of life.">Recurso profesional de neurorrehabilitación que explica el TNF y ofrece apoyo estructurado, incluyendo evaluación, tratamiento y estrategias de autogestión para mejorar los síntomas y la calidad de vida.</p>
-                    <span class="org-type medical">Professional Resource</span>
+                    <span class="org-type medical" data-en="Professional Resource">Recurso profesional</span>
                 </a>
 
                 <a href="https://www.fndwellbeing.com/" target="_blank" class="org-card reveal" data-geo="online" data-type="support" data-tags="wellbeing support online lived experience">
@@ -3849,7 +3848,7 @@
                     <h3>FND Wellbeing</h3>
                     <p class="org-desc" data-en="Support and guidance for people living with Functional Neurological Disorder,
                         shaped by lived experience and professional insight.">Apoyo y orientación para personas que viven con Trastorno Neurológico Funcional, moldeado por la experiencia vivida y el conocimiento profesional.</p>
-                    <span class="org-type support">Wellbeing Support</span>
+                    <span class="org-type support" data-en="Wellbeing Support">Apoyo al bienestar</span>
                 </a>
 
                 <a href="https://www.facebook.com/groups/1118556290245976" target="_blank" class="org-card reveal" data-geo="global" data-type="support" data-tags="fnd connect australia national peer led support facebook group families carers community">
@@ -3857,9 +3856,8 @@
                     <div class="org-icon" style="background:#FFF3E0;color:#B8860B;">🇦🇺</div>
                     <h3>FND Connect Australia</h3>
                     <p class="org-desc" data-en="National peer-led support for individuals diagnosed with FND, their families,
-                        and carers — an active Facebook community connecting people across Australia.">National peer-led support for individuals diagnosed with FND, their families,
-                        and carers — an active Facebook community connecting people across Australia.</p>
-                    <span class="org-type support">Peer Support (Australia)</span>
+                        and carers — an active Facebook community connecting people across Australia.">Apoyo nacional entre iguales para personas con diagnóstico de TNF, sus familias y cuidadores — una comunidad activa de Facebook que conecta a personas de toda Australia.</p>
+                    <span class="org-type support" data-en="Peer Support (Australia)">Apoyo entre iguales (Australia)</span>
                 </a>
 
                 <a href="https://www.themedicalblindspot.com/" target="_blank" class="org-card reveal" data-geo="uk" data-type="support" data-tags="medical blind spot nhs advocacy uk complex chronic undiagnosed conditions patient advocate">
@@ -3867,9 +3865,8 @@
                     <div class="org-icon" style="background:#E8F1FA;color:#3D6E9E;">🧭</div>
                     <h3>The Medical Blind Spot</h3>
                     <p class="org-desc" data-en="Independent NHS advocacy for people with complex, chronic, or undiagnosed
-                        conditions — helping patients be heard and navigate their care.">Independent NHS advocacy for people with complex, chronic, or undiagnosed
-                        conditions — helping patients be heard and navigate their care.</p>
-                    <span class="org-type support">Advocacy (UK)</span>
+                        conditions — helping patients be heard and navigate their care.">Defensa independiente dentro del NHS para personas con condiciones complejas, crónicas o sin diagnóstico — ayudando a los pacientes a ser escuchados y a navegar su atención.</p>
+                    <span class="org-type support" data-en="Advocacy (UK)">Defensa (Reino Unido)</span>
                 </a>
 
                 <a href="https://www.fndportal.org" target="_blank" class="org-card reveal" data-geo="global" data-type="medical" data-tags="fnd portal patient information perspectives resources articles science lived experience library">
@@ -3877,9 +3874,8 @@
                     <div class="org-icon" style="background:#EDE7F3;color:#7A619B;">📚</div>
                     <h3>FND Portal</h3>
                     <p class="org-desc" data-en="Patient-created library of information and perspectives on FND — curated
-                        articles, science, and lived-experience resources in one place.">Patient-created library of information and perspectives on FND — curated
-                        articles, science, and lived-experience resources in one place.</p>
-                    <span class="org-type nhs">Information Resource</span>
+                        articles, science, and lived-experience resources in one place.">Biblioteca creada por pacientes con información y perspectivas sobre el TNF — artículos seleccionados, ciencia y recursos de experiencia vivida en un solo lugar.</p>
+                    <span class="org-type nhs" data-en="Information Resource">Recurso de información</span>
                 </a>
 
             </div>
@@ -3918,14 +3914,13 @@
                 <h4>Connect with Irene</h4>
                 <a href="https://irenerouragarcia.com" target="_blank">irenerouragarcia.com</a>
                 <a href="https://www.instagram.com/irenerouragarcia/" target="_blank">@irenerouragarcia</a>
-                <a href="https://calendly.com/irenerouragarcia/freeconsultation" target="_blank">Book a Free
-                    Session</a>
+                <a href="https://calendly.com/irenerouragarcia/freeconsultation" target="_blank" data-i18n="footerBookFree">Reserva una consulta gratuita</a>
                 <a href="mailto:irenerouragarcia@gmail.com">Get in Touch</a>
             </div>
             <div class="footer-col">
                 <h4 data-i18n="footerSupportTitle">Apoya</h4>
                 <a href="https://www.patreon.com/cw/IreneRouraGarcia" target="_blank" rel="noopener" data-i18n="footerPatreon">Apoya en Patreon</a>
-                <span class="footer-a11y-note" data-i18n="a11yStatement">Diseñada con y para personas que viven con TNF — sin destellos, ritmo suave, a tu ritmo.</span>
+                <span class="footer-a11y-note" data-i18n="a11yStatement">Diseñada con y para personas que viven con TNF.</span>
             </div>
         </div>
         <div class="footer-disclaimer" data-i18n="footerDisclaimer"><strong>Descargo de responsabilidad:</strong> La información en FNDCareGuide.com es solo para fines educativos y de apoyo entre pares, y no constituye consejo médico profesional, diagnóstico o tratamiento. Consulta siempre a tu médico o a un proveedor de atención médica calificado sobre cualquier condición médica o plan de tratamiento.</div>
@@ -4395,7 +4390,7 @@
                 grid.classList.remove('collapsed');
                 grid.classList.add('expanded');
                 btn.classList.add('expanded');
-                btn.querySelector('span:first-child').textContent = 'Show Less';
+                btn.querySelector('span:first-child').textContent = (translations[currentLang] || translations.en).showLess;
                 fade.classList.add('hidden');
             } else {
                 // Reset to collapsed for 'All'
@@ -4405,7 +4400,7 @@
                 grid.classList.add('collapsed');
                 grid.classList.remove('expanded');
                 btn.classList.remove('expanded');
-                btn.querySelector('span:first-child').textContent = 'Show More Insights';
+                btn.querySelector('span:first-child').textContent = (translations[currentLang] || translations.en).showMore;
                 fade.classList.remove('hidden');
                 // Scroll back to section top
                 document.getElementById('community').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -4423,13 +4418,13 @@
                 grid.classList.remove('collapsed');
                 grid.classList.add('expanded');
                 btn.classList.add('expanded');
-                btn.querySelector('span:first-child').textContent = 'Show Less';
+                btn.querySelector('span:first-child').textContent = (translations[currentLang] || translations.en).showLess;
                 fade.classList.add('hidden');
             } else {
                 grid.classList.remove('expanded');
                 grid.classList.add('collapsed');
                 btn.classList.remove('expanded');
-                btn.querySelector('span:first-child').textContent = 'Show More Insights';
+                btn.querySelector('span:first-child').textContent = (translations[currentLang] || translations.en).showMore;
                 fade.classList.remove('hidden');
                 // Scroll back to section top
                 document.getElementById('community').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -4568,6 +4563,11 @@
                 bookFeat5: '<span class="check">✓</span> A reminder that there is hope and that you are not alone',
                 bookBtn: 'Get yours',
                 caringTitle: '<span style="font-size: 0.4em;">&#128156;</span> Caring messages <span style="font-size: 0.4em;">&#128156;</span>',
+                reflectionsLabel: 'Reflections about helpful practical tools',
+                filterAll: 'All', filterCharities: 'Charities', filterProfessional: 'Professional',
+                filterResearch: 'Research', filterPeer: 'Peer Support', filterSpecialist: 'Specialist',
+                filterApps: 'Apps & Tools',
+                footerBookFree: 'Book a Free Consultation',
                 caringSubtitle: 'Supportive messages from people navigating FND',
                 cmsg1: 'Strive for progress, not perfection. A tiny step in the right direction is still progress.',
                 cmsg2: 'It may feel terrifying and hopeless at first, but I promise it can get better. Take in the new feelings without judgment, keep going, be patient, trust the process — one day at a time.',
@@ -4601,7 +4601,6 @@
                 floatingSurveyBtn: 'Go to Survey',
                 toolSurveyLink: 'Did this help you? Tell us in the 2-minute What Helps survey →',
                 toolShuffleBtn: '⟳ New Tool',
-                storiesSurveyLink: 'Has something here helped you? Add your voice in the What Helps survey →',
                 footerSupportTitle: 'Support',
                 footerPatreon: 'Support on Patreon',
                 footerVolunteer: 'Volunteer with us — get in touch →',
@@ -4621,19 +4620,19 @@
                 heroBtn3: 'Fuentes de apoyo',
                 heroTag: 'Creado por Irene Roura Garcia y Co',
                 heroTitle: '<span style="color: #4a4a4a;">Guía de cuidado</span> <em style="color: var(--purple-deep); display: block;">TNF</em>',
-                heroSubtitle: 'Una base de conocimiento comunitaria con herramientas prácticas que han ayudado a otras personas que viven con el TNF, junto con perspectivas de experiencia vivida, mensajes de ánimo y enlaces a apoyo profesional y comunitario.',
+                heroSubtitle: 'Una base de conocimiento comunitaria con herramientas prácticas que han ayudado a otras personas que viven con TNF, junto con perspectivas de experiencia vivida, mensajes de ánimo y enlaces a apoyo profesional y comunitario.',
                 heroBtn1: 'Explora herramientas de auto-cuidado',
                 heroBtn2: 'Citas de experiencia vivida',
                 scroll: 'Desplazar',
                 toolsTag: 'Herramientas de Autocuidado',
                 toolsTitle: 'Herramientas de auto-cuidado',
-                toolsDesc: 'El principal objetivo de la Guía de Cuidado TNF es ofrecerte herramientas que puedas poner en práctica de verdad — aquí y ahora. Pulsa el botón para descubrir un recurso de una de las diez categorías de autocuidado. Cada uno ha sido seleccionado porque personas con TNF lo han encontrado realmente útil.',
+                toolsDesc: 'El principal objetivo de la Guía de Cuidado TNF es ofrecerte herramientas que puedas poner en práctica de verdad, aquí y ahora. Pulsa el botón para descubrir un recurso de una de las diez categorías de autocuidado. Cada uno ha sido seleccionado porque personas con TNF lo han encontrado realmente útil.',
                 toolsReminder: '<p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; font-weight: 300; margin: 0;"><span style="font-weight: 600; color: var(--sage-deep);">Recordatorio:</span> Todas las personas somos diferentes. Lo que funciona para una persona puede no funcionar para otra. Por eso te animo a explorar y elegir las técnicas que conecten contigo y que te resulten útiles. Escucha siempre a tu cuerpo y haz lo que sientas que es adecuado para ti. Tu camino es único, y también lo es tu caja de herramientas.</p>',
                 communityTag: 'Base de Conocimiento de Experiencia Vivida',
                 communityTitle: 'Citas de experiencia vivida',
                 communityDesc: 'Esta es una base de conocimiento colaborativa: perspectivas reales de personas reales que comparten las herramientas, técnicas y enfoques que les han ayudado a manejar sus síntomas, encontrar alivio y avanzar en su recuperación del TNF. Cada aportación contribuye a construir una comprensión más rica de lo que realmente funciona. Tu experiencia vivida es una parte invaluable de la sabiduría colectiva de la comunidad.',
                 shareTitle: 'Añade Tu Perspectiva a la Base de Conocimiento',
-                shareDesc: '¿Qué te ha ayudado? Ya sea una técnica de respiración, una práctica de movimiento, tiempo en la naturaleza, una salida creativa, o simplemente algo que alguien dijo que cambió tu perspectiva — tu aportación podría ser la que ayude a otra persona. Así es como construimos una base de conocimiento juntos.',
+                shareDesc: '¿Qué te ha ayudado? Ya sea una técnica de respiración, una práctica de movimiento, tiempo en la naturaleza, una actividad creativa, o simplemente algo que alguien dijo que cambió tu perspectiva. Tu aportación podría ser la que ayude a otra persona. Así es como construimos una base de conocimiento juntos.',
                 signpostTag: 'Apoyo Profesional y de Red',
                 signpostTitle: 'Fuentes de apoyo',
                 signpostDesc: 'Podemos apoyarnos de muchas maneras, y las actividades anteriores pueden ayudarnos a cuidarnos. Sin embargo, no sustituyen la atención profesional. Si tu salud o bienestar se ven afectados, busca apoyo de tu proveedor de atención médica local. Sigue siempre el tratamiento o plan de cuidado acordado con tu médico o equipo de salud.<br><br>A continuación se muestra una lista de organizaciones, organizaciones benéficas, redes y grupos que ofrecen apoyo profesional y comunitario para personas que viven con el TNF',
@@ -4658,7 +4657,7 @@
                 navPrivacy: 'Política de Privacidad',
                 bookLabel: '📖 La Guía',
                 bookTitle: 'Libro FND Care Guide',
-                bookDesc: 'Manual compasivo y práctico diseñado para compartir contigo lo que ha ayudado a otras personas que viven con TNF a manejar sus síntomas, sentirse más en control y mejorar su bienestar, y lo que también podría ayudarte a ti. Moldeado por las voces y experiencias de la comunidad TNF.',
+                bookDesc: 'Manual práctico diseñado para compartir contigo lo que ha ayudado a otras personas que viven con TNF a manejar sus síntomas, sentirse más en control y mejorar su bienestar, y lo que también podría ayudarte a ti. Con reflexiones y experiencias de la comunidad TNF.',
                 bookFeat1: '<span class="check">✓</span> Herramientas prácticas para ayudarte a manejar síntomas y sentirte más en control',
                 bookFeat2: '<span class="check">✓</span> Prácticas cotidianas para cuidar tu cuerpo y tu mente',
                 bookFeat3: '<span class="check">✓</span> Experiencias vividas y sabiduría compartida de la comunidad TNF',
@@ -4666,7 +4665,12 @@
                 bookFeat5: '<span class="check">✓</span> Un recordatorio de que hay esperanza y de que no estás solo/a',
                 bookBtn: 'Consigue el tuyo',
                 caringTitle: '<span style="font-size: 0.4em;">&#128156;</span> Mensajes de ánimo <span style="font-size: 0.4em;">&#128156;</span>',
-                caringSubtitle: 'Mensajes de apoyo de personas que navegan por el TNF',
+                reflectionsLabel: 'Reflexiones sobre herramientas prácticas útiles',
+                filterAll: 'Todas', filterCharities: 'Asociaciones benéficas', filterProfessional: 'Profesional',
+                filterResearch: 'Investigación', filterPeer: 'Apoyo entre iguales', filterSpecialist: 'Especialistas',
+                filterApps: 'Apps y herramientas',
+                footerBookFree: 'Reserva una consulta gratuita',
+                caringSubtitle: 'Mensajes de apoyo de personas que viven con TNF',
                 cmsg1: 'Busca el progreso, no la perfección. Un paso minúsculo en la dirección correcta sigue siendo un progreso.',
                 cmsg2: 'Al principio puede parecer aterrador y sin esperanza, pero prometo que puede mejorar. Asimila los nuevos sentimientos sin juzgar, sigue adelante, ten paciencia, confía en el proceso — un día a la vez.',
                 cmsg3: 'El diagnóstico puede parecer desesperanzador, pero no pierdas la esperanza. Mantén la constancia, tómalo momento a momento — eres suficiente, eres amado.',
@@ -4699,13 +4703,12 @@
                 floatingSurveyBtn: 'Ir a la encuesta',
                 toolSurveyLink: '¿Te ha ayudado? Cuéntanoslo en la encuesta de 2 minutos «Qué ayuda» →',
                 toolShuffleBtn: '⟳ Nueva Herramienta',
-                storiesSurveyLink: '¿Algo de aquí te ha ayudado? Suma tu voz en la encuesta «Qué ayuda» →',
                 footerSupportTitle: 'Apoya',
                 footerPatreon: 'Apoya en Patreon',
                 footerVolunteer: 'Hazte voluntario/a — escríbenos →',
-                supportCardText: 'Este recurso es gratuito y construido en comunidad.<br>Puedes apoyar su mantenimiento y desarrollo en Patreon — y recibir grandes recompensas a cambio: sesiones grupales semanales y mensuales, contenido exclusivo ¡y mucho más!',
+                supportCardText: 'Este recurso es gratuito y construido en comunidad.<br>Puedes apoyar su mantenimiento y desarrollo en Patreon a cambio de acceso a contenido educacional, sesiones grupales semanales y mensuales, ¡y más!',
                 toggleText: 'Texto más grande',
-                a11yStatement: 'Diseñada con y para personas que viven con TNF — sin destellos, ritmo suave, a tu ritmo.'
+                a11yStatement: 'Diseñada con y para personas que viven con TNF.'
             }
         };
 
@@ -4948,6 +4951,9 @@
 
         // === SPANISH ORG DESCRIPTIONS (keyed by href) ===
         var orgDescsEs = {
+            'https://www.facebook.com/groups/1118556290245976': 'Apoyo nacional entre iguales para personas con diagnóstico de TNF, sus familias y cuidadores — una comunidad activa de Facebook que conecta a personas de toda Australia.',
+            'https://www.themedicalblindspot.com/': 'Defensa independiente dentro del NHS para personas con condiciones complejas, crónicas o sin diagnóstico — ayudando a los pacientes a ser escuchados y a navegar su atención.',
+            'https://www.fndportal.org': 'Biblioteca creada por pacientes con información y perspectivas sobre el TNF — artículos seleccionados, ciencia y recursos de experiencia vivida en un solo lugar.',
             'https://www.neurosymptoms.org': 'Creado por el Prof. Jon Stone — el recurso de información definitivo para pacientes que explica cada síntoma del TNF, cómo funciona el diagnóstico y los enfoques de tratamiento. Lectura esencial.',
             'https://www.nhsinform.scot/illnesses-and-conditions/brain-nerves-and-spinal-cord/functional-neurological-disorder/': 'Información sanitaria oficial del NHS de Escocia. Orientación de confianza sobre enfermedades, síntomas, tratamientos y servicios de salud.',
             'https://www.fndaction.org.uk': 'La primera organización benéfica del Reino Unido dedicada exclusivamente al TNF. Apoyo, educación, campañas de sensibilización y grupos comunitarios regionales en todo el Reino Unido.',
@@ -4990,7 +4996,30 @@
 
         function applyOrgDescs(lang) {
             var cards = document.querySelectorAll('#signpostGrid .org-card');
-            for (var i = 0; i < cards.length; i++) {
+            
+        var orgTypeEs = {
+            'Professional Resource': 'Recurso profesional', 'UK Charity': 'Asociación benéfica (Reino Unido)',
+            'Advocacy & Support': 'Defensa y apoyo', 'Northern Ireland': 'Irlanda del Norte',
+            'Charity (South Africa)': 'Asociación benéfica (Sudáfrica)', 'Mental Health': 'Salud mental',
+            'FND Specialist': 'Especialista en TNF', 'Support & Education': 'Apoyo y educación',
+            'Professional Network': 'Red profesional', 'Professionals': 'Profesionales',
+            'US Research & Treatment': 'Investigación y tratamiento (EE. UU.)', 'Global Charity': 'Asociación benéfica global',
+            'Irish Charity': 'Asociación benéfica (Irlanda)', 'Australian Charity': 'Asociación benéfica (Australia)',
+            'Support (Italy)': 'Apoyo (Italia)', 'Working Group (Germany)': 'Grupo de trabajo (Alemania)',
+            'US Advocacy': 'Defensa (EE. UU.)', 'App': 'App', 'Crisis Support': 'Apoyo en crisis',
+            'Occupational Therapy': 'Terapia ocupacional', 'Charity (Spain)': 'Asociación benéfica (España)',
+            'Peer Support': 'Apoyo entre iguales', 'Wellbeing Support': 'Apoyo al bienestar',
+            'Peer Support (Australia)': 'Apoyo entre iguales (Australia)', 'Advocacy (UK)': 'Defensa (Reino Unido)',
+            'Information Resource': 'Recurso de información'
+        };
+        var orgTypeEls = document.querySelectorAll('.org-type');
+        for (var bi = 0; bi < orgTypeEls.length; bi++) {
+            var bEl = orgTypeEls[bi];
+            if (!bEl.getAttribute('data-en')) bEl.setAttribute('data-en', bEl.textContent.trim());
+            var enTxt = bEl.getAttribute('data-en');
+            bEl.textContent = (lang === 'es' && orgTypeEs[enTxt]) ? orgTypeEs[enTxt] : enTxt;
+        }
+        for (var i = 0; i < cards.length; i++) {
                 var href = cards[i].getAttribute('href');
                 var descEl = cards[i].querySelector('.org-desc');
                 if (!descEl) continue;
