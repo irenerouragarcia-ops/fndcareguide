@@ -4761,7 +4761,7 @@
                 var type = card.getAttribute('data-type');
                 var geo = card.getAttribute('data-geo') || '';
                 var tags = (card.getAttribute('data-tags') || '').toLowerCase();
-                var title = card.querySelector('h4').textContent.toLowerCase();
+                var title = card.querySelector('h3, h4').textContent.toLowerCase();
                 var desc = card.querySelector('.org-desc').textContent.toLowerCase();
                 var searchText = tags + ' ' + title + ' ' + desc;
                 var matchesType = (currentOrgFilter === 'all' || type === currentOrgFilter ||
