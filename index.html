@@ -2389,6 +2389,7 @@
             margin-right: 0.5rem;
             vertical-align: middle;
             filter: brightness(1.8);
+            filter: brightness(0) invert(1);
         }
 
         /* Sections need relative for deco logos */
@@ -2757,8 +2758,7 @@
 
             <div class="community-layout">
                 <div class="subtitle-container" style="margin-top: 2rem; margin-bottom: 2rem; text-align: center;">
-                    <p style="color: var(--soft-black); font-size: 1.15rem; font-weight: 300;">Reflections about helpful
-                        practical tools</p>
+                    <p style="color: var(--soft-black); font-size: 1.15rem; font-weight: 300;" data-i18n="reflectionsLabel">Reflections about helpful practical tools</p>
                 </div>
                 <div class="community-tabs reveal">
                     <button class="tab-btn active" onclick="filterStories('all', this)">All</button>
@@ -3469,7 +3469,7 @@
 
                 <div class="stories-fade-overlay" id="storiesFade"></div>
                 <button class="stories-expand-btn" id="storiesExpandBtn" onclick="toggleStoriesExpand()">
-                    <span>Show More Insights</span>
+                    <span data-i18n="showMore">Show More Insights</span>
                     <span class="expand-arrow">▼</span>
                 </button>
 
@@ -3625,10 +3625,6 @@
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5LP47ylQVbTaoLzZ3UjR3GXiNA1522QJ1aTgkoU-d_0uNcw/viewform"
                             target="_blank" class="btn btn-primary" style="margin-top:0.5rem;"
                             data-i18n="extendedQuestionnaire">📝 Extended Questionnaire</a>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdjXKt5A5uBE0MW-lb3xXfAOZkWOgwD-wN2iVkPcPVXJU-55A/viewform"
-                            target="_blank" rel="noopener" class="survey-mini-link"
-                            data-i18n="storiesSurveyLink">Has something here
-                            helped you? Add your voice in the What Helps survey →</a>
                     </div>
                 </div>
 
@@ -3666,13 +3662,13 @@
                         placeholder="Search by name, country, topic, or keyword..." oninput="filterOrgs()">
                 </div>
                 <div class="signpost-filters" id="signpostFilters">
-                    <button class="signpost-filter-btn active" onclick="filterOrgType('all', this)">All</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgType('charity', this)">Charities</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgType('medical', this)">Professional</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgType('research', this)">Research</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgType('support', this)">Peer Support</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgType('specialist', this)">Specialist</button>
-                    <button class="signpost-filter-btn" onclick="filterOrgType('tools', this)">Apps &amp; Tools</button>
+                    <button class="signpost-filter-btn active" onclick="filterOrgType('all', this)" data-i18n=\"filterAll">All</button>
+                    <button class="signpost-filter-btn" onclick="filterOrgType('charity', this)" data-i18n=\"filterCharities">Charities</button>
+                    <button class="signpost-filter-btn" onclick="filterOrgType('medical', this)" data-i18n=\"filterProfessional">Professional</button>
+                    <button class="signpost-filter-btn" onclick="filterOrgType('research', this)" data-i18n=\"filterResearch">Research</button>
+                    <button class="signpost-filter-btn" onclick="filterOrgType('support', this)" data-i18n=\"filterPeer">Peer Support</button>
+                    <button class="signpost-filter-btn" onclick="filterOrgType('specialist', this)" data-i18n=\"filterSpecialist">Specialist</button>
+                    <button class="signpost-filter-btn" onclick="filterOrgType('tools', this)" data-i18n=\"filterApps">Apps &amp; Tools</button>
                     <button class="signpost-filter-btn" onclick="filterOrgType('spanish', this)">🇪🇸 En Español</button>
                 </div>
 
@@ -4206,8 +4202,7 @@
                 <h4>Connect with Irene</h4>
                 <a href="https://irenerouragarcia.com" target="_blank">irenerouragarcia.com</a>
                 <a href="https://www.instagram.com/irenerouragarcia/" target="_blank">@irenerouragarcia</a>
-                <a href="https://calendly.com/irenerouragarcia/freeconsultation" target="_blank">Book a Free
-                    Session</a>
+                <a href="https://calendly.com/irenerouragarcia/freeconsultation" target="_blank" data-i18n="footerBookFree">Book a Free Consultation</a>
                 <a href="mailto:irenerouragarcia@gmail.com">Get in Touch</a>
             </div>
             <div class="footer-col">
@@ -4691,7 +4686,7 @@
                 grid.classList.remove('collapsed');
                 grid.classList.add('expanded');
                 btn.classList.add('expanded');
-                btn.querySelector('span:first-child').textContent = 'Show Less';
+                btn.querySelector('span:first-child').textContent = (translations[currentLang] || translations.en).showLess;
                 fade.classList.add('hidden');
             } else {
                 // Reset to collapsed for 'All'
@@ -4701,7 +4696,7 @@
                 grid.classList.add('collapsed');
                 grid.classList.remove('expanded');
                 btn.classList.remove('expanded');
-                btn.querySelector('span:first-child').textContent = 'Show More Insights';
+                btn.querySelector('span:first-child').textContent = (translations[currentLang] || translations.en).showMore;
                 fade.classList.remove('hidden');
                 // Scroll back to section top
                 document.getElementById('community').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -4719,13 +4714,13 @@
                 grid.classList.remove('collapsed');
                 grid.classList.add('expanded');
                 btn.classList.add('expanded');
-                btn.querySelector('span:first-child').textContent = 'Show Less';
+                btn.querySelector('span:first-child').textContent = (translations[currentLang] || translations.en).showLess;
                 fade.classList.add('hidden');
             } else {
                 grid.classList.remove('expanded');
                 grid.classList.add('collapsed');
                 btn.classList.remove('expanded');
-                btn.querySelector('span:first-child').textContent = 'Show More Insights';
+                btn.querySelector('span:first-child').textContent = (translations[currentLang] || translations.en).showMore;
                 fade.classList.remove('hidden');
                 // Scroll back to section top
                 document.getElementById('community').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -4864,6 +4859,11 @@
                 bookFeat5: '<span class="check">✓</span> A reminder that there is hope and that you are not alone',
                 bookBtn: 'Get yours',
                 caringTitle: '<span style="font-size: 0.4em;">&#128156;</span> Caring messages <span style="font-size: 0.4em;">&#128156;</span>',
+                reflectionsLabel: 'Reflections about helpful practical tools',
+                filterAll: 'All', filterCharities: 'Charities', filterProfessional: 'Professional',
+                filterResearch: 'Research', filterPeer: 'Peer Support', filterSpecialist: 'Specialist',
+                filterApps: 'Apps & Tools',
+                footerBookFree: 'Book a Free Consultation',
                 caringSubtitle: 'Supportive messages from people navigating FND',
                 cmsg1: 'Strive for progress, not perfection. A tiny step in the right direction is still progress.',
                 cmsg2: 'It may feel terrifying and hopeless at first, but I promise it can get better. Take in the new feelings without judgment, keep going, be patient, trust the process — one day at a time.',
@@ -4897,7 +4897,6 @@
                 floatingSurveyBtn: 'Go to Survey',
                 toolSurveyLink: 'Did this help you? Tell us in the 2-minute What Helps survey →',
                 toolShuffleBtn: '⟳ New Tool',
-                storiesSurveyLink: 'Has something here helped you? Add your voice in the What Helps survey →',
                 footerSupportTitle: 'Support',
                 footerPatreon: 'Support on Patreon',
                 footerVolunteer: 'Volunteer with us — get in touch →',
@@ -4917,19 +4916,19 @@
                 heroBtn3: 'Fuentes de apoyo',
                 heroTag: 'Creado por Irene Roura Garcia y Co',
                 heroTitle: '<span style="color: #4a4a4a;">Guía de cuidado</span> <em style="color: var(--purple-deep); display: block;">TNF</em>',
-                heroSubtitle: 'Una base de conocimiento comunitaria con herramientas prácticas que han ayudado a otras personas que viven con el TNF, junto con perspectivas de experiencia vivida, mensajes de ánimo y enlaces a apoyo profesional y comunitario.',
+                heroSubtitle: 'Una base de conocimiento comunitaria con herramientas prácticas que han ayudado a otras personas que viven con TNF, junto con perspectivas de experiencia vivida, mensajes de ánimo y enlaces a apoyo profesional y comunitario.',
                 heroBtn1: 'Explora herramientas de auto-cuidado',
                 heroBtn2: 'Citas de experiencia vivida',
                 scroll: 'Desplazar',
                 toolsTag: 'Herramientas de Autocuidado',
                 toolsTitle: 'Herramientas de auto-cuidado',
-                toolsDesc: 'El principal objetivo de la Guía de Cuidado TNF es ofrecerte herramientas que puedas poner en práctica de verdad — aquí y ahora. Pulsa el botón para descubrir un recurso de una de las diez categorías de autocuidado. Cada uno ha sido seleccionado porque personas con TNF lo han encontrado realmente útil.',
+                toolsDesc: 'El principal objetivo de la Guía de Cuidado TNF es ofrecerte herramientas que puedas poner en práctica de verdad, aquí y ahora. Pulsa el botón para descubrir un recurso de una de las diez categorías de autocuidado. Cada uno ha sido seleccionado porque personas con TNF lo han encontrado realmente útil.',
                 toolsReminder: '<p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; font-weight: 300; margin: 0;"><span style="font-weight: 600; color: var(--sage-deep);">Recordatorio:</span> Todas las personas somos diferentes. Lo que funciona para una persona puede no funcionar para otra. Por eso te animo a explorar y elegir las técnicas que conecten contigo y que te resulten útiles. Escucha siempre a tu cuerpo y haz lo que sientas que es adecuado para ti. Tu camino es único, y también lo es tu caja de herramientas.</p>',
                 communityTag: 'Base de Conocimiento de Experiencia Vivida',
                 communityTitle: 'Citas de experiencia vivida',
                 communityDesc: 'Esta es una base de conocimiento colaborativa: perspectivas reales de personas reales que comparten las herramientas, técnicas y enfoques que les han ayudado a manejar sus síntomas, encontrar alivio y avanzar en su recuperación del TNF. Cada aportación contribuye a construir una comprensión más rica de lo que realmente funciona. Tu experiencia vivida es una parte invaluable de la sabiduría colectiva de la comunidad.',
                 shareTitle: 'Añade Tu Perspectiva a la Base de Conocimiento',
-                shareDesc: '¿Qué te ha ayudado? Ya sea una técnica de respiración, una práctica de movimiento, tiempo en la naturaleza, una salida creativa, o simplemente algo que alguien dijo que cambió tu perspectiva — tu aportación podría ser la que ayude a otra persona. Así es como construimos una base de conocimiento juntos.',
+                shareDesc: '¿Qué te ha ayudado? Ya sea una técnica de respiración, una práctica de movimiento, tiempo en la naturaleza, una actividad creativa, o simplemente algo que alguien dijo que cambió tu perspectiva. Tu aportación podría ser la que ayude a otra persona. Así es como construimos una base de conocimiento juntos.',
                 signpostTag: 'Apoyo Profesional y de Red',
                 signpostTitle: 'Fuentes de apoyo',
                 signpostDesc: 'Podemos apoyarnos de muchas maneras, y las actividades anteriores pueden ayudarnos a cuidarnos. Sin embargo, no sustituyen la atención profesional. Si tu salud o bienestar se ven afectados, busca apoyo de tu proveedor de atención médica local. Sigue siempre el tratamiento o plan de cuidado acordado con tu médico o equipo de salud.<br><br>A continuación se muestra una lista de organizaciones, organizaciones benéficas, redes y grupos que ofrecen apoyo profesional y comunitario para personas que viven con el TNF',
@@ -4954,7 +4953,7 @@
                 navPrivacy: 'Política de Privacidad',
                 bookLabel: '📖 La Guía',
                 bookTitle: 'Libro FND Care Guide',
-                bookDesc: 'Manual compasivo y práctico diseñado para compartir contigo lo que ha ayudado a otras personas que viven con TNF a manejar sus síntomas, sentirse más en control y mejorar su bienestar, y lo que también podría ayudarte a ti. Moldeado por las voces y experiencias de la comunidad TNF.',
+                bookDesc: 'Manual práctico diseñado para compartir contigo lo que ha ayudado a otras personas que viven con TNF a manejar sus síntomas, sentirse más en control y mejorar su bienestar, y lo que también podría ayudarte a ti. Con reflexiones y experiencias de la comunidad TNF.',
                 bookFeat1: '<span class="check">✓</span> Herramientas prácticas para ayudarte a manejar síntomas y sentirte más en control',
                 bookFeat2: '<span class="check">✓</span> Prácticas cotidianas para cuidar tu cuerpo y tu mente',
                 bookFeat3: '<span class="check">✓</span> Experiencias vividas y sabiduría compartida de la comunidad TNF',
@@ -4962,7 +4961,12 @@
                 bookFeat5: '<span class="check">✓</span> Un recordatorio de que hay esperanza y de que no estás solo/a',
                 bookBtn: 'Consigue el tuyo',
                 caringTitle: '<span style="font-size: 0.4em;">&#128156;</span> Mensajes de ánimo <span style="font-size: 0.4em;">&#128156;</span>',
-                caringSubtitle: 'Mensajes de apoyo de personas que navegan por el TNF',
+                reflectionsLabel: 'Reflexiones sobre herramientas prácticas útiles',
+                filterAll: 'Todas', filterCharities: 'Asociaciones benéficas', filterProfessional: 'Profesional',
+                filterResearch: 'Investigación', filterPeer: 'Apoyo entre iguales', filterSpecialist: 'Especialistas',
+                filterApps: 'Apps y herramientas',
+                footerBookFree: 'Reserva una consulta gratuita',
+                caringSubtitle: 'Mensajes de apoyo de personas que viven con TNF',
                 cmsg1: 'Busca el progreso, no la perfección. Un paso minúsculo en la dirección correcta sigue siendo un progreso.',
                 cmsg2: 'Al principio puede parecer aterrador y sin esperanza, pero prometo que puede mejorar. Asimila los nuevos sentimientos sin juzgar, sigue adelante, ten paciencia, confía en el proceso — un día a la vez.',
                 cmsg3: 'El diagnóstico puede parecer desesperanzador, pero no pierdas la esperanza. Mantén la constancia, tómalo momento a momento — eres suficiente, eres amado.',
@@ -4995,13 +4999,12 @@
                 floatingSurveyBtn: 'Ir a la encuesta',
                 toolSurveyLink: '¿Te ha ayudado? Cuéntanoslo en la encuesta de 2 minutos «Qué ayuda» →',
                 toolShuffleBtn: '⟳ Nueva Herramienta',
-                storiesSurveyLink: '¿Algo de aquí te ha ayudado? Suma tu voz en la encuesta «Qué ayuda» →',
                 footerSupportTitle: 'Apoya',
                 footerPatreon: 'Apoya en Patreon',
                 footerVolunteer: 'Hazte voluntario/a — escríbenos →',
-                supportCardText: 'Este recurso es gratuito y construido en comunidad.<br>Puedes apoyar su mantenimiento y desarrollo en Patreon — y recibir grandes recompensas a cambio: sesiones grupales semanales y mensuales, contenido exclusivo ¡y mucho más!',
+                supportCardText: 'Este recurso es gratuito y construido en comunidad.<br>Puedes apoyar su mantenimiento y desarrollo en Patreon a cambio de acceso a contenido educacional, sesiones grupales semanales y mensuales, ¡y más!',
                 toggleText: 'Texto más grande',
-                a11yStatement: 'Diseñada con y para personas que viven con TNF — sin destellos, ritmo suave, a tu ritmo.'
+                a11yStatement: 'Diseñada con y para personas que viven con TNF.'
             }
         };
 
@@ -5244,6 +5247,9 @@
 
         // === SPANISH ORG DESCRIPTIONS (keyed by href) ===
         var orgDescsEs = {
+            'https://www.facebook.com/groups/1118556290245976': 'Apoyo nacional entre iguales para personas con diagnóstico de TNF, sus familias y cuidadores — una comunidad activa de Facebook que conecta a personas de toda Australia.',
+            'https://www.themedicalblindspot.com/': 'Defensa independiente dentro del NHS para personas con condiciones complejas, crónicas o sin diagnóstico — ayudando a los pacientes a ser escuchados y a navegar su atención.',
+            'https://www.fndportal.org': 'Biblioteca creada por pacientes con información y perspectivas sobre el TNF — artículos seleccionados, ciencia y recursos de experiencia vivida en un solo lugar.',
             'https://www.neurosymptoms.org': 'Creado por el Prof. Jon Stone — el recurso de información definitivo para pacientes que explica cada síntoma del TNF, cómo funciona el diagnóstico y los enfoques de tratamiento. Lectura esencial.',
             'https://www.nhsinform.scot/illnesses-and-conditions/brain-nerves-and-spinal-cord/functional-neurological-disorder/': 'Información sanitaria oficial del NHS de Escocia. Orientación de confianza sobre enfermedades, síntomas, tratamientos y servicios de salud.',
             'https://www.fndaction.org.uk': 'La primera organización benéfica del Reino Unido dedicada exclusivamente al TNF. Apoyo, educación, campañas de sensibilización y grupos comunitarios regionales en todo el Reino Unido.',
@@ -5286,7 +5292,30 @@
 
         function applyOrgDescs(lang) {
             var cards = document.querySelectorAll('#signpostGrid .org-card');
-            for (var i = 0; i < cards.length; i++) {
+            
+        var orgTypeEs = {
+            'Professional Resource': 'Recurso profesional', 'UK Charity': 'Asociación benéfica (Reino Unido)',
+            'Advocacy & Support': 'Defensa y apoyo', 'Northern Ireland': 'Irlanda del Norte',
+            'Charity (South Africa)': 'Asociación benéfica (Sudáfrica)', 'Mental Health': 'Salud mental',
+            'FND Specialist': 'Especialista en TNF', 'Support & Education': 'Apoyo y educación',
+            'Professional Network': 'Red profesional', 'Professionals': 'Profesionales',
+            'US Research & Treatment': 'Investigación y tratamiento (EE. UU.)', 'Global Charity': 'Asociación benéfica global',
+            'Irish Charity': 'Asociación benéfica (Irlanda)', 'Australian Charity': 'Asociación benéfica (Australia)',
+            'Support (Italy)': 'Apoyo (Italia)', 'Working Group (Germany)': 'Grupo de trabajo (Alemania)',
+            'US Advocacy': 'Defensa (EE. UU.)', 'App': 'App', 'Crisis Support': 'Apoyo en crisis',
+            'Occupational Therapy': 'Terapia ocupacional', 'Charity (Spain)': 'Asociación benéfica (España)',
+            'Peer Support': 'Apoyo entre iguales', 'Wellbeing Support': 'Apoyo al bienestar',
+            'Peer Support (Australia)': 'Apoyo entre iguales (Australia)', 'Advocacy (UK)': 'Defensa (Reino Unido)',
+            'Information Resource': 'Recurso de información'
+        };
+        var orgTypeEls = document.querySelectorAll('.org-type');
+        for (var bi = 0; bi < orgTypeEls.length; bi++) {
+            var bEl = orgTypeEls[bi];
+            if (!bEl.getAttribute('data-en')) bEl.setAttribute('data-en', bEl.textContent.trim());
+            var enTxt = bEl.getAttribute('data-en');
+            bEl.textContent = (lang === 'es' && orgTypeEs[enTxt]) ? orgTypeEs[enTxt] : enTxt;
+        }
+        for (var i = 0; i < cards.length; i++) {
                 var href = cards[i].getAttribute('href');
                 var descEl = cards[i].querySelector('.org-desc');
                 if (!descEl) continue;
